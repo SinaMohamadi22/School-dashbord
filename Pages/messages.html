@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیام‌ها | پنل والدین</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+</head>
+
+<body class="bg-background text-text">
+
+<div class="min-h-screen flex flex-row-reverse">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white min-h-screen p-5 hidden md:block">
+        <h1 class="text-2xl font-bold mb-10">مدرسه من</h1>
+        <p class="text-xs text-white/70 mb-4">منوی اصلی</p>
+
+        <nav class="space-y-2">
+            <a href="parent.html" class="block p-3 rounded-xl hover:bg-white/15">⌂ داشبورد</a>
+            <a href="children.html" class="block p-3 rounded-xl hover:bg-white/15">♧ فرزندان من</a>
+            <a href="grades.html" class="block p-3 rounded-xl hover:bg-white/15">▤ نمرات و کارنامه</a>
+            <a href="attendance.html" class="block p-3 rounded-xl hover:bg-white/15">◷ حضور و غیاب</a>
+            <a href="homework.html" class="block p-3 rounded-xl hover:bg-white/15">▣ تکالیف</a>
+            <a href="weekly-schedule.html" class="block p-3 rounded-xl hover:bg-white/15">▦ برنامه هفتگی</a>
+            <a href="announcements.html" class="block p-3 rounded-xl hover:bg-white/15">♢ اطلاعیه‌ها</a>
+            <a href="messages.html" class="block bg-white/20 p-3 rounded-xl">✉ پیام‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">امور مالی</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0 p-5 md:p-8">
+
+        <header class="mb-8">
+            <h2 class="text-2xl font-bold">پیام‌ها و ارتباط با مدرسه</h2>
+            <p class="text-slate-500 mt-2">ارتباط با معلمان و مسئولان مدرسه</p>
+        </header>
+
+        <!-- Statistics -->
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-7">
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">کل پیام‌ها</p>
+                <h3 class="text-3xl font-bold text-primary mt-3">۱۲</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">پیام‌های دریافتی</p>
+                <h3 class="text-3xl font-bold text-info mt-3">۸</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">پیام‌های خوانده‌نشده</p>
+                <h3 class="text-3xl font-bold text-warning mt-3">۲</h3>
+            </div>
+
+        </section>
+
+        <!-- New Message -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-7">
+
+            <h3 class="font-bold text-lg mb-5">ارسال پیام جدید</h3>
+
+            <form>
+                <div class="mb-5">
+                    <label class="block text-sm font-medium mb-2">گیرنده پیام</label>
+                    <select class="w-full border border-slate-200 rounded-xl p-3 bg-white">
+                        <option>انتخاب گیرنده</option>
+                        <option>مدیر مدرسه</option>
+                        <option>معلم راهنما</option>
+                        <option>معلم ریاضی</option>
+                        <option>مشاور مدرسه</option>
+                    </select>
+                </div>
+
+                <div class="mb-5">
+                    <label class="block text-sm font-medium mb-2">موضوع پیام</label>
+                    <input type="text" placeholder="موضوع پیام را وارد کنید"
+                        class="w-full border border-slate-200 rounded-xl p-3">
+                </div>
+
+                <div class="mb-5">
+                    <label class="block text-sm font-medium mb-2">متن پیام</label>
+                    <textarea rows="4" placeholder="پیام خود را بنویسید..."
+                        class="w-full border border-slate-200 rounded-xl p-3 resize-none"></textarea>
+                </div>
+
+                <button type="button"
+                    class="bg-primary text-white px-6 py-3 rounded-xl hover:opacity-90">
+                    ارسال پیام
+                </button>
+            </form>
+
+        </section>
+
+        <!-- Inbox -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm">
+
+            <h3 class="font-bold text-lg mb-5">آخرین پیام‌ها</h3>
+
+            <div class="space-y-5">
+
+                <div class="border-b border-slate-100 pb-5">
+                    <div class="flex justify-between flex-wrap gap-3">
+                        <h4 class="font-bold">خانم رضایی - معلم راهنما</h4>
+                        <span class="text-xs bg-info/10 text-info px-3 py-2 rounded-lg">جدید</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-3">
+                        عملکرد تحصیلی فرزند شما در این ماه بسیار خوب بوده است.
+                    </p>
+                    <p class="text-xs text-slate-400 mt-3">۱۴۰۵/۰۸/۲۵</p>
+                </div>
+
+                <div class="border-b border-slate-100 pb-5">
+                    <h4 class="font-bold">آقای محمدی - مدیر مدرسه</h4>
+                    <p class="text-sm text-slate-500 mt-3">
+                        لطفاً برای شرکت در جلسه اولیا و مربیان حضور داشته باشید.
+                    </p>
+                    <p class="text-xs text-slate-400 mt-3">۱۴۰۵/۰۸/۲۳</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold">مشاور مدرسه</h4>
+                    <p class="text-sm text-slate-500 mt-3">
+                        زمان مشاوره تحصیلی دانش‌آموزان اعلام شد.
+                    </p>
+                    <p class="text-xs text-slate-400 mt-3">۱۴۰۵/۰۸/۲۰</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

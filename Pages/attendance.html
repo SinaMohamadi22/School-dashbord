@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حضور و غیاب | پنل والدین</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+</head>
+
+<body class="bg-background text-text">
+
+<div class="min-h-screen flex flex-row-reverse">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white min-h-screen p-5 hidden md:block">
+        <h1 class="text-2xl font-bold mb-10">مدرسه من</h1>
+        <p class="text-xs text-white/70 mb-4">منوی اصلی</p>
+
+        <nav class="space-y-2">
+            <a href="parent.html" class="block p-3 rounded-xl hover:bg-white/15">⌂ داشبورد</a>
+            <a href="children.html" class="block p-3 rounded-xl hover:bg-white/15">♧ فرزندان من</a>
+            <a href="grades.html" class="block p-3 rounded-xl hover:bg-white/15">▤ نمرات و کارنامه</a>
+            <a href="attendance.html" class="block bg-white/20 p-3 rounded-xl">◷ حضور و غیاب</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▣ تکالیف</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▦ برنامه هفتگی</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">♢ اطلاعیه‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">✉ پیام‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">امور مالی</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0 p-5 md:p-8">
+
+        <header class="mb-8">
+            <h2 class="text-2xl font-bold">حضور و غیاب</h2>
+            <p class="text-slate-500 mt-2">گزارش حضور، غیبت و تأخیر دانش‌آموز</p>
+        </header>
+
+        <!-- Student Info -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-6">
+            <h3 class="font-bold text-lg">آراد احمدی</h3>
+            <p class="text-sm text-slate-500 mt-2">پایه هشتم | کلاس ۸/۲</p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-7">
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">روزهای حضور</p>
+                <h3 class="text-3xl font-bold text-success mt-3">۸۸</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">غیبت موجه</p>
+                <h3 class="text-3xl font-bold text-info mt-3">۱</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">غیبت غیرموجه</p>
+                <h3 class="text-3xl font-bold text-warning mt-3">۱</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">تعداد تأخیر</p>
+                <h3 class="text-3xl font-bold text-primary mt-3">۳</h3>
+            </div>
+
+        </section>
+
+        <!-- Attendance Percentage -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-7">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg">درصد حضور دانش‌آموز</h3>
+                <span class="text-success font-bold">۹۶٪</span>
+            </div>
+
+            <div class="w-full bg-primary-light rounded-full h-4">
+                <div class="bg-success h-4 rounded-full" style="width: 96%"></div>
+            </div>
+
+            <p class="text-sm text-slate-500 mt-3">
+                وضعیت حضور دانش‌آموز در این نیم‌سال مطلوب است.
+            </p>
+        </section>
+
+        <!-- Attendance Table -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm">
+
+            <h3 class="font-bold text-lg mb-5">آخرین گزارش حضور و غیاب</h3>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-right">
+
+                    <thead>
+                        <tr class="bg-primary-light text-primary">
+                            <th class="p-4 rounded-r-xl">تاریخ</th>
+                            <th class="p-4">روز</th>
+                            <th class="p-4">وضعیت</th>
+                            <th class="p-4 rounded-l-xl">توضیحات</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4">۱۴۰۵/۰۸/۲۰</td>
+                            <td class="p-4">شنبه</td>
+                            <td class="p-4 text-success font-bold">حاضر</td>
+                            <td class="p-4">بدون تأخیر</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4">۱۴۰۵/۰۸/۲۱</td>
+                            <td class="p-4">یکشنبه</td>
+                            <td class="p-4 text-warning font-bold">غایب</td>
+                            <td class="p-4">غیبت موجه</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4">۱۴۰۵/۰۸/۲۲</td>
+                            <td class="p-4">دوشنبه</td>
+                            <td class="p-4 text-success font-bold">حاضر</td>
+                            <td class="p-4">بدون تأخیر</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4">۱۴۰۵/۰۸/۲۳</td>
+                            <td class="p-4">سه‌شنبه</td>
+                            <td class="p-4 text-info font-bold">با تأخیر</td>
+                            <td class="p-4">۱۰ دقیقه تأخیر</td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-4">۱۴۰۵/۰۸/۲۴</td>
+                            <td class="p-4">چهارشنبه</td>
+                            <td class="p-4 text-success font-bold">حاضر</td>
+                            <td class="p-4">بدون تأخیر</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

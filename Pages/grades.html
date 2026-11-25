@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمرات و کارنامه | پنل والدین</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+</head>
+
+<body class="bg-background text-text">
+
+<div class="min-h-screen flex flex-row-reverse">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white min-h-screen p-5 hidden md:block">
+        <h1 class="text-2xl font-bold mb-10">مدرسه من</h1>
+        <p class="text-xs text-white/70 mb-4">منوی اصلی</p>
+
+        <nav class="space-y-2">
+            <a href="parent.html" class="block p-3 rounded-xl hover:bg-white/15">⌂ داشبورد</a>
+            <a href="children.html" class="block p-3 rounded-xl hover:bg-white/15">♧ فرزندان من</a>
+            <a href="grades.html" class="block bg-white/20 p-3 rounded-xl">▤ نمرات و کارنامه</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">◷ حضور و غیاب</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▣ تکالیف</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▦ برنامه هفتگی</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">♢ اطلاعیه‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">✉ پیام‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">امور مالی</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0 p-5 md:p-8">
+
+        <header class="mb-8">
+            <h2 class="text-2xl font-bold">نمرات و کارنامه</h2>
+            <p class="text-slate-500 mt-2">بررسی عملکرد و نتایج تحصیلی فرزند شما</p>
+        </header>
+
+        <!-- Student Info -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-6">
+            <div class="flex flex-wrap justify-between items-center gap-4">
+                <div>
+                    <h3 class="text-lg font-bold">آراد احمدی</h3>
+                    <p class="text-sm text-slate-500 mt-2">پایه هشتم | کلاس ۸/۲</p>
+                </div>
+                <span class="bg-primary-light text-primary px-4 py-2 rounded-xl text-sm">
+                    سال تحصیلی ۱۴۰۵ - ۱۴۰۶
+                </span>
+            </div>
+        </section>
+
+        <!-- Average Cards -->
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-7">
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">معدل کل</p>
+                <h3 class="text-3xl font-bold text-primary mt-3">۱۸.۷۵</h3>
+                <p class="text-success text-sm mt-2">عملکرد مطلوب</p>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">بالاترین نمره</p>
+                <h3 class="text-3xl font-bold text-success mt-3">۲۰</h3>
+                <p class="text-sm text-slate-400 mt-2">درس زبان انگلیسی</p>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">تعداد دروس</p>
+                <h3 class="text-3xl font-bold text-info mt-3">۶</h3>
+                <p class="text-sm text-slate-400 mt-2">در این نیم‌سال</p>
+            </div>
+
+        </section>
+
+        <!-- Grades Table -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-7">
+
+            <h3 class="font-bold text-lg mb-5">جدول نمرات دروس</h3>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-right">
+                    <thead>
+                        <tr class="bg-primary-light text-primary">
+                            <th class="p-4 rounded-r-xl">نام درس</th>
+                            <th class="p-4">نمره مستمر</th>
+                            <th class="p-4">نمره پایانی</th>
+                            <th class="p-4 rounded-l-xl">وضعیت</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium">ریاضی</td>
+                            <td class="p-4">۱۸</td>
+                            <td class="p-4">۱۹</td>
+                            <td class="p-4 text-success font-bold">خیلی خوب</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium">علوم تجربی</td>
+                            <td class="p-4">۱۷</td>
+                            <td class="p-4">۱۸.۵</td>
+                            <td class="p-4 text-success font-bold">خیلی خوب</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium">زبان انگلیسی</td>
+                            <td class="p-4">۲۰</td>
+                            <td class="p-4">۲۰</td>
+                            <td class="p-4 text-success font-bold">عالی</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium">فارسی</td>
+                            <td class="p-4">۱۶</td>
+                            <td class="p-4">۱۷</td>
+                            <td class="p-4 text-success font-bold">خوب</td>
+                        </tr>
+
+                        <tr class="border-b border-slate-100">
+                            <td class="p-4 font-medium">مطالعات اجتماعی</td>
+                            <td class="p-4">۱۸</td>
+                            <td class="p-4">۱۹</td>
+                            <td class="p-4 text-success font-bold">خیلی خوب</td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-4 font-medium">قرآن و پیام‌های آسمان</td>
+                            <td class="p-4">۱۹</td>
+                            <td class="p-4">۱۹.۵</td>
+                            <td class="p-4 text-success font-bold">عالی</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Teacher Note -->
+        <section class="bg-primary-light rounded-2xl p-6">
+            <h3 class="font-bold text-primary mb-3">یادداشت معلم راهنما</h3>
+            <p class="text-sm leading-8 text-text">
+                دانش‌آموز در بیشتر دروس عملکرد خوبی داشته است.
+                با تمرین بیشتر در درس فارسی می‌تواند نتیجه بهتری کسب کند.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

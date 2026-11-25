@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تکالیف دانش‌آموز | پنل والدین</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+</head>
+
+<body class="bg-background text-text">
+
+<div class="min-h-screen flex flex-row-reverse">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white min-h-screen p-5 hidden md:block">
+        <h1 class="text-2xl font-bold mb-10">مدرسه من</h1>
+        <p class="text-xs text-white/70 mb-4">منوی اصلی</p>
+
+        <nav class="space-y-2">
+            <a href="parent.html" class="block p-3 rounded-xl hover:bg-white/15">⌂ داشبورد</a>
+            <a href="children.html" class="block p-3 rounded-xl hover:bg-white/15">♧ فرزندان من</a>
+            <a href="grades.html" class="block p-3 rounded-xl hover:bg-white/15">▤ نمرات و کارنامه</a>
+            <a href="attendance.html" class="block p-3 rounded-xl hover:bg-white/15">◷ حضور و غیاب</a>
+            <a href="homework.html" class="block bg-white/20 p-3 rounded-xl">▣ تکالیف</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▦ برنامه هفتگی</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">♢ اطلاعیه‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">✉ پیام‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">امور مالی</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0 p-5 md:p-8">
+
+        <header class="mb-8">
+            <h2 class="text-2xl font-bold">تکالیف دانش‌آموز</h2>
+            <p class="text-slate-500 mt-2">پیگیری تکالیف و زمان تحویل آن‌ها</p>
+        </header>
+
+        <!-- Student Info -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-6">
+            <h3 class="font-bold text-lg">آراد احمدی</h3>
+            <p class="text-sm text-slate-500 mt-2">پایه هشتم | کلاس ۸/۲</p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-7">
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">کل تکالیف</p>
+                <h3 class="text-3xl font-bold text-primary mt-3">۱۲</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">انجام‌شده</p>
+                <h3 class="text-3xl font-bold text-success mt-3">۹</h3>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">باقی‌مانده</p>
+                <h3 class="text-3xl font-bold text-warning mt-3">۳</h3>
+            </div>
+
+        </section>
+
+        <!-- Progress -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-7">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold">میزان انجام تکالیف</h3>
+                <span class="text-success font-bold">۷۵٪</span>
+            </div>
+
+            <div class="w-full bg-primary-light rounded-full h-4">
+                <div class="bg-success h-4 rounded-full" style="width: 75%"></div>
+            </div>
+        </section>
+
+        <!-- Homework List -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm">
+
+            <h3 class="font-bold text-lg mb-5">فهرست تکالیف</h3>
+
+            <div class="space-y-4">
+
+                <div class="flex flex-wrap justify-between items-center gap-4 border-b border-slate-100 pb-4">
+                    <div>
+                        <h4 class="font-bold">حل تمرین‌های فصل سوم</h4>
+                        <p class="text-sm text-slate-500 mt-2">درس ریاضی | مهلت: فردا</p>
+                    </div>
+                    <span class="bg-warning/10 text-warning px-4 py-2 rounded-lg text-sm">
+                        انجام نشده
+                    </span>
+                </div>
+
+                <div class="flex flex-wrap justify-between items-center gap-4 border-b border-slate-100 pb-4">
+                    <div>
+                        <h4 class="font-bold">تحقیق درباره سلول‌ها</h4>
+                        <p class="text-sm text-slate-500 mt-2">درس علوم | مهلت: شنبه</p>
+                    </div>
+                    <span class="bg-success/10 text-success px-4 py-2 rounded-lg text-sm">
+                        انجام شده
+                    </span>
+                </div>
+
+                <div class="flex flex-wrap justify-between items-center gap-4 border-b border-slate-100 pb-4">
+                    <div>
+                        <h4 class="font-bold">تمرین درس پنجم</h4>
+                        <p class="text-sm text-slate-500 mt-2">درس زبان انگلیسی | مهلت: یکشنبه</p>
+                    </div>
+                    <span class="bg-warning/10 text-warning px-4 py-2 rounded-lg text-sm">
+                        انجام نشده
+                    </span>
+                </div>
+
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <h4 class="font-bold">خلاصه‌نویسی درس چهارم</h4>
+                        <p class="text-sm text-slate-500 mt-2">درس فارسی | مهلت: دوشنبه</p>
+                    </div>
+                    <span class="bg-success/10 text-success px-4 py-2 rounded-lg text-sm">
+                        انجام شده
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

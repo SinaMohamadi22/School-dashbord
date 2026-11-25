@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرزندان من | پنل والدین</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+</head>
+
+<body class="bg-background text-text">
+
+<div class="min-h-screen flex flex-row-reverse">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white min-h-screen p-5 hidden md:block">
+        <h1 class="text-2xl font-bold mb-10">مدرسه من</h1>
+        <p class="text-xs text-white/70 mb-4">منوی اصلی</p>
+
+        <nav class="space-y-2">
+            <a href="parent.html" class="block p-3 rounded-xl hover:bg-white/15">⌂ داشبورد</a>
+            <a href="children.html" class="block bg-white/20 p-3 rounded-xl">♧ فرزندان من</a>
+            <a href="grades.html" class="block p-3 rounded-xl hover:bg-white/15">▤ نمرات و کارنامه</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">◷ حضور و غیاب</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▣ تکالیف</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">▦ برنامه هفتگی</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">♢ اطلاعیه‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">✉ پیام‌ها</a>
+            <a href="#" class="block p-3 rounded-xl hover:bg-white/15">امور مالی</a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0 p-5 md:p-8">
+
+        <header class="mb-8">
+            <h2 class="text-2xl font-bold">فرزندان من</h2>
+            <p class="text-slate-500 mt-2">مشاهده اطلاعات و وضعیت تحصیلی فرزندان</p>
+        </header>
+
+        <!-- Student Card -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm mb-6">
+            <div class="flex flex-wrap items-center gap-5">
+
+                <div class="w-20 h-20 rounded-full bg-primary-light text-primary flex items-center justify-center text-3xl font-bold">
+                    آ
+                </div>
+
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold">آراد احمدی</h3>
+                    <p class="text-slate-500 mt-2">دانش‌آموز پایه هشتم | کلاس ۸/۲</p>
+                    <p class="text-sm text-slate-400 mt-2">کد دانش‌آموزی: ۱۴۰۲۵۸</p>
+                </div>
+
+                <span class="bg-success/10 text-success px-4 py-2 rounded-xl text-sm">
+                    فعال و در حال تحصیل
+                </span>
+            </div>
+        </section>
+
+        <!-- Information -->
+        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-6">
+
+            <div class="bg-surface p-5 rounded-2xl shadow-sm">
+                <p class="text-sm text-slate-500">نام مدرسه</p>
+                <h3 class="font-bold mt-3">دبیرستان دانش</h3>
+            </div>
+
+            <div class="bg-surface p-5 rounded-2xl shadow-sm">
+                <p class="text-sm text-slate-500">پایه تحصیلی</p>
+                <h3 class="font-bold mt-3">هشتم</h3>
+            </div>
+
+            <div class="bg-surface p-5 rounded-2xl shadow-sm">
+                <p class="text-sm text-slate-500">نام کلاس</p>
+                <h3 class="font-bold mt-3">۸/۲</h3>
+            </div>
+
+            <div class="bg-surface p-5 rounded-2xl shadow-sm">
+                <p class="text-sm text-slate-500">نام مدیر مدرسه</p>
+                <h3 class="font-bold mt-3">آقای محمدی</h3>
+            </div>
+
+            <div class="bg-surface p-5 rounded-2xl shadow-sm">
+                <p class="text-sm text-slate-500">نام معلم راهنما</p>
+                <h3 class="font-bold mt-3">خانم رضایی</h3>
+            </div>
+
+            <div class="bg-surface p-5 rounded-2xl shadow-sm">
+                <p class="text-sm text-slate-500">وضعیت تحصیلی</p>
+                <h3 class="font-bold text-success mt-3">مطلوب</h3>
+            </div>
+
+        </section>
+
+        <!-- Quick Summary -->
+        <section class="bg-surface rounded-2xl p-6 shadow-sm">
+            <h3 class="font-bold text-lg mb-5">خلاصه وضعیت تحصیلی</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+
+                <div class="bg-primary-light rounded-xl p-5">
+                    <p class="text-sm text-slate-500">معدل کل</p>
+                    <h3 class="text-2xl font-bold text-primary mt-2">۱۸.۷۵</h3>
+                </div>
+
+                <div class="bg-primary-light rounded-xl p-5">
+                    <p class="text-sm text-slate-500">درصد حضور</p>
+                    <h3 class="text-2xl font-bold text-success mt-2">۹۶٪</h3>
+                </div>
+
+                <div class="bg-primary-light rounded-xl p-5">
+                    <p class="text-sm text-slate-500">تعداد غیبت</p>
+                    <h3 class="text-2xl font-bold text-warning mt-2">۲ روز</h3>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

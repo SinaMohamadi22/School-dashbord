@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امور مالی</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+</head>
+
+<body class="bg-background text-text">
+
+<div class="flex flex-row-reverse min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-primary text-white min-h-screen p-5 hidden md:block">
+        <h1 class="text-2xl font-bold mb-2">مدرسه من</h1>
+        <p class="text-sm text-white/70 mb-8">پنل والدین</p>
+
+        <nav class="space-y-3">
+            <a href="parent.html" class="block p-3 rounded-xl hover:bg-white/20">⌂ داشبورد</a>
+            <a href="children.html" class="block p-3 rounded-xl hover:bg-white/20">♧ فرزندان من</a>
+            <a href="grades.html" class="block p-3 rounded-xl hover:bg-white/20">▤ نمرات و کارنامه</a>
+            <a href="attendance.html" class="block p-3 rounded-xl hover:bg-white/20">◷ حضور و غیاب</a>
+            <a href="homework.html" class="block p-3 rounded-xl hover:bg-white/20">▣ تکالیف</a>
+            <a href="weekly-schedule.html" class="block p-3 rounded-xl hover:bg-white/20">▦ برنامه هفتگی</a>
+            <a href="announcements.html" class="block p-3 rounded-xl hover:bg-white/20">♢ اطلاعیه‌ها</a>
+            <a href="messages.html" class="block p-3 rounded-xl hover:bg-white/20">✉ پیام‌ها</a>
+            <a href="finance.html" class="block bg-white/20 p-3 rounded-xl">💳 امور مالی</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 md:p-10">
+
+        <header class="mb-8">
+            <h2 class="text-3xl font-bold mb-2">امور مالی</h2>
+            <p class="text-gray-500">مدیریت شهریه و مشاهده وضعیت پرداخت‌ها</p>
+        </header>
+
+        <!-- Financial Summary -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+                <p class="text-gray-500 mb-3">شهریه کل سال تحصیلی</p>
+                <h3 class="text-2xl font-bold">۱۸,۰۰۰,۰۰۰ تومان</h3>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+                <p class="text-gray-500 mb-3">مبلغ پرداخت‌شده</p>
+                <h3 class="text-2xl font-bold text-success">۱۲,۰۰۰,۰۰۰ تومان</h3>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+                <p class="text-gray-500 mb-3">مانده قابل پرداخت</p>
+                <h3 class="text-2xl font-bold text-warning">۶,۰۰۰,۰۰۰ تومان</h3>
+            </div>
+
+        </section>
+
+        <!-- Payment Progress -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">وضعیت پرداخت شهریه</h3>
+                <span class="text-success font-bold">۶۷٪ پرداخت شده</span>
+            </div>
+
+            <div class="w-full bg-gray-200 rounded-full h-4">
+                <div class="bg-success h-4 rounded-full" style="width: 67%"></div>
+            </div>
+
+            <p class="text-sm text-gray-500 mt-3">
+                از مجموع شهریه سال تحصیلی، ۱۲ میلیون تومان پرداخت شده است.
+            </p>
+        </section>
+
+        <!-- Payment History -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+            <h3 class="text-xl font-bold mb-5">تاریخچه پرداخت‌ها</h3>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-right">
+                    <thead>
+                        <tr class="border-b text-gray-500">
+                            <th class="p-4">عنوان پرداخت</th>
+                            <th class="p-4">تاریخ</th>
+                            <th class="p-4">مبلغ</th>
+                            <th class="p-4">وضعیت</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4">قسط اول شهریه</td>
+                            <td class="p-4">۱۴۰۵/۰۷/۱۰</td>
+                            <td class="p-4">۵,۰۰۰,۰۰۰ تومان</td>
+                            <td class="p-4 text-success font-bold">پرداخت شده</td>
+                        </tr>
+
+                        <tr class="border-b">
+                            <td class="p-4">قسط دوم شهریه</td>
+                            <td class="p-4">۱۴۰۵/۰۸/۱۵</td>
+                            <td class="p-4">۷,۰۰۰,۰۰۰ تومان</td>
+                            <td class="p-4 text-success font-bold">پرداخت شده</td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-4">قسط سوم شهریه</td>
+                            <td class="p-4">۱۴۰۵/۰۹/۱۵</td>
+                            <td class="p-4">۶,۰۰۰,۰۰۰ تومان</td>
+                            <td class="p-4 text-warning font-bold">در انتظار پرداخت</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Payment Button -->
+        <section class="bg-primary-light p-6 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h3 class="text-lg font-bold mb-2">پرداخت شهریه</h3>
+                <p class="text-gray-600 text-sm">
+                    مبلغ ۶,۰۰۰,۰۰۰ تومان باقی‌مانده است.
+                </p>
+            </div>
+
+            <button class="bg-primary text-white px-8 py-3 rounded-xl hover:opacity-90">
+                پرداخت شهریه
+            </button>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
