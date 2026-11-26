@@ -13,10 +13,10 @@
 
 <body class="min-h-screen bg-background font-vazirmatn text-text">
 
-    <div class="min-h-screen lg:flex lg:flex-row-reverse">
+    <div class="min-h-dvh lg:flex lg:flex-row-reverse lg:items-stretch">
 
         <!-- ==================== SIDEBAR ==================== -->
-        <aside class="hidden w-[250px] shrink-0 flex-col border-l border-[#e9e4ff] bg-white px-3 py-4 lg:flex xl:w-[270px]">
+        <aside class="hidden w-[250px] shrink-0 flex-col border-l border-[#e9e4ff] bg-white px-3 py-4 lg:flex lg:min-h-dvh lg:self-stretch xl:w-[270px] ">
 
             <!-- Logo -->
             <a href="../index.html" class="flex h-12 items-center justify-center border-b border-primary/5 pb-3">
@@ -113,7 +113,7 @@
             </nav>
 
             <!-- School Card -->
-            <article class="mt-5 overflow-hidden rounded-2xl bg-primary-light">
+            <article class="mt-auto overflow-hidden rounded-2xl bg-primary-light">
 
                 <div class="flex h-[125px] items-center justify-center overflow-hidden p-2">
                     <img
@@ -137,9 +137,9 @@
 
 
         <!-- ==================== MAIN ==================== -->
-        <main id="dashboard" class="min-w-0 flex-1 overflow-hidden">
+        <main id="dashboard" class="min-w-0 flex-1">
 
-            <div class="mx-auto flex min-h-screen max-w-[1800px] flex-col gap-3 p-3 sm:gap-4 sm:p-5 xl:p-6">
+            <div class="mx-auto flex min-h-dvh max-w-[1800px] flex-col gap-3 p-3 pb-3 sm:gap-4 sm:p-5 sm:pb-3 xl:p-6 xl:pb-3">
 
                 <!-- ==================== HEADER ==================== -->
                 <header class="relative grid min-h-[145px] grid-cols-1 overflow-hidden rounded-2xl px-4 py-3 sm:min-h-[165px] sm:px-6 lg:min-h-[185px] lg:grid-cols-2">
@@ -185,8 +185,8 @@
                                 </div>
 
                                 <div class="hidden text-right sm:block">
-                                    <p class="text-[11px] font-bold">مدیر مدرسه</p>
-                                    <p class="mt-1 text-[9px] text-gray-500">مدیر سیستم</p>
+                                    <p class="text-sm font-extrabold">مدیر مدرسه</p>
+                                    <p class="mt-1 text-xs text-gray-500">مدیر سیستم</p>
                                 </div>
 
                                 <svg viewBox="0 0 24 24" fill="none" class="size-3 text-gray-500" aria-hidden="true">
@@ -209,7 +209,7 @@
 
 
                             <!-- Search -->
-                            <form role="search" class="hidden min-w-0 flex-1 sm:block">
+                            <form role="search" class="min-w-0 flex-1">
                                 <label for="search" class="sr-only">جستجو در سامانه</label>
 
                                 <div class="flex h-10 max-w-[220px] items-center gap-2 rounded-full border border-white/70 bg-white/65 px-3 text-gray-400 backdrop-blur-sm">
@@ -217,7 +217,7 @@
                                         id="search"
                                         type="search"
                                         placeholder="جستجو در سامانه..."
-                                        class="min-w-0 flex-1 bg-transparent text-[10px] outline-none placeholder:text-gray-400"
+                                        class="min-w-0 flex-1 bg-transparent text-[9px] xs:text-xs font-medium outline-none placeholder:text-gray-400"
                                     >
                                     <svg viewBox="0 0 24 24" fill="none" class="size-4 shrink-0" aria-hidden="true">
                                         <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
@@ -236,7 +236,7 @@
                                 </h1>
                             </div>
 
-                            <p class="mt-2 text-[10px] text-[#5e548e] sm:text-xs">
+                            <p class="mt-2 text-[10px] font-medium text-[#5e548e] sm:text-xs">
                                 به پنل مدیریت مدرسه خوش آمدید
                             </p>
                         </div>
@@ -259,9 +259,9 @@
                         </div>
 
                         <div class="min-w-0">
-                            <p class="truncate text-[9px] text-gray-500 sm:text-[11px]">آخرین معدل</p>
+                            <p class="truncate text-xs lg:text-sm font-semibold text-gray-500">آخرین معدل</p>
                             <p class="mt-1 text-base font-black text-blue-600 sm:text-xl">۱۹.۵</p>
-                            <p class="mt-0.5 text-[9px] text-success">▲ ۲٪</p>
+                            <p class="mt-0.5 text-xs lg:text-sm font-semibold text-success">▲ ۲٪</p>
                         </div>
 
                     </article>
@@ -277,9 +277,9 @@
                         </div>
 
                         <div class="min-w-0">
-                            <p class="truncate text-[9px] text-gray-500 sm:text-[11px]">تعداد تکالیف</p>
+                            <p class="truncate font-semibold text-xs lg:text-sm text-gray-500">تعداد تکالیف</p>
                             <p class="mt-1 text-base font-black text-text sm:text-xl">۳</p>
-                            <p class="mt-0.5 text-[9px] text-orange-500">● باقی‌مانده</p>
+                            <p class="mt-0.5 text-xs lg:text-sm font-semibold text-orange-500">● باقی‌مانده</p>
                         </div>
 
                     </article>
@@ -295,9 +295,9 @@
                         </div>
 
                         <div class="min-w-0">
-                            <p class="truncate text-[9px] text-gray-500 sm:text-[11px]">تعداد معلمان</p>
+                            <p class="truncate text-xs lg:text-sm font-semibold text-gray-500 ">تعداد معلمان</p>
                             <p class="mt-1 text-base font-black text-text sm:text-xl">۶۸</p>
-                            <p class="mt-0.5 text-[9px] text-success">▲ ۴٪</p>
+                            <p class="mt-0.5 text-xs lg:text-sm font-semibold text-success">▲ ۴٪</p>
                         </div>
 
                     </article>
@@ -306,16 +306,15 @@
                     <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#ece7ff] bg-[#f3f6ff] p-3 shadow-sm sm:gap-3 sm:p-4">
 
                         <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-500 sm:size-11">
-                            <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6" aria-hidden="true">
-                                <path d="M12 3 2.5 8 12 13l9.5-5L12 3Z" fill="currentColor" opacity=".2"/>
-                                <path d="M4 10v5c4 3 12 3 16 0v-5M21.5 8v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="size-5 sm:size-6 fill-blue-500">
+                                <use href="#students"></use>
                             </svg>
                         </div>
 
                         <div class="min-w-0">
-                            <p class="truncate text-[9px] text-gray-500 sm:text-[11px]">تعداد دانش‌آموزان</p>
+                            <p class="truncate text-xs lg:text-sm font-semibold text-gray-500">تعداد دانش‌آموزان</p>
                             <p class="mt-1 text-base font-black text-text sm:text-xl">۱,۲۸۴</p>
-                            <p class="mt-0.5 text-[9px] text-success">▲ ۸٪</p>
+                            <p class="mt-0.5 text-xs lg:text-sm font-semibold text-success">▲ ۸٪</p>
                         </div>
 
                     </article>
@@ -343,7 +342,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" class="size-5 text-primary sm:size-6" aria-hidden="true">
                                     <path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20M10 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM18 8a3 3 0 0 1 0 5.5M20 20v-1.5a3.5 3.5 0 0 0-2.5-3.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
                                 </svg>
-                                <span class="text-[9px] leading-4 text-text sm:text-[10px]">مدیریت دانش‌آموزان</span>
+                                <span class="text-[9px] leading-4 text-text font-semibold sm:text-xs">مدیریت دانش‌آموزان</span>
                             </a>
 
                             <!-- Books -->
@@ -352,7 +351,7 @@
                                     <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22V5.5ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22V5.5Z" fill="currentColor" opacity=".2"/>
                                     <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22V5.5ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22V5.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
                                 </svg>
-                                <span class="text-[9px] leading-4 text-text sm:text-[10px]">مدیریت محتوای آموزشی</span>
+                                <span class="text-[9px] leading-4 text-text font-semibold sm:text-xs">مدیریت محتوای آموزشی</span>
                             </a>
 
                             <!-- Reports -->
@@ -361,7 +360,7 @@
                                     <path d="M4 19h4V9H4v10ZM10 19h4V4h-4v15ZM16 19h4v-7h-4v7Z" fill="currentColor" opacity=".2"/>
                                     <path d="M4 19h4V9H4v10ZM10 19h4V4h-4v15ZM16 19h4v-7h-4v7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
                                 </svg>
-                                <span class="text-[9px] leading-4 text-text sm:text-[10px]">گزارش‌گیری</span>
+                                <span class="text-[9px] leading-4 text-text font-semibold sm:text-xs">گزارش‌گیری</span>
                             </a>
 
                             <!-- Send -->
@@ -370,7 +369,7 @@
                                     <path d="m21 3-7.5 18-3.5-7L3 10.5 21 3Z" fill="currentColor" opacity=".2"/>
                                     <path d="m21 3-7.5 18-3.5-7L3 10.5 21 3ZM10 14l11-11" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
                                 </svg>
-                                <span class="text-[9px] leading-4 text-text sm:text-[10px]">ارسال پیام</span>
+                                <span class="text-[9px] leading-4 text-text font-semibold sm:text-xs">ارسال پیام</span>
                             </a>
 
                         </div>
@@ -444,11 +443,11 @@
 
                         <!-- Chart Legend -->
                         <div class="mb-2 flex items-center justify-center gap-4 text-[9px] text-gray-500">
-                            <span class="flex items-center gap-1.5">
+                            <span class="flex font-medium text-xs items-center gap-1.5">
                                 <span class="size-2 rounded-full bg-primary"></span>
                                 حضور
                             </span>
-                            <span class="flex items-center gap-1.5">
+                            <span class="flex font-medium text-xs items-center gap-1.5">
                                 <span class="size-2 rounded-full bg-[#b9a4ff]"></span>
                                 غیبت
                             </span>
@@ -504,19 +503,132 @@
                                     stroke-linejoin="round"
                                 />
 
-                                <!-- Attendance Points -->
+                                <!-- Attendance Points + Tooltips -->
                                 <g fill="#7952ed">
-                                    <circle cx="60" cy="95" r="4"/>
-                                    <circle cx="120" cy="82" r="4"/>
-                                    <circle cx="180" cy="76" r="4"/>
-                                    <circle cx="240" cy="70" r="4"/>
-                                    <circle cx="300" cy="64" r="4"/>
-                                    <circle cx="360" cy="61" r="4"/>
-                                    <circle cx="395" cy="60" r="4"/>
-                                </g>
 
+                                    <!-- Saturday -->
+                                    <g class="group cursor-pointer">
+                                        <circle cx="60" cy="95" r="12" fill="transparent"/>
+                                        <circle cx="60" cy="95" r="4" class="transition-all duration-200 group-hover:r-6"/>
+
+                                        <foreignObject
+                                            x="35"
+                                            y="105"
+                                            width="110"
+                                            height="65"
+                                            class="pointer-events-none overflow-visible opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                        >
+                                            <div class="flex flex-col rounded-lg border border-[#ece7ff] bg-white px-2.5 py-2 text-[10px] shadow-lg">
+                                                <span class="mb-1 font-bold text-[#25243A]">شنبه</span>
+                                                <span class="text-[#7952ed]">حضور: ۸۵۰</span>
+                                                <span class="text-[#b9a4ff]">غیبت: ۱۵۰</span>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+
+                                    <!-- Sunday -->
+                                    <g class="group cursor-pointer">
+                                        <circle cx="120" cy="82" r="12" fill="transparent"/>
+                                        <circle cx="120" cy="82" r="4" class="transition-all duration-200 group-hover:r-6"/>
+
+                                        <foreignObject
+                                            x="95"
+                                            y="92"
+                                            width="110"
+                                            height="65"
+                                            class="pointer-events-none overflow-visible opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                        >
+                                            <div class="flex flex-col rounded-lg border border-[#ece7ff] bg-white px-2.5 py-2 text-[10px] shadow-lg">
+                                                <span class="mb-1 font-bold text-[#25243A]">یکشنبه</span>
+                                                <span class="text-[#7952ed]">حضور: ۹۰۰</span>
+                                                <span class="text-[#b9a4ff]">غیبت: ۱۰۰</span>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+
+                                    <!-- Monday -->
+                                    <g class="group cursor-pointer">
+                                        <circle cx="180" cy="76" r="12" fill="transparent"/>
+                                        <circle cx="180" cy="76" r="4" class="transition-all duration-200 group-hover:r-6"/>
+
+                                        <foreignObject
+                                            x="155"
+                                            y="86"
+                                            width="110"
+                                            height="65"
+                                            class="pointer-events-none overflow-visible opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                        >
+                                            <div class="flex flex-col rounded-lg border border-[#ece7ff] bg-white px-2.5 py-2 text-[10px] shadow-lg">
+                                                <span class="mb-1 font-bold text-[#25243A]">دوشنبه</span>
+                                                <span class="text-[#7952ed]">حضور: ۹۲۰</span>
+                                                <span class="text-[#b9a4ff]">غیبت: ۸۰</span>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+
+                                    <!-- Tuesday -->
+                                    <g class="group cursor-pointer">
+                                        <circle cx="240" cy="70" r="12" fill="transparent"/>
+                                        <circle cx="240" cy="70" r="4" class="transition-all duration-200 group-hover:r-6"/>
+
+                                        <foreignObject
+                                            x="215"
+                                            y="80"
+                                            width="110"
+                                            height="65"
+                                            class="pointer-events-none overflow-visible opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                        >
+                                            <div class="flex flex-col rounded-lg border border-[#ece7ff] bg-white px-2.5 py-2 text-[10px] shadow-lg">
+                                                <span class="mb-1 font-bold text-[#25243A]">سه‌شنبه</span>
+                                                <span class="text-[#7952ed]">حضور: ۹۴۰</span>
+                                                <span class="text-[#b9a4ff]">غیبت: ۶۰</span>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+
+                                    <!-- Wednesday -->
+                                    <g class="group cursor-pointer">
+                                        <circle cx="300" cy="64" r="12" fill="transparent"/>
+                                        <circle cx="300" cy="64" r="4" class="transition-all duration-200 group-hover:r-6"/>
+
+                                        <foreignObject
+                                            x="275"
+                                            y="74"
+                                            width="110"
+                                            height="65"
+                                            class="pointer-events-none overflow-visible opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                        >
+                                            <div class="flex flex-col rounded-lg border border-[#ece7ff] bg-white px-2.5 py-2 text-[10px] shadow-lg">
+                                                <span class="mb-1 font-bold text-[#25243A]">چهارشنبه</span>
+                                                <span class="text-[#7952ed]">حضور: ۹۷۰</span>
+                                                <span class="text-[#b9a4ff]">غیبت: ۳۰</span>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+
+                                    <!-- Thursday -->
+                                    <g class="group cursor-pointer">
+                                        <circle cx="360" cy="61" r="12" fill="transparent"/>
+                                        <circle cx="360" cy="61" r="4" class="transition-all duration-200 group-hover:r-6"/>
+
+                                        <foreignObject
+                                            x="285"
+                                            y="71"
+                                            width="110"
+                                            height="65"
+                                            class="pointer-events-none overflow-visible opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                        >
+                                            <div class="flex flex-col rounded-lg border border-[#ece7ff] bg-white px-2.5 py-2 text-[10px] shadow-lg">
+                                                <span class="mb-1 font-bold text-[#25243A]">پنجشنبه</span>
+                                                <span class="text-[#7952ed]">حضور: ۹۸۰</span>
+                                                <span class="text-[#b9a4ff]">غیبت: ۲۰</span>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+
+                                </g>
                                 <!-- X Labels -->
-                                <g fill="#8d86a8" font-size="10" font-family="Vazirmatn, sans-serif">
+                                <g fill="#8d86a8" font-size="10" font-weight="500" font-family="Vazirmatn, sans-serif">
                                     <text x="60" y="205" text-anchor="middle">شنبه</text>
                                     <text x="120" y="205" text-anchor="middle">یکشنبه</text>
                                     <text x="180" y="205" text-anchor="middle">دوشنبه</text>
@@ -626,210 +738,214 @@
 
 
                 <!-- ==================== FOOTER ==================== -->
-                <footer class="mt-auto py-3 text-center text-[9px] text-gray-400 sm:text-[10px]">
-                    SMART — سامانه هوشمند مدیریت مدرسه
+                <footer id="contact" class="mx-auto mt-auto flex w-[92%] items-center justify-center gap-2.5 py-7 text-center text-[11px] text-[#7753db] sm:gap-4 sm:py-9 sm:text-sm">
+                    <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+                    <p class="m-0">
+                    آینده‌ای روشن‌تر برای آموزش با <strong class="text-[#7046f5">SMART</strong>
+                    <span class="text-lg">♡</span>
+                    </p>
+                    <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
                 </footer>
 
             </div>
 
-<!-- Mobile Bottom Navigation -->
-<nav
-    aria-label="منوی موبایل"
-    class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E9E4FF] bg-white/95 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(65,45,130,0.08)] backdrop-blur-lg lg:hidden"
->
-    <ul class="mx-auto grid max-w-lg grid-cols-5 gap-1 py-2">
-
-        <!-- Dashboard -->
-        <li>
-            <a
-                href="#dashboard"
-                aria-current="page"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl bg-primary-light py-2 text-primary"
+            <!-- Mobile Bottom Navigation -->
+            <nav
+                aria-label="منوی موبایل"
+                class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E9E4FF] bg-white/95 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(65,45,130,0.08)] backdrop-blur-lg lg:hidden"
             >
-                <svg class="size-4">
-                    <use href="#dashbord"></use>
+                <ul class="mx-auto grid max-w-lg grid-cols-5 gap-1 py-2">
+
+                    <!-- Dashboard -->
+                    <li>
+                        <a
+                            href="#dashboard"
+                            aria-current="page"
+                            class="flex flex-col items-center justify-center gap-1 rounded-xl bg-primary-light py-2 text-primary"
+                        >
+                            <svg class="size-4">
+                                <use href="#dashbord"></use>
+                            </svg>
+                            <span class="text-[9px] font-bold">داشبورد</span>
+                        </a>
+                    </li>
+
+                    <!-- Students -->
+                    <li>
+                        <a
+                            href="#students"
+                            class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary"
+                        >
+                            <svg class="size-4 fill-gray-500">
+                                <use href="#students"></use>
+                            </svg>
+                            <span class="text-[9px]">دانش‌آموزان</span>
+                        </a>
+                    </li>
+
+                    <!-- Teachers -->
+                    <li>
+                        <a
+                            href="#teachers"
+                            class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary"
+                        >
+                            <svg class="size-4">
+                                <use href="#teachers"></use>
+                            </svg>
+                            <span class="text-[9px]">معلمان</span>
+                        </a>
+                    </li>
+
+                    <!-- Classes -->
+                    <li>
+                        <a
+                            href="#classes"
+                            class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary"
+                        >
+                            <svg class="size-4">
+                                <use href="#calendar"></use>
+                            </svg>
+                            <span class="text-[9px]">کلاس‌ها</span>
+                        </a>
+                    </li>
+
+            <li class="relative flex-1 min-w-0">
+            <details class="group">
+
+                <!-- More button -->
+                <summary
+                class="flex cursor-pointer list-none flex-col items-center justify-center gap-1.5 rounded-xl py-2 text-[#77738B] transition-colors hover:bg-[#F5F2FF] hover:text-[#6D52CF] [&::-webkit-details-marker]:hidden"
+                >
+                <svg
+                    class="h-5 w-5 shrink-0 transition-transform duration-200 group-open:rotate-180"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <circle cx="5" cy="12" r="1" />
+                    <circle cx="12" cy="12" r="1" />
+                    <circle cx="19" cy="12" r="1" />
                 </svg>
-                <span class="text-[9px] font-bold">داشبورد</span>
-            </a>
-        </li>
 
-        <!-- Students -->
-        <li>
-            <a
-                href="#students"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary"
-            >
-                <svg class="size-4 fill-gray-500">
-                    <use href="#students"></use>
-                </svg>
-                <span class="text-[9px]">دانش‌آموزان</span>
-            </a>
-        </li>
+                <span class="max-w-full truncate text-[10px] sm:text-xs">
+                    بیشتر
+                </span>
+                </summary>
 
-        <!-- Teachers -->
-        <li>
-            <a
-                href="#teachers"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary"
-            >
-                <svg class="size-4">
-                    <use href="#teachers"></use>
-                </svg>
-                <span class="text-[9px]">معلمان</span>
-            </a>
-        </li>
+                <!-- More menu -->
+                <div
+                class="fixed inset-x-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-[60] mx-auto w-auto max-w-[360px] max-h-[min(70dvh,480px)] overflow-y-auto overscroll-contain rounded-2xl border border-[#E9E4FF] bg-white p-3 shadow-[0_12px_40px_rgba(65,45,130,0.16)] sm:inset-x-4 sm:max-w-[400px]"
+                >
 
-        <!-- Classes -->
-        <li>
-            <a
-                href="#classes"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary"
-            >
-                <svg class="size-4">
-                    <use href="#calendar"></use>
-                </svg>
-                <span class="text-[9px]">کلاس‌ها</span>
-            </a>
-        </li>
+                <!-- Menu header -->
+                <div class="mb-3 flex items-center justify-between gap-2 border-b border-[#F0ECFA] pb-3">
+                    <span class="text-sm font-bold text-[#25243A]">
+                    دسترسی‌های بیشتر
+                    </span>
 
-<li class="relative flex-1 min-w-0">
-  <details class="group">
+                    <span class="rounded-lg bg-[#F3EFFF] px-2 py-1 text-[10px] text-[#6D52CF] sm:text-xs">
+                    ۴ بخش
+                    </span>
+                </div>
 
-    <!-- More button -->
-    <summary
-      class="flex cursor-pointer list-none flex-col items-center justify-center gap-1.5 rounded-xl py-2 text-[#77738B] transition-colors hover:bg-[#F5F2FF] hover:text-[#6D52CF] [&::-webkit-details-marker]:hidden"
-    >
-      <svg
-        class="h-5 w-5 shrink-0 transition-transform duration-200 group-open:rotate-180"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <circle cx="5" cy="12" r="1" />
-        <circle cx="12" cy="12" r="1" />
-        <circle cx="19" cy="12" r="1" />
-      </svg>
+                <!-- Menu items -->
+                <div class="grid grid-cols-2 gap-2 sm:gap-3">
 
-      <span class="max-w-full truncate text-[10px] sm:text-xs">
-        بیشتر
-      </span>
-    </summary>
+                    <!-- Attendance -->
+                    <a
+                    href="#attendance"
+                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
+                    >
+                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EDE7FF] text-[#6D52CF] sm:h-10 sm:w-10">
+                            <svg class="size-4">
+                                <use href="#calendar"></use>
+                            </svg>
+                    </span>
 
-    <!-- More menu -->
-    <div
-      class="fixed inset-x-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-[60] mx-auto w-auto max-w-[360px] max-h-[min(70dvh,480px)] overflow-y-auto overscroll-contain rounded-2xl border border-[#E9E4FF] bg-white p-3 shadow-[0_12px_40px_rgba(65,45,130,0.16)] sm:inset-x-4 sm:max-w-[400px]"
-    >
+                    <span class="min-w-0 flex-1">
+                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                        حضور و غیاب
+                        </span>
+                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                        وضعیت حضور دانش‌آموزان
+                        </span>
+                    </span>
+                    </a>
 
-      <!-- Menu header -->
-      <div class="mb-3 flex items-center justify-between gap-2 border-b border-[#F0ECFA] pb-3">
-        <span class="text-sm font-bold text-[#25243A]">
-          دسترسی‌های بیشتر
-        </span>
+                    <!-- Grades -->
+                    <a
+                    href="#grades"
+                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
+                    >
+                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E5F4FF] text-[#5798D7] sm:h-10 sm:w-10">
+                            <svg class="size-4">
+                                <use href="#score"></use>
+                            </svg>
+                    </span>
 
-        <span class="rounded-lg bg-[#F3EFFF] px-2 py-1 text-[10px] text-[#6D52CF] sm:text-xs">
-          ۴ بخش
-        </span>
-      </div>
+                    <span class="min-w-0 flex-1">
+                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                        نمرات و کارنامه
+                        </span>
+                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                        نتایج و عملکرد تحصیلی
+                        </span>
+                    </span>
+                    </a>
 
-      <!-- Menu items -->
-      <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                    <!-- Reports -->
+                    <a
+                    href="#reports"
+                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
+                    >
+                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E3F8EE] text-[#35B985] sm:h-10 sm:w-10">
+                            <svg class="size-4">
+                                <use href="#newspaper"></use>
+                            </svg>
+                    </span>
 
-        <!-- Attendance -->
-        <a
-          href="#attendance"
-          class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
-        >
-          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EDE7FF] text-[#6D52CF] sm:h-10 sm:w-10">
-                <svg class="size-4">
-                    <use href="#calendar"></use>
-                </svg>
-          </span>
+                    <span class="min-w-0 flex-1">
+                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                        گزارش‌ها
+                        </span>
+                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                        گزارش‌های تحلیلی
+                        </span>
+                    </span>
+                    </a>
 
-          <span class="min-w-0 flex-1">
-            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
-              حضور و غیاب
-            </span>
-            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
-              وضعیت حضور دانش‌آموزان
-            </span>
-          </span>
-        </a>
+                    <!-- Settings -->
+                    <a
+                    href="#settings"
+                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
+                    >
+                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF0E5] text-[#F49A52] sm:h-10 sm:w-10">
+                            <svg class="size-4">
+                                <use href="#setting"></use>
+                            </svg>
+                    </span>
 
-        <!-- Grades -->
-        <a
-          href="#grades"
-          class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
-        >
-          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E5F4FF] text-[#5798D7] sm:h-10 sm:w-10">
-                <svg class="size-4">
-                    <use href="#score"></use>
-                </svg>
-          </span>
+                    <span class="min-w-0 flex-1">
+                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                        تنظیمات
+                        </span>
+                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                        تنظیمات پنل
+                        </span>
+                    </span>
+                    </a>
 
-          <span class="min-w-0 flex-1">
-            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
-              نمرات و کارنامه
-            </span>
-            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
-              نتایج و عملکرد تحصیلی
-            </span>
-          </span>
-        </a>
+                </div>
+                </div>
+            </details>
+            </li>
 
-        <!-- Reports -->
-        <a
-          href="#reports"
-          class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
-        >
-          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E3F8EE] text-[#35B985] sm:h-10 sm:w-10">
-                <svg class="size-4">
-                    <use href="#newspaper"></use>
-                </svg>
-          </span>
+                </ul>
+            </nav>
 
-          <span class="min-w-0 flex-1">
-            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
-              گزارش‌ها
-            </span>
-            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
-              گزارش‌های تحلیلی
-            </span>
-          </span>
-        </a>
-
-        <!-- Settings -->
-        <a
-          href="#settings"
-          class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3"
-        >
-          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF0E5] text-[#F49A52] sm:h-10 sm:w-10">
-                <svg class="size-4">
-                    <use href="#setting"></use>
-                </svg>
-          </span>
-
-          <span class="min-w-0 flex-1">
-            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
-              تنظیمات
-            </span>
-            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
-              تنظیمات پنل
-            </span>
-          </span>
-        </a>
-
-      </div>
-    </div>
-  </details>
-</li>
-
-    </ul>
-</nav>
-
-        
         </main>
 
     </div>
