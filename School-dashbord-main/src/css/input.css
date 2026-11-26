@@ -1,0 +1,42 @@
+body {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  background: #F7F4FF;
+  color: #25243A;
+  font-size: 16px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .65rem .9rem;
+  border-radius: .9rem;
+  color: #6b6a85;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.side-link.active {
+  background: #F1EDFF;
+  color: #6D52CF;
+  font-weight: 600;
+}
+
+/* متن‌های کوچک */
+.text-xs,
+.text-\[11px\],
+.text-\[10px\] {
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+/* متن‌های معمولی */
+.text-sm {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* عنوان‌ها */
+h1, b {
+  font-weight: 600;
+}
