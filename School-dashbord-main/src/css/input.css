@@ -1,43 +1,42 @@
-@import "tailwindcss";
-  font-display: swap;
+body {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  background: #F7F4FF;
+  color: #25243A;
+  font-size: 16px;
 }
 
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/assets/fonts/vazirmatn/Vazirmatn-Medium.ttf") format("truetype");
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .65rem .9rem;
+  border-radius: .9rem;
+  color: #6b6a85;
+  font-size: 14px;
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
 }
 
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/assets/fonts/vazirmatn/Vazirmatn-SemiBold.ttf") format("truetype");
+.side-link.active {
+  background: #F1EDFF;
+  color: #6D52CF;
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
 }
 
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/assets/fonts/vazirmatn/Vazirmatn-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+/* متن‌های کوچک */
+.text-xs,
+.text-\[11px\],
+.text-\[10px\] {
+  font-size: 14px !important;
+  font-weight: 500;
 }
 
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/assets/fonts/vazirmatn/Vazirmatn-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
+/* متن‌های معمولی */
+.text-sm {
+  font-size: 16px;
+  font-weight: 500;
 }
 
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/assets/fonts/vazirmatn/Vazirmatn-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+/* عنوان‌ها */
+h1, b {
+  font-weight: 600;
 }
