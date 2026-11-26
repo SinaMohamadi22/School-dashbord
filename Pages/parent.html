@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>پنل والدین | مدرسه</title>
     <link rel="stylesheet" href="../src/css/output.css">
+    <link rel="stylesheet" href="../assets/mobile-nav.css">
 </head>
 
 <body class="bg-background text-text">
@@ -259,7 +260,48 @@
             </div>
 
         </section>
-
+<nav class="mobile-nav" aria-label="منوی موبایل">
+    <ul>
+        <li>
+            <a href="#dashboard" aria-current="page">
+                <svg><use href="#dashbord"></use></svg>
+                <span>داشبورد</span>
+            </a>
+        </li>
+        <li>
+            <a href="#students">
+                <svg><use href="#students"></use></svg>
+                <span>دانش‌آموزان</span>
+            </a>
+        </li>
+        <li>
+            <a href="#teachers">
+                <svg><use href="#teachers"></use></svg>
+                <span>معلمان</span>
+            </a>
+        </li>
+        <li>
+            <a href="#classes">
+                <svg><use href="#calendar"></use></svg>
+                <span>کلاس‌ها</span>
+            </a>
+        </li>
+        <li>
+            <details>
+                <summary>
+                    <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+                    <span>بیشتر</span>
+                </summary>
+                <div class="more-menu">
+                    <a href="#attendance"><svg><use href="#calendar"></use></svg><span>حضور و غیاب</span></a>
+                    <a href="#grades"><svg><use href="#score"></use></svg><span>نمرات و کارنامه</span></a>
+                    <a href="#reports"><svg><use href="#newspaper"></use></svg><span>گزارش‌ها</span></a>
+                    <a href="#settings"><svg><use href="#setting"></use></svg><span>تنظیمات</span></a>
+                </div>
+            </details>
+        </li>
+    </ul>
+</nav>
     </main>
 </div>
 
