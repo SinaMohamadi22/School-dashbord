@@ -1,11 +1,16 @@
 {
-  "name": "school-dashbord",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build:css": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "tailwindcss": "^4.3.5"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
-  }
+    "vite": "^8.3.8"
+  },
+  "type": "module",
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
 }
+}
+
