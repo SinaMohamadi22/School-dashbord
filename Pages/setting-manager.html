@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تنظیمات پنل مدیریت مدرسه SMART">
+    <meta name="theme-color" content="#f7f4ff">
+
+    <title>تنظیمات | پنل مدیریت SMART</title>
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+
+    <link rel="stylesheet" href="/src/css/input.css">
+</head>
+
+<body class="bg-background font-vazirmatn text-text">
+
+<!-- SVG Icons -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="dashboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="8" rx="2"/>
+        <rect x="14" y="3" width="7" height="5" rx="2"/>
+        <rect x="14" y="12" width="7" height="9" rx="2"/>
+        <rect x="3" y="15" width="7" height="6" rx="2"/>
+    </symbol>
+
+    <symbol id="students" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="8" r="4"/>
+        <path d="M3 21v-2a6 6 0 0 1 6-6h2"/>
+        <path d="M16 17h5"/>
+        <path d="M18.5 14.5v5"/>
+    </symbol>
+
+    <symbol id="teachers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="8" r="4"/>
+        <path d="M3 21v-2a6 6 0 0 1 12 0v2"/>
+        <path d="M16 4.5a4 4 0 0 1 0 7"/>
+        <path d="M19 15a5 5 0 0 1 2 4v2"/>
+    </symbol>
+
+    <symbol id="classes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 5.5 12 2l9 3.5-9 3.5-9-3.5Z"/>
+        <path d="M5 10v6l7 3 7-3v-6"/>
+        <path d="M21 6v7"/>
+    </symbol>
+
+    <symbol id="more" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="5" cy="12" r="1"/>
+        <circle cx="12" cy="12" r="1"/>
+        <circle cx="19" cy="12" r="1"/>
+    </symbol>
+
+    <symbol id="attendance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="17" rx="3"/>
+        <path d="M8 2v4M16 2v4M3 9h18"/>
+        <path d="m8 14 2 2 5-5"/>
+    </symbol>
+
+    <symbol id="grades" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5Z"/>
+        <path d="M8 7h8M8 11h8M8 15h5"/>
+    </symbol>
+
+    <symbol id="reports" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19V5M4 19h17"/>
+        <path d="M8 16v-5M12 16V7M16 16v-8M20 16v-4"/>
+    </symbol>
+
+        <symbol id="settings" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </symbol>
+
+    <symbol id="user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+    </symbol>
+
+    <symbol id="school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m3 10 9-7 9 7"/>
+        <path d="M5 9v12h14V9M9 21v-6h6v6"/>
+        <path d="M3 21h18"/>
+    </symbol>
+
+    <symbol id="bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+        <path d="M10 21h4"/>
+    </symbol>
+
+    <symbol id="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="10" width="16" height="11" rx="2"/>
+        <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+        <circle cx="12" cy="15" r="1"/>
+    </symbol>
+
+    <symbol id="calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="17" rx="3"/>
+        <path d="M8 2v4M16 2v4M3 9h18"/>
+    </symbol>
+
+    <symbol id="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"/>
+    </symbol>
+
+    <symbol id="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m5 12 4 4L19 6"/>
+    </symbol>
+
+    <symbol id="mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="3"/>
+        <path d="m3 7 9 6 9-6"/>
+    </symbol>
+
+    <symbol id="phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 3H5a2 2 0 0 0-2 2c0 9 7 16 16 16a2 2 0 0 0 2-2v-2l-5-2-2 3a14 14 0 0 1-6-6l3-2-2-5Z"/>
+    </symbol>
+
+    <symbol id="edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 5 4 4M4 20l4.5-1 11-11a2.8 2.8 0 0 0-4-4l-11 11L4 20Z"/>
+    </symbol>
+</svg>
+
+<div class="min-h-dvh lg:flex lg:flex-row-reverse lg:items-stretch">
+
+    <!-- Desktop Sidebar -->
+    <aside class="hidden lg:flex lg:w-[250px] xl:w-[270px] shrink-0 flex-col border-l border-[#E9E4FF] bg-white px-5 py-6">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 mb-9">
+            <div class="flex size-11 items-center justify-center rounded-2xl bg-primary text-white font-bold text-xl">
+                S
+            </div>
+
+            <div>
+                <h1 class="text-xl font-extrabold text-primary">SMART</h1>
+                <p class="text-[11px] text-gray-400">مدیریت هوشمند مدرسه</p>
+            </div>
+        </a>
+
+        <p class="mb-3 px-3 text-xs font-medium text-gray-400">منوی اصلی</p>
+
+        <nav class="flex flex-col gap-1.5">
+
+            <a href="/index.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#dashboard"/></svg>
+                <span>داشبورد</span>
+            </a>
+
+            <a href="/pages/students-control.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#students"/></svg>
+                <span>دانش‌آموزان</span>
+            </a>
+
+            <a href="/pages/teachers-control.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#teachers"/></svg>
+                <span>معلمان</span>
+            </a>
+
+            <a href="/pages/classes.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#classes"/></svg>
+                <span>کلاس‌ها</span>
+            </a>
+
+            <a href="/pages/attendance-control.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#attendance"/></svg>
+                <span>حضور و غیاب</span>
+            </a>
+
+            <a href="grades.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#grades"/></svg>
+                <span>نمرات</span>
+            </a>
+
+            <a href="reports.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                <svg class="size-5"><use href="#reports"/></svg>
+                <span>گزارش‌ها</span>
+            </a>
+
+            <!-- Active Settings -->
+            <a href="/pages/setting-manager.html" aria-current="page" class="flex items-center gap-3 rounded-xl bg-primary-light px-3 py-3 text-sm font-semibold text-primary">
+                <svg class="size-5"><use href="#settings"/></svg>
+                <span>تنظیمات</span>
+            </a>
+        </nav>
+
+        <!-- Sidebar School Card -->
+        <div class="mt-auto pt-7">
+            <div class="overflow-hidden rounded-2xl bg-primary-light p-3">
+                <img
+                    src="/assets/images/school-sidebar.webp"
+                    alt="مدرسه"
+                    class="mb-3 h-28 w-full rounded-xl object-cover"
+                >
+
+                <p class="text-sm font-bold text-text">مدرسه هوشمند مهر</p>
+                <p class="mt-1 text-xs text-gray-500">پنل مدیریت مدرسه</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="min-w-0 flex-1">
+
+        <div class="mx-auto w-full max-w-[1500px] px-4 pt-5 sm:px-6 lg:px-8 lg:pt-8">
+
+            <!-- Header -->
+            <header class="mb-6 flex items-center justify-between gap-3 sm:mb-8">
+
+                <div>
+                    <h2 class="text-xl font-bold sm:text-2xl">تنظیمات</h2>
+                    <p class="mt-1 text-xs text-gray-400 sm:text-sm">
+                        مدیریت مشخصات و تنظیمات مدرسه
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <button class="flex size-10 items-center justify-center rounded-xl border border-[#E9E4FF] bg-white text-gray-500 transition hover:bg-primary-light hover:text-primary sm:size-11">
+                        <svg class="size-5"><use href="#bell"/></svg>
+                    </button>
+
+                    <div class="flex items-center gap-2 rounded-xl bg-white p-1.5 sm:gap-3 sm:p-2">
+                        <img
+                            src="/assets/images/avatar-school-panel.webp"
+                            alt="مدیر مدرسه"
+                            class="size-9 rounded-full object-cover sm:size-10"
+                        >
+
+                        <div class="hidden sm:block">
+                            <p class="text-xs font-semibold">مدیر مدرسه</p>
+                            <p class="mt-1 text-[10px] text-gray-400">مدیر سیستم</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Banner -->
+            <section class="relative mb-6 overflow-hidden rounded-3xl bg-primary px-5 py-6 text-white sm:mb-8 sm:px-8 sm:py-8">
+
+                <div class="relative z-10 max-w-lg">
+                    <span class="mb-3 inline-flex rounded-full bg-white/15 px-3 py-1 text-xs">
+                        بخش مدیریت سیستم
+                    </span>
+
+                    <h1 class="text-xl font-bold sm:text-2xl">
+                        تنظیمات پنل مدرسه
+                    </h1>
+
+                    <p class="mt-2 max-w-md text-xs leading-7 text-white/75 sm:text-sm">
+                        از این بخش می‌توانید اطلاعات مدرسه، تنظیمات آموزشی،
+                        اعلان‌ها و امنیت حساب خود را مدیریت کنید.
+                    </p>
+                </div>
+
+                <div class="absolute -left-10 -top-14 size-44 rounded-full bg-white/5"></div>
+                <div class="absolute -left-3 -bottom-24 size-48 rounded-full bg-white/5"></div>
+            </section>
+
+            <!-- Settings Layout -->
+            <div class="grid grid-cols-1 gap-5 xl:grid-cols-[240px_minmax(0,1fr)]">
+
+                <!-- Settings Menu -->
+                <aside class="h-fit rounded-2xl border border-[#E9E4FF] bg-white p-3 sm:p-4">
+
+                    <p class="mb-3 px-3 text-xs font-semibold text-gray-400">
+                        بخش‌های تنظیمات
+                    </p>
+
+                    <nav class="flex flex-col gap-1">
+
+                        <a href="#school-info" class="flex items-center gap-3 rounded-xl bg-primary-light px-3 py-3 text-sm font-medium text-primary">
+                            <svg class="size-5"><use href="#school"/></svg>
+                            اطلاعات مدرسه
+                        </a>
+
+                        <a href="#admin-info" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                            <svg class="size-5"><use href="#user"/></svg>
+                            حساب مدیر
+                        </a>
+
+                        <a href="#education" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                            <svg class="size-5"><use href="#calendar"/></svg>
+                            تنظیمات آموزشی
+                        </a>
+
+                        <a href="#notifications" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                            <svg class="size-5"><use href="#bell"/></svg>
+                            اعلان‌ها
+                        </a>
+
+                        <a href="#security" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-gray-500 transition hover:bg-primary-light hover:text-primary">
+                            <svg class="size-5"><use href="#lock"/></svg>
+                            امنیت حساب
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Settings Sections -->
+                <div class="min-w-0 space-y-5">
+
+                    <!-- School Information -->
+                    <section id="school-info" class="scroll-mt-5 rounded-2xl border border-[#E9E4FF] bg-white p-4 sm:p-6">
+
+                        <div class="mb-5 flex items-center gap-3 border-b border-[#F0ECFA] pb-4">
+                            <div class="flex size-11 items-center justify-center rounded-xl bg-primary-light text-primary">
+                                <svg class="size-5"><use href="#school"/></svg>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold sm:text-base">اطلاعات مدرسه</h3>
+                                <p class="mt-1 text-xs text-gray-400">مشخصات اصلی مدرسه را مدیریت کنید</p>
+                            </div>
+                        </div>
+
+                        <!-- School Logo -->
+                        <div class="mb-6 flex flex-wrap items-center gap-4">
+                            <div class="flex size-20 items-center justify-center rounded-2xl bg-primary-light text-3xl font-bold text-primary">
+                                م
+                            </div>
+
+                            <div>
+                                <p class="text-sm font-semibold">لوگوی مدرسه</p>
+                                <p class="mt-1 text-xs text-gray-400">تصویر لوگوی فعلی مدرسه</p>
+
+                                <button class="mt-3 rounded-lg border border-[#E5DEFA] px-3 py-2 text-xs font-medium text-primary transition hover:bg-primary-light">
+                                    تغییر لوگو
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                            <div>
+                                <label for="school-name" class="mb-2 block text-xs font-medium text-gray-600">نام مدرسه</label>
+                                <input
+                                    id="school-name"
+                                    type="text"
+                                    value="مدرسه هوشمند مهر"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="school-code" class="mb-2 block text-xs font-medium text-gray-600">کد مدرسه</label>
+                                <input
+                                    id="school-code"
+                                    type="text"
+                                    value="102458"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="school-phone" class="mb-2 block text-xs font-medium text-gray-600">شماره تماس</label>
+                                <input
+                                    id="school-phone"
+                                    type="tel"
+                                    value="026-32501234"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="school-email" class="mb-2 block text-xs font-medium text-gray-600">ایمیل مدرسه</label>
+                                <input
+                                    id="school-email"
+                                    type="email"
+                                    value="info@mehrschool.ir"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label for="school-address" class="mb-2 block text-xs font-medium text-gray-600">آدرس مدرسه</label>
+                                <textarea
+                                    id="school-address"
+                                    rows="3"
+                                    class="w-full resize-none rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm leading-7 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >کرج، خیابان اصلی، بلوار دانش، مدرسه هوشمند مهر</textarea>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Admin Profile -->
+                    <section id="admin-info" class="scroll-mt-5 rounded-2xl border border-[#E9E4FF] bg-white p-4 sm:p-6">
+
+                        <div class="mb-5 flex items-center gap-3 border-b border-[#F0ECFA] pb-4">
+                            <div class="flex size-11 items-center justify-center rounded-xl bg-primary-light text-primary">
+                                <svg class="size-5"><use href="#user"/></svg>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold sm:text-base">اطلاعات حساب مدیر</h3>
+                                <p class="mt-1 text-xs text-gray-400">اطلاعات حساب کاربری مدیر مدرسه</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                            <div>
+                                <label for="admin-name" class="mb-2 block text-xs font-medium text-gray-600">نام و نام خانوادگی</label>
+                                <input
+                                    id="admin-name"
+                                    type="text"
+                                    value="محمد رضایی"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="admin-username" class="mb-2 block text-xs font-medium text-gray-600">نام کاربری</label>
+                                <input
+                                    id="admin-username"
+                                    type="text"
+                                    value="admin_mehr"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="admin-phone" class="mb-2 block text-xs font-medium text-gray-600">شماره موبایل</label>
+                                <input
+                                    id="admin-phone"
+                                    type="tel"
+                                    value="09123456789"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="admin-email" class="mb-2 block text-xs font-medium text-gray-600">ایمیل مدیر</label>
+                                <input
+                                    id="admin-email"
+                                    type="email"
+                                    value="admin@mehrschool.ir"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Education Settings -->
+                    <section id="education" class="scroll-mt-5 rounded-2xl border border-[#E9E4FF] bg-white p-4 sm:p-6">
+
+                        <div class="mb-5 flex items-center gap-3 border-b border-[#F0ECFA] pb-4">
+                            <div class="flex size-11 items-center justify-center rounded-xl bg-primary-light text-primary">
+                                <svg class="size-5"><use href="#calendar"/></svg>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold sm:text-base">تنظیمات آموزشی</h3>
+                                <p class="mt-1 text-xs text-gray-400">سال تحصیلی و برنامه زمانی مدرسه</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                            <div>
+                                <label for="school-year" class="mb-2 block text-xs font-medium text-gray-600">سال تحصیلی جاری</label>
+                                <select
+                                    id="school-year"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                                    <option selected>۱۴۰۵ - ۱۴۰۶</option>
+                                    <option>۱۴۰۴ - ۱۴۰۵</option>
+                                    <option>۱۴۰۳ - ۱۴۰۴</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="semester" class="mb-2 block text-xs font-medium text-gray-600">ترم تحصیلی</label>
+                                <select
+                                    id="semester"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                                    <option selected>نیمسال اول</option>
+                                    <option>نیمسال دوم</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="start-time" class="mb-2 block text-xs font-medium text-gray-600">ساعت شروع مدرسه</label>
+                                <input
+                                    id="start-time"
+                                    type="time"
+                                    value="07:30"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="end-time" class="mb-2 block text-xs font-medium text-gray-600">ساعت پایان مدرسه</label>
+                                <input
+                                    id="end-time"
+                                    type="time"
+                                    value="13:30"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Notification Settings -->
+                    <section id="notifications" class="scroll-mt-5 rounded-2xl border border-[#E9E4FF] bg-white p-4 sm:p-6">
+
+                        <div class="mb-5 flex items-center gap-3 border-b border-[#F0ECFA] pb-4">
+                            <div class="flex size-11 items-center justify-center rounded-xl bg-primary-light text-primary">
+                                <svg class="size-5"><use href="#bell"/></svg>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold sm:text-base">تنظیمات اعلان‌ها</h3>
+                                <p class="mt-1 text-xs text-gray-400">مدیریت اطلاع‌رسانی‌های سیستم</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+
+                            <!-- Notification Row -->
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-medium">اعلان حضور و غیاب</p>
+                                    <p class="mt-1 text-xs leading-6 text-gray-400">اطلاع از غیبت یا تأخیر دانش‌آموزان</p>
+                                </div>
+
+                                <label class="relative inline-flex shrink-0 cursor-pointer items-center">
+                                    <input type="checkbox" checked class="peer sr-only">
+                                    <span class="h-6 w-11 rounded-full bg-gray-200 transition peer-checked:bg-primary"></span>
+                                    <span class="absolute right-0.5 top-0.5 size-5 rounded-full bg-white shadow-sm transition peer-checked:translate-x-[-20px]"></span>
+                                </label>
+                            </div>
+
+                            <div class="h-px bg-[#F0ECFA]"></div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-medium">اعلان ثبت نمرات</p>
+                                    <p class="mt-1 text-xs leading-6 text-gray-400">اطلاع از ثبت یا تغییر نمرات</p>
+                                </div>
+
+                                <label class="relative inline-flex shrink-0 cursor-pointer items-center">
+                                    <input type="checkbox" checked class="peer sr-only">
+                                    <span class="h-6 w-11 rounded-full bg-gray-200 transition peer-checked:bg-primary"></span>
+                                    <span class="absolute right-0.5 top-0.5 size-5 rounded-full bg-white shadow-sm transition peer-checked:translate-x-[-20px]"></span>
+                                </label>
+                            </div>
+
+                            <div class="h-px bg-[#F0ECFA]"></div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-medium">اعلان پیام‌های جدید</p>
+                                    <p class="mt-1 text-xs leading-6 text-gray-400">اطلاع از پیام‌های دریافتی</p>
+                                </div>
+
+                                <label class="relative inline-flex shrink-0 cursor-pointer items-center">
+                                    <input type="checkbox" checked class="peer sr-only">
+                                    <span class="h-6 w-11 rounded-full bg-gray-200 transition peer-checked:bg-primary"></span>
+                                    <span class="absolute right-0.5 top-0.5 size-5 rounded-full bg-white shadow-sm transition peer-checked:translate-x-[-20px]"></span>
+                                </label>
+                            </div>
+
+                            <div class="h-px bg-[#F0ECFA]"></div>
+
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-medium">اعلان ایمیلی</p>
+                                    <p class="mt-1 text-xs leading-6 text-gray-400">دریافت اطلاعیه‌ها از طریق ایمیل</p>
+                                </div>
+
+                                <label class="relative inline-flex shrink-0 cursor-pointer items-center">
+                                    <input type="checkbox" class="peer sr-only">
+                                    <span class="h-6 w-11 rounded-full bg-gray-200 transition peer-checked:bg-primary"></span>
+                                    <span class="absolute right-0.5 top-0.5 size-5 rounded-full bg-white shadow-sm transition peer-checked:translate-x-[-20px]"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Security -->
+                    <section id="security" class="scroll-mt-5 rounded-2xl border border-[#E9E4FF] bg-white p-4 sm:p-6">
+
+                        <div class="mb-5 flex items-center gap-3 border-b border-[#F0ECFA] pb-4">
+                            <div class="flex size-11 items-center justify-center rounded-xl bg-primary-light text-primary">
+                                <svg class="size-5"><use href="#lock"/></svg>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold sm:text-base">امنیت حساب</h3>
+                                <p class="mt-1 text-xs text-gray-400">مدیریت رمز عبور و امنیت حساب کاربری</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+
+                            <div>
+                                <label for="current-password" class="mb-2 block text-xs font-medium text-gray-600">رمز عبور فعلی</label>
+                                <input
+                                    id="current-password"
+                                    type="password"
+                                    placeholder="رمز عبور فعلی را وارد کنید"
+                                    class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                                <div>
+                                    <label for="new-password" class="mb-2 block text-xs font-medium text-gray-600">رمز عبور جدید</label>
+                                    <input
+                                        id="new-password"
+                                        type="password"
+                                        placeholder="رمز جدید"
+                                        class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label for="confirm-password" class="mb-2 block text-xs font-medium text-gray-600">تکرار رمز عبور جدید</label>
+                                    <input
+                                        id="confirm-password"
+                                        type="password"
+                                        placeholder="تکرار رمز جدید"
+                                        class="w-full rounded-xl border border-[#E9E4FF] bg-[#FCFBFF] px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="rounded-xl bg-primary-light/60 p-4">
+                                <p class="mb-2 text-xs font-semibold text-primary">نکات انتخاب رمز عبور</p>
+                                <ul class="space-y-2 text-xs leading-6 text-gray-500">
+                                    <li class="flex items-start gap-2">
+                                        <svg class="mt-1 size-4 shrink-0 text-success"><use href="#check"/></svg>
+                                        حداقل ۸ کاراکتر داشته باشد.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg class="mt-1 size-4 shrink-0 text-success"><use href="#check"/></svg>
+                                        ترکیبی از حروف و اعداد انتخاب کنید.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg class="mt-1 size-4 shrink-0 text-success"><use href="#check"/></svg>
+                                        از رمزهای قابل حدس استفاده نکنید.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Save Actions -->
+                    <div class="flex flex-col-reverse gap-3 rounded-2xl border border-[#E9E4FF] bg-white p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+
+                        <button class="w-full rounded-xl border border-[#E9E4FF] px-5 py-3 text-sm font-medium text-gray-500 transition hover:bg-gray-50 sm:w-auto">
+                            انصراف
+                        </button>
+
+                        <button class="w-full rounded-xl bg-primary px-6 py-3 text-sm font-medium text-white transition hover:bg-primary/90 sm:w-auto">
+                            ذخیره تغییرات
+                        </button>
+                    </div>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="mb-28 mt-8 text-center text-xs text-gray-400 lg:mb-7">
+                © ۱۴۰۵ پنل مدیریت SMART - تمامی حقوق محفوظ است.
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<!-- Mobile Bottom Navigation -->
+<nav aria-label="منوی موبایل" class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E9E4FF] bg-white/95 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(109,82,207,0.06)] lg:hidden">
+    <div class="mx-auto grid w-full max-w-lg grid-cols-5 items-center py-2">
+
+        <a href="index.html" class="flex flex-col items-center justify-center gap-1 py-1 text-gray-400">
+            <svg class="size-5"><use href="#dashboard"/></svg>
+            <span class="text-[10px]">خانه</span>
+        </a>
+
+        <a href="students.html" class="flex flex-col items-center justify-center gap-1 py-1 text-gray-400">
+            <svg class="size-5"><use href="#students"/></svg>
+            <span class="text-[10px]">دانش‌آموزان</span>
+        </a>
+
+        <a href="teachers.html" class="flex flex-col items-center justify-center gap-1 py-1 text-gray-400">
+            <svg class="size-5"><use href="#teachers"/></svg>
+            <span class="text-[10px]">معلمان</span>
+        </a>
+
+        <a href="classes.html" class="flex flex-col items-center justify-center gap-1 py-1 text-gray-400">
+            <svg class="size-5"><use href="#classes"/></svg>
+            <span class="text-[10px]">کلاس‌ها</span>
+        </a>
+
+        <!-- More Menu -->
+        <details class="group relative">
+            <summary class="flex cursor-pointer list-none flex-col items-center justify-center gap-1 py-1 text-gray-400 [&::-webkit-details-marker]:hidden">
+                <svg class="size-5"><use href="#more"/></svg>
+                <span class="text-[10px]">بیشتر</span>
+            </summary>
+
+            <div class="absolute bottom-full left-0 mb-4 w-48 overflow-hidden rounded-2xl border border-[#E9E4FF] bg-white p-2 shadow-xl">
+
+                <a href="attendance.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-xs text-gray-500 hover:bg-primary-light hover:text-primary">
+                    <svg class="size-4"><use href="#attendance"/></svg>
+                    حضور و غیاب
+                </a>
+
+                <a href="grades.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-xs text-gray-500 hover:bg-primary-light hover:text-primary">
+                    <svg class="size-4"><use href="#grades"/></svg>
+                    نمرات
+                </a>
+
+                <a href="reports.html" class="flex items-center gap-3 rounded-xl px-3 py-3 text-xs text-gray-500 hover:bg-primary-light hover:text-primary">
+                    <svg class="size-4"><use href="#reports"/></svg>
+                    گزارش‌ها
+                </a>
+
+                <a href="settings.html" class="flex items-center gap-3 rounded-xl bg-primary-light px-3 py-3 text-xs font-semibold text-primary">
+                    <svg class="size-4"><use href="#settings"/></svg>
+                    تنظیمات
+                </a>
+            </div>
+        </details>
+    </div>
+</nav>
+
+</body>
+</html>

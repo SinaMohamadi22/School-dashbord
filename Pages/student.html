@@ -1,159 +1,776 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>پنل دانش‌آموز | SMART</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    colors: { background:'#F7F4FF', primaryLight:'#F1EDFF', primary:{DEFAULT:'#6D52CF',dark:'#5840B0'}, info:'#5798D7', warning:'#F49A52', success:'#35B985', ink:'#25243A' },
-    fontFamily: { vazir:['Vazirmatn','Tahoma','sans-serif'] },
-    boxShadow: { card:'0 8px 30px rgba(109,82,207,.08)' }
-  } }
-}
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<style>
-body{font-family:'Vazirmatn',Tahoma,sans-serif;background:#F7F4FF;color:#25243A}
-.side-link{display:flex;align-items:center;gap:.6rem;padding:.65rem .9rem;border-radius:.9rem;color:#6b6a85;font-size:14px;font-weight:500;transition:.2s}
-.side-link:hover{background:#F7F4FF;color:#6D52CF}
-.side-link.active{background:#F1EDFF;color:#6D52CF;font-weight:600}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F7F4FF" />
+    <title>پنل دانش‌آموز | SMART</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#F7F4FF',
+                        primaryLight: '#F1EDFF',
+                        primary: {
+                            DEFAULT: '#6D52CF',
+                            dark: '#5840B0'
+                        },
+                        info: '#5798D7',
+                        warning: '#F49A52',
+                        success: '#35B985',
+                        ink: '#25243A'
+                    },
+                    fontFamily: {
+                        vazir: ['Vazirmatn', 'Tahoma', 'sans-serif']
+                    },
+                    boxShadow: {
+                        card: '0 8px 30px rgba(109,82,207,.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+    />
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: #F7F4FF;
+            color: #25243A;
+            margin: 0;
+            min-width: 320px;
+            overflow-x: clip;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        input {
+            min-width: 0;
+        }
+
+        .side-link {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            padding: .7rem .9rem;
+            border-radius: .9rem;
+            color: #6b6a85;
+            font-size: 14px;
+            font-weight: 500;
+            transition: .2s;
+            min-width: 0;
+        }
+
+        .side-link:hover {
+            background: #F7F4FF;
+            color: #6D52CF;
+        }
+
+        .side-link.active {
+            background: #F1EDFF;
+            color: #6D52CF;
+            font-weight: 600;
+        }
+
+        .mobile-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            min-width: 0;
+            width: 100%;
+            padding: 8px 2px;
+            border-radius: 12px;
+            color: #77738B;
+            transition: .2s;
+        }
+
+        .mobile-link:hover,
+        .mobile-link.active {
+            background: #F1EDFF;
+            color: #6D52CF;
+        }
+
+        .mobile-link svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .mobile-link span {
+            max-width: 100%;
+            white-space: nowrap;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        canvas {
+            display: block;
+            max-width: 100%;
+        }
+
+        details > summary {
+            list-style: none;
+        }
+
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        @media (max-width: 380px) {
+            .mobile-link span {
+                font-size: 9px;
+            }
+        }
+    </style>
 </head>
-<body class="min-h-screen flex">
 
-<!-- محتوای اصلی -->
-<main class="flex-1 p-4 md:p-6 max-w-[1200px] mx-auto w-full">
-  <!-- تاپ‌بار -->
-  <div class="flex items-center gap-3">
-    <div class="flex items-center gap-2 bg-white rounded-full ps-1 pe-3 py-1 shadow-card">
-      <img src="https://i.pravatar.cc/64?img=12" class="w-8 h-8 rounded-full" alt="علی رضایی"/>
-      <div class="leading-5"><div class="font-semibold text-[14px]">علی رضایی</div><span class="text-gray-400 font-medium text-[14px]">دانش‌آموز پایه نهم</span></div>
-    </div>
-    <button class="relative bg-white rounded-full w-10 h-10 grid place-items-center shadow-card shrink-0" aria-label="اعلان‌ها">🔔<span class="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] rounded-full grid place-items-center">۲</span></button>
-    <div class="flex-1 bg-white rounded-full shadow-card flex items-center px-4 py-2.5">
-      <input placeholder="جستجو در سامانه..." class="flex-1 bg-transparent outline-none text-[14px] font-medium px-2" />
-      <span class="text-gray-400">🔍</span>
-    </div>
-  </div>
+<body class="min-h-screen">
 
-  <!-- خوش‌آمد -->
-  <div class="flex flex-wrap items-center justify-between mt-5 gap-4">
-    <div>
-      <h1 class="text-2xl font-black">سلام، علی جان! 👋</h1>
-      <p class="text-[16px] font-medium text-gray-500 mt-1">امیدواریم امروز هم موفق باشی.</p>
-    </div>
-    <div class="flex items-center gap-3 bg-[#EDE7FF] rounded-2xl px-4 py-2 text-[14px] font-semibold">
-    </div>
-  </div>
+    <!-- Layout -->
+    <div class="min-h-screen md:flex">
 
-  <!-- ۴ کارت -->
-  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-    <div class="bg-white rounded-2xl shadow-card p-4">
-      <div class="flex justify-between items-center text-[14px] font-medium text-gray-500"><span>آخرین معدل</span><span class="bg-primaryLight text-primary rounded-lg px-2 py-1">📊</span></div>
-      <div class="text-2xl font-black mt-2">۱۹.۵۰</div>
+        <!-- Main Content -->
+        <main class="min-w-0 w-full flex-1 pb-28 md:pb-6">
+            <div class="mx-auto w-full max-w-[1200px] p-3 sm:p-5 lg:p-6">
+
+                <!-- Topbar -->
+                <header class="flex flex-wrap items-center gap-2 sm:gap-3">
+
+                    <!-- Profile -->
+                    <div class="flex min-w-0 max-w-full items-center gap-2 bg-white rounded-full ps-1 pe-3 py-1 shadow-card shrink-0">
+                        <img
+                            src="https://i.pravatar.cc/64?img=12"
+                            class="w-8 h-8 rounded-full shrink-0"
+                            alt="علی رضایی"
+                        />
+
+                        <div class="min-w-0 leading-5">
+                            <div class="font-semibold text-[13px] sm:text-[14px] truncate">
+                                علی رضایی
+                            </div>
+                            <span class="text-gray-400 font-medium text-xs sm:text-[14px] whitespace-nowrap">
+                                دانش‌آموز پایه نهم
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <button
+                        class="relative bg-white rounded-full w-10 h-10 grid place-items-center shadow-card shrink-0"
+                        aria-label="اعلان‌ها"
+                    >
+                        🔔
+                        <span class="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] rounded-full grid place-items-center">
+                            ۲
+                        </span>
+                    </button>
+
+                    <!-- Search -->
+                    <div class="flex-1 min-w-[140px] bg-white rounded-full shadow-card flex items-center px-3 sm:px-4 py-2.5">
+                        <input
+                            type="search"
+                            placeholder="جستجو در سامانه..."
+                            class="w-full min-w-0 flex-1 bg-transparent outline-none text-[13px] sm:text-[14px] font-medium px-2"
+                        />
+                        <span class="text-gray-400 shrink-0">🔍</span>
+                    </div>
+
+                </header>
+
+                <!-- Welcome -->
+                <section class="flex flex-wrap items-center justify-between mt-5 gap-4">
+                    <div class="min-w-0">
+                        <h1 class="text-xl sm:text-2xl font-black">
+                            سلام، علی جان! 👋
+                        </h1>
+                        <p class="text-sm sm:text-base font-medium text-gray-500 mt-1">
+                            امیدواریم امروز هم موفق باشی.
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-3 bg-[#EDE7FF] rounded-2xl px-4 py-2 text-sm font-semibold">
+                        <!-- محتوای تاریخ یا وضعیت -->
+                    </div>
+                </section>
+
+                <!-- Stats Cards -->
+                <section class="grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-5">
+
+                    <!-- Average Grade -->
+                    <article class="min-w-0 bg-white rounded-2xl shadow-card p-3 sm:p-4">
+                        <div class="flex justify-between items-center gap-2 text-sm font-medium text-gray-500">
+                            <span>آخرین معدل</span>
+                            <span class="bg-primaryLight text-primary rounded-lg px-2 py-1 shrink-0">📊</span>
+                        </div>
+                        <div class="text-2xl font-black mt-2">۱۹.۵۰</div>
+                    </article>
+
+                    <!-- Assignments -->
+                    <article class="min-w-0 bg-[#FFF7ED] rounded-2xl shadow-card p-3 sm:p-4">
+                        <div class="flex justify-between items-center gap-2 text-sm font-medium text-gray-500">
+                            <span>تعداد تکالیف</span>
+                            <span class="bg-orange-100 rounded-lg px-2 py-1 shrink-0">📋</span>
+                        </div>
+                        <div class="text-2xl font-black mt-2">۳</div>
+                        <div class="text-sm font-medium text-gray-400 mt-1">تا مهلت: سه روز</div>
+                    </article>
+
+                    <!-- Attendance -->
+                    <article class="min-w-0 bg-white rounded-2xl shadow-card p-3 sm:p-4">
+                        <div class="flex justify-between items-center gap-2 text-sm font-medium text-gray-500">
+                            <span>درصد حضور</span>
+                            <span class="bg-green-100 rounded-lg px-2 py-1 shrink-0">✅</span>
+                        </div>
+                        <div class="text-2xl font-black mt-2">
+                            ۹۶٪
+                            <span class="text-sm text-green-600 font-semibold">↑ +۱٪</span>
+                        </div>
+                    </article>
+
+                    <!-- Scores -->
+                    <article class="min-w-0 bg-white rounded-2xl shadow-card p-3 sm:p-4">
+                        <div class="flex justify-between items-center gap-2 text-sm font-medium text-gray-500">
+                            <span>میانگین نمرات</span>
+                            <span class="bg-primaryLight rounded-lg px-2 py-1 shrink-0">⭐</span>
+                        </div>
+                        <div class="text-2xl font-black mt-2">
+                            ۱۹.۰۲
+                            <span class="text-sm text-primary font-semibold">+ ۰.۵ ↑</span>
+                        </div>
+                    </article>
+
+                </section>
+
+                <!-- Main Dashboard Grid -->
+                <section class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4 mt-4">
+
+                    <!-- Announcements -->
+                    <article class="min-w-0 bg-white rounded-3xl shadow-card p-4 sm:p-5">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <b class="text-base font-semibold">اطلاعیه‌های مدرسه</b>
+                            <a href="#" class="text-sm font-semibold text-primary whitespace-nowrap">
+                                مشاهده همه
+                            </a>
+                        </div>
+
+                        <ul class="mt-4 space-y-4 text-sm font-medium">
+                            <li class="flex gap-2 min-w-0">
+                                <span class="shrink-0">📢</span>
+                                <div class="min-w-0">
+                                    برگزاری آزمون میان‌ترم
+                                    <div class="text-gray-400 text-sm font-medium mt-0.5">امروز</div>
+                                </div>
+                            </li>
+
+                            <li class="flex gap-2 min-w-0">
+                                <span class="shrink-0">⭐</span>
+                                <div class="min-w-0">
+                                    ثبت‌نام اردوهای علمی
+                                    <div class="text-gray-400 text-sm font-medium mt-0.5">تا پایان هفته</div>
+                                </div>
+                            </li>
+
+                            <li class="flex gap-2 min-w-0">
+                                <span class="shrink-0">⏰</span>
+                                <div class="min-w-0">
+                                    تغییر ساعت کلاس روز چهارشنبه
+                                    <div class="text-gray-400 text-sm font-medium mt-0.5">۲ روز پیش</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- Weekly Schedule -->
+                    <article class="min-w-0 bg-white rounded-3xl shadow-card p-4 sm:p-5">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <b class="text-base font-semibold">برنامه هفتگی کلاس‌ها</b>
+                            <a href="#" class="text-sm font-semibold text-primary whitespace-nowrap">
+                                مشاهده کامل
+                            </a>
+                        </div>
+
+                        <div class="mt-3 space-y-3 text-sm font-medium">
+
+                            <div class="flex flex-wrap items-center justify-between gap-2 bg-[#F7F4FF] rounded-xl p-3">
+                                <div class="flex gap-2 items-center min-w-0">
+                                    <span class="bg-primary text-white rounded-lg w-8 h-8 grid place-items-center shrink-0">📐</span>
+                                    <b class="font-semibold">ریاضی</b>
+                                </div>
+                                <span class="text-xs sm:text-sm font-medium text-gray-500 whitespace-nowrap">
+                                    شنبه • 8:00
+                                </span>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-2 bg-[#F7F4FF] rounded-xl p-3">
+                                <div class="flex gap-2 items-center min-w-0">
+                                    <span class="bg-info text-white rounded-lg w-8 h-8 grid place-items-center shrink-0">🧪</span>
+                                    <b class="font-semibold">فیزیک</b>
+                                </div>
+                                <span class="text-xs sm:text-sm font-medium text-gray-500 whitespace-nowrap">
+                                    یکشنبه • 8:00
+                                </span>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-2 bg-[#F7F4FF] rounded-xl p-3">
+                                <div class="flex gap-2 items-center min-w-0">
+                                    <span class="bg-warning text-white rounded-lg w-8 h-8 grid place-items-center shrink-0">⚗️</span>
+                                    <b class="font-semibold">شیمی</b>
+                                </div>
+                                <span class="text-xs sm:text-sm font-medium text-gray-500 whitespace-nowrap">
+                                    دوشنبه • 8:00
+                                </span>
+                            </div>
+
+                        </div>
+                    </article>
+
+<!-- Performance Chart -->
+<article class="min-w-0 bg-white rounded-3xl shadow-card p-4 sm:p-5">
+    <div class="flex flex-wrap items-center justify-between gap-2">
+        <span class="text-base font-semibold">عملکرد تحصیلی شما</span>
+
+        <span class="text-xs text-gray-400 font-medium">
+            <span class="text-primary">●</span> ترم جاری
+            <span class="text-[#B9A8EE]">●</span> ترم‌های قبلی
+        </span>
     </div>
-    <div class="bg-[#FFF7ED] rounded-2xl shadow-card p-4">
-      <div class="flex justify-between items-center text-[14px] font-medium text-gray-500"><span>تعداد تکالیف</span><span class="bg-orange-100 rounded-lg px-2 py-1">📋</span></div>
-      <div class="text-2xl font-black mt-2">۳</div>
-      <div class="text-[14px] font-medium text-gray-400">تا مهلت: سه روز</div>
+
+    <div class="mt-4 w-full overflow-visible">
+        <svg
+            viewBox="0 0 340 210"
+            class="w-full h-auto overflow-visible"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="نمودار مقایسه عملکرد تحصیلی ترم جاری و ترم‌های قبلی"
+        >
+
+            <!-- Grid Lines -->
+            <g stroke="#F0EDFF" stroke-width="1">
+                <line x1="35" y1="20" x2="330" y2="20"/>
+                <line x1="35" y1="60" x2="330" y2="60"/>
+                <line x1="35" y1="100" x2="330" y2="100"/>
+                <line x1="35" y1="140" x2="330" y2="140"/>
+                <line x1="35" y1="180" x2="330" y2="180"/>
+            </g>
+
+            <!-- Y Axis Labels -->
+            <g
+                fill="#9B96AD"
+                font-size="10"
+                font-family="Vazirmatn, Tahoma, sans-serif"
+                text-anchor="end"
+            >
+                <text x="27" y="23">۲۰</text>
+                <text x="27" y="63">۱۵</text>
+                <text x="27" y="103">۱۰</text>
+                <text x="27" y="143">۵</text>
+                <text x="27" y="183">۰</text>
+            </g>
+
+            <!-- Previous Semester Line -->
+            <path
+                d="M 55 52
+                   L 120 44
+                   L 185 40
+                   L 250 36
+                   L 315 32"
+                fill="none"
+                stroke="#B9A8EE"
+                stroke-width="2.5"
+                stroke-dasharray="6 5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+            <!-- Current Semester Area -->
+            <path
+                d="M 55 44
+                   L 120 36
+                   L 185 32
+                   L 250 28
+                   L 315 26
+                   L 315 180
+                   L 55 180
+                   Z"
+                fill="#6D52CF"
+                opacity="0.08"
+            />
+
+            <!-- Current Semester Line -->
+            <path
+                d="M 55 44
+                   L 120 36
+                   L 185 32
+                   L 250 28
+                   L 315 26"
+                fill="none"
+                stroke="#6D52CF"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+            <!-- Points & Tooltips -->
+            <g fill="#6D52CF" stroke="white" stroke-width="2">
+
+                <!-- Math -->
+                <g class="cursor-pointer">
+                    <circle cx="55" cy="44" r="10" fill="transparent" stroke="none"/>
+                    <circle cx="55" cy="44" r="4"/>
+                    <title>ریاضی | ترم جاری: ۱۷ | ترم قبلی: ۱۶</title>
+
+                    <g class="opacity-0 pointer-events-none transition-opacity duration-200">
+                        <rect x="25" y="4" width="60" height="28" rx="7" fill="#25243A" stroke="none"/>
+                        <text x="55" y="21" fill="white" stroke="none" font-size="10" text-anchor="middle">
+                            ریاضی: ۱۷
+                        </text>
+                    </g>
+                </g>
+
+                <!-- Physics -->
+                <g class="cursor-pointer">
+                    <circle cx="120" cy="36" r="10" fill="transparent" stroke="none"/>
+                    <circle cx="120" cy="36" r="4"/>
+                    <title>فیزیک | ترم جاری: ۱۸ | ترم قبلی: ۱۷</title>
+
+                    <g class="opacity-0 pointer-events-none transition-opacity duration-200">
+                        <rect x="90" y="0" width="60" height="28" rx="7" fill="#25243A" stroke="none"/>
+                        <text x="120" y="17" fill="white" stroke="none" font-size="10" text-anchor="middle">
+                            فیزیک: ۱۸
+                        </text>
+                    </g>
+                </g>
+
+                <!-- Chemistry -->
+                <g class="cursor-pointer">
+                    <circle cx="185" cy="32" r="10" fill="transparent" stroke="none"/>
+                    <circle cx="185" cy="32" r="4"/>
+                    <title>شیمی | ترم جاری: ۱۸.۵ | ترم قبلی: ۱۷.۵</title>
+
+                    <g class="opacity-0 pointer-events-none transition-opacity duration-200">
+                        <rect x="155" y="0" width="60" height="28" rx="7" fill="#25243A" stroke="none"/>
+                        <text x="185" y="17" fill="white" stroke="none" font-size="10" text-anchor="middle">
+                            شیمی: ۱۸.۵
+                        </text>
+                    </g>
+                </g>
+
+                <!-- Literature -->
+                <g class="cursor-pointer">
+                    <circle cx="250" cy="28" r="10" fill="transparent" stroke="none"/>
+                    <circle cx="250" cy="28" r="4"/>
+                    <title>ادبیات | ترم جاری: ۱۹ | ترم قبلی: ۱۸</title>
+
+                    <g class="opacity-0 pointer-events-none transition-opacity duration-200">
+                        <rect x="220" y="0" width="60" height="28" rx="7" fill="#25243A" stroke="none"/>
+                        <text x="250" y="17" fill="white" stroke="none" font-size="10" text-anchor="middle">
+                            ادبیات: ۱۹
+                        </text>
+                    </g>
+                </g>
+
+                <!-- English -->
+                <g class="cursor-pointer">
+                    <circle cx="315" cy="26" r="10" fill="transparent" stroke="none"/>
+                    <circle cx="315" cy="26" r="4"/>
+                    <title>انگلیسی | ترم جاری: ۱۹.۲ | ترم قبلی: ۱۸.۵</title>
+
+                    <g class="opacity-0 pointer-events-none transition-opacity duration-200">
+                        <rect x="275" y="0" width="60" height="28" rx="7" fill="#25243A" stroke="none"/>
+                        <text x="305" y="17" fill="white" stroke="none" font-size="10" text-anchor="middle">
+                            انگلیسی: ۱۹.۲
+                        </text>
+                    </g>
+                </g>
+
+            </g>
+
+            <!-- Previous Semester Points -->
+            <g fill="#B9A8EE" stroke="white" stroke-width="2">
+                <circle cx="55" cy="52" r="3.5"/>
+                <circle cx="120" cy="44" r="3.5"/>
+                <circle cx="185" cy="40" r="3.5"/>
+                <circle cx="250" cy="36" r="3.5"/>
+                <circle cx="315" cy="32" r="3.5"/>
+            </g>
+
+        </svg>
     </div>
-    <div class="bg-white rounded-2xl shadow-card p-4">
-      <div class="flex justify-between items-center text-[14px] font-medium text-gray-500"><span>درصد حضور</span><span class="bg-green-100 rounded-lg px-2 py-1">✅</span></div>
-      <div class="text-2xl font-black mt-2">۹۶٪ <span class="text-[14px] text-green-600 font-semibold">↑ +۱٪</span></div>
+
+    <!-- Subjects -->
+    <div class="grid grid-cols-5 gap-1 text-[10px] sm:text-xs font-medium text-gray-400 mt-3 text-center">
+        <span class="truncate">ریاضی</span>
+        <span class="truncate">فیزیک</span>
+        <span class="truncate">شیمی</span>
+        <span class="truncate">ادبیات</span>
+        <span class="truncate">انگلیسی</span>
     </div>
-    <div class="bg-white rounded-2xl shadow-card p-4">
-      <div class="flex justify-between items-center text-[14px] font-medium text-gray-500"><span>میانگین نمرات</span><span class="bg-primaryLight rounded-lg px-2 py-1">⭐</span></div>
-      <div class="text-2xl font-black mt-2">۱۹.۰۲ <span class="text-[14px] text-primary font-semibold">+ ۰.۵ ↑</span></div>
+</article>
+
+                </section>
+
+                <!-- Bottom Banner -->
+                <section class="mt-4 bg-gradient-to-l from-[#EDE7FF] to-white rounded-3xl shadow-card p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+
+                    <div class="text-4xl sm:text-5xl shrink-0">🏆</div>
+
+                    <div class="flex-1 min-w-0">
+                        <b class="text-base font-semibold">تو می‌تونی!</b>
+                        <p class="text-sm font-medium text-gray-500 mt-1">
+                            با تلاش بیشتر، به اهدافت نزدیک‌تر شو.
+                        </p>
+                    </div>
+
+                    <a
+                        href="#"
+                        class="inline-flex items-center justify-center bg-primary hover:bg-primary-dark transition text-white text-sm font-semibold rounded-full px-6 py-2.5 w-full sm:w-auto text-center"
+                    >
+                        مشاهده پیشرفت
+                    </a>
+
+                </section>
+
+                <!-- Back Link -->
+                <a href="../index.html" class="inline-flex mt-4 text-sm font-semibold text-primary">
+                    → بازگشت به صفحه اصلی
+                </a>
+
+            </div>
+        </main>
+
+        <!-- Desktop Sidebar -->
+        <aside class="hidden md:flex w-[210px] lg:w-[240px] shrink-0 bg-white p-3 lg:p-4 flex-col gap-1 shadow-sm sticky top-0 h-screen overflow-y-auto">
+
+            <div class="font-black text-primary text-xl tracking-widest px-2 py-2 text-center">
+                SMART
+            </div>
+
+            <a class="side-link active" href="#">
+                <span>▦</span> داشبورد
+            </a>
+
+            <a class="side-link" href="#">
+                <span>📅</span> برنامه درسی
+            </a>
+
+            <a class="side-link" href="#">
+                <span>📝</span> تکالیف
+            </a>
+
+            <a class="side-link" href="#">
+                <span>⭐</span> نمرات
+            </a>
+
+            <a class="side-link" href="#">
+                <span>⏱</span> حضور و غیاب
+            </a>
+
+            <a class="side-link" href="#">
+                <span>✉️</span> پیام‌ها
+            </a>
+
+            <a class="side-link" href="#">
+                <span>⚙️</span> تنظیمات
+            </a>
+
+            <div class="mt-auto bg-primaryLight rounded-2xl p-3 text-center">
+                <div class="text-3xl">🎓</div>
+                <div class="font-semibold text-sm mt-1">موفق باشی!</div>
+                <div class="text-sm font-medium text-gray-500">
+                    آینده روشن در انتظار توست
+                </div>
+            </div>
+
+        </aside>
+
     </div>
-  </div>
 
-  <div class="grid lg:grid-cols-3 gap-4 mt-4">
-    <!-- ۱. اطلاعیه مدرسه -->
-    <div class="bg-white rounded-3xl shadow-card p-5">
-      <div class="flex justify-between items-center"><b class="text-[16px] font-semibold">اطلاعیه‌های مدرسه</b><a href="#" class="text-[14px] font-semibold text-primary">مشاهده همه</a></div>
-      <ul class="mt-4 space-y-4 text-[14px] font-medium">
-        <li class="flex gap-2"><span>📢</span><div>برگزاری آزمون میان‌ترم <div class="text-gray-400 text-[14px] font-medium mt-0.5">امروز</div></div></li>
-        <li class="flex gap-2"><span>⭐</span><div>ثبت‌نام اردوهای علمی <div class="text-gray-400 text-[14px] font-medium mt-0.5">تا پایان هفته</div></div></li>
-        <li class="flex gap-2"><span>⏰</span><div>تغییر ساعت کلاس روز چهارشنبه <div class="text-gray-400 text-[14px] font-medium mt-0.5">۲ روز پیش</div></div></li>
-      </ul>
-    </div>
-    <!-- ۲. برنامه هفتگی -->
-    <div class="bg-white rounded-3xl shadow-card p-5">
-      <div class="flex justify-between items-center"><b class="text-[16px] font-semibold">برنامه هفتگی کلاس‌ها</b><a href="#" class="text-[14px] font-semibold text-primary">مشاهده کامل</a></div>
-      <div class="mt-3 space-y-3 text-[14px] font-medium">
-        <div class="flex items-center justify-between bg-[#F7F4FF] rounded-xl p-3"><div class="flex gap-2 items-center"><span class="bg-primary text-white rounded-lg w-8 h-8 grid place-items-center">📐</span><b class="font-semibold">ریاضی</b></div><span class="text-[14px] font-medium text-gray-500">شنبه • 8:00</span></div>
-        <div class="flex items-center justify-between bg-[#F7F4FF] rounded-xl p-3"><div class="flex gap-2 items-center"><span class="bg-info text-white rounded-lg w-8 h-8 grid place-items-center">🧪</span><b class="font-semibold">فیزیک</b></div><span class="text-[14px] font-medium text-gray-500">یکشنبه • 8:00</span></div>
-        <div class="flex items-center justify-between bg-[#F7F4FF] rounded-xl p-3"><div class="flex gap-2 items-center"><span class="bg-warning text-white rounded-lg w-8 h-8 grid place-items-center">⚗️</span><b class="font-semibold">شیمی</b></div><span class="text-[14px] font-medium text-gray-500">دوشنبه • 8:00</span></div>
-      </div>
-    </div>
-    <!-- ۳. عملکرد تحصیلی -->
-    <div class="bg-white rounded-3xl shadow-card p-5">
-      <div class="flex justify-between items-center text-[16px] font-semibold"><span>عملکرد تحصیلی شما</span><span class="text-[14px] text-gray-400 font-medium">● ترم جاری ● ترم‌های قبلی</span></div>
-      <div class="mt-3 h-[200px]"><canvas id="perfChart"></canvas></div>
-      <div class="flex justify-between text-[14px] font-medium text-gray-400 mt-2 px-1"><span>ریاضی</span><span>فیزیک</span><span>شیمی</span><span>ادبیات</span><span>انگلیسی</span></div>
-    </div>
-  </div>
+    <!-- Mobile Bottom Navigation -->
+    <nav
+        aria-label="منوی موبایل"
+        class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E9E4FF] bg-white/95 px-2 pt-1 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(65,45,130,0.08)] backdrop-blur-lg md:hidden"
+    >
+        <ul class="mx-auto grid w-full max-w-lg grid-cols-5 gap-1 py-1.5">
 
-  <!-- بنر پایینی -->
-  <div class="mt-4 bg-gradient-to-l from-[#EDE7FF] to-white rounded-3xl shadow-card p-5 flex items-center justify-between gap-4 flex-wrap">
-    <div class="text-5xl">🏆</div>
-    <div class="flex-1 min-w-[200px]"><b class="text-[16px] font-semibold">تو می‌تونی!</b><p class="text-[14px] font-medium text-gray-500 mt-1">با تلاش بیشتر، به اهدافت نزدیک‌تر شو.</p></div>
-    <a href="#" class="bg-primary hover:bg-primary-dark transition text-white text-[14px] font-semibold rounded-full px-6 py-2.5">مشاهده پیشرفت</a>
-  </div>
+            <!-- Dashboard -->
+            <li class="min-w-0">
+                <a href="#dashboard" aria-current="page" class="mobile-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="8" height="8" rx="2"/>
+                        <rect x="13" y="3" width="8" height="8" rx="2"/>
+                        <rect x="3" y="13" width="8" height="8" rx="2"/>
+                        <rect x="13" y="13" width="8" height="8" rx="2"/>
+                    </svg>
+                    <span>داشبورد</span>
+                </a>
+            </li>
 
-  <a href="../index.html" class="inline-block mt-4 text-[14px] font-semibold text-primary">→ بازگشت به صفحه اصلی</a>
-</main>
+            <!-- Students -->
+            <li class="min-w-0">
+                <a href="#students" class="mobile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span>دانش‌آموزان</span>
+                </a>
+            </li>
 
-<!-- سایدبار SMART سمت چپ (در dir=rtl با order طبیعی آخر = چپ) -->
-<aside class="w-[210px] shrink-0 bg-white p-4 hidden md:flex flex-col gap-1 shadow-sm sticky top-0 h-screen">
-  <div class="font-black text-primary text-xl tracking-widest px-2 py-2 text-center">SMART</div>
-  <a class="side-link active" href="#">▦ داشبورد</a>
-  <a class="side-link" href="#">📅 برنامه درسی</a>
-  <a class="side-link" href="#">📝 تکالیف</a>
-  <a class="side-link" href="#">⭐ نمرات</a>
-  <a class="side-link" href="#">⏱ حضور و غیاب</a>
-  <a class="side-link" href="#">✉️ پیام‌ها</a>
-  <a class="side-link" href="#">⚙️ تنظیمات</a>
-  <div class="mt-auto bg-primaryLight rounded-2xl p-3 text-center">
-    <div class="text-3xl">🎓</div>
-    <div class="font-semibold text-[14px] mt-1">موفق باشی!</div>
-    <div class="text-[14px] font-medium text-gray-500">آینده روشن در انتظار توست</div>
-  </div>
-</aside>
+            <!-- Teachers -->
+            <li class="min-w-0">
+                <a href="#teachers" class="mobile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A3.5 3.5 0 0 1 7.5 16h9a3.5 3.5 0 0 1 3.5 3.5"/>
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M3 10h3M18 10h3"/>
+                    </svg>
+                    <span>معلمان</span>
+                </a>
+            </li>
 
-<script>
-new Chart(document.getElementById('perfChart'), {
-  type:'line',
-  data:{ labels:['ریاضی','فیزیک','شیمی','ادبیات','انگلیسی'],
-    datasets:[
-      {data:[17,18,18.5,19,19.2],borderColor:'#6D52CF',backgroundColor:'rgba(109,82,207,.12)',fill:true,tension:.45,pointRadius:3},
-      {data:[16,17,17.5,18,18.5],borderColor:'#B9A8EE',borderDash:[5,5],fill:false,tension:.45,pointRadius:2}
-    ]},
-  options: {
-    responsive:true, maintainAspectRatio:false,
-    plugins: {legend: {display: false}},
-    scales: {
-      y:{min: 0,max: 20,ticks: {stepSize: 5},grid: {color: '#f0edff'}},
-      x:{ticks: {display: false},grid: {display: false}}
-    }
-  }
-});
-</script>
-<script>window.__CF$cv$params={r:'a609e170cfe7bd80',t:'MTc5NTcwNjQ2Mg==',u:'01a2187223da74749f5db625329b9ba8',ut:'CEiXDhaLIvXSvg9Kc9KmzKGco_UMur5vhw4AWh9O68I-1795706463-1.2.1.1-0FWz6oXW7y9ml5wvS8BQUf7w.hgJLOtZUTlL1M6nzIABNvneRTi4vjJyMAhsO.QAvwfyo9C7_qGqbN8lskV9o75qcI21NrIH1XGrb2EOnc0',i:60};(function(){if(!document.body)return;var l=window.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/precursor/main.js?ray=a609e170cfe7bd80',s=document.createElement('script');s.src=o?new URL(u,o).href:u;document.head.appendChild(s);})();</script></body>
-</html>
+            <!-- Classes -->
+            <li class="min-w-0">
+                <a href="#classes" class="mobile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="17" rx="2"/>
+                        <path d="M16 2v4M8 2v4M3 9h18"/>
+                    </svg>
+                    <span>کلاس‌ها</span>
+                </a>
+            </li>
 
+            <!-- More -->
+            <li class="min-w-0">
+                <details class="group relative">
 
+                    <summary class="mobile-link cursor-pointer">
+                        <svg class="transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="5" cy="12" r="1"/>
+                            <circle cx="12" cy="12" r="1"/>
+                            <circle cx="19" cy="12" r="1"/>
+                        </svg>
+                        <span>بیشتر</span>
+                    </summary>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/css/input.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    
+                    <!-- More Menu Popup -->
+                    <div class="fixed inset-x-2 bottom-[calc(4.8rem+env(safe-area-inset-bottom))] z-[60] mx-auto w-auto max-w-[400px] max-h-[min(65dvh,460px)] overflow-y-auto overscroll-contain rounded-2xl border border-[#E9E4FF] bg-white p-3 shadow-[0_12px_40px_rgba(65,45,130,0.16)]">
+
+                        <!-- Menu Header -->
+                        <div class="mb-3 flex items-center justify-between gap-2 border-b border-[#F0ECFA] pb-3">
+                            <span class="text-sm font-bold text-[#25243A]">
+                                دسترسی‌های بیشتر
+                            </span>
+                            <span class="rounded-lg bg-[#F3EFFF] px-2 py-1 text-[10px] text-[#6D52CF] sm:text-xs">
+                                ۴ بخش
+                            </span>
+                        </div>
+
+                        <!-- More Items -->
+                        <div class="grid grid-cols-1 min-[380px]:grid-cols-2 gap-2 sm:gap-3">
+
+                            <!-- Attendance -->
+                            <a href="#attendance" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EDE7FF] text-[#6D52CF] sm:h-10 sm:w-10">
+                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="17" rx="2"/>
+                                        <path d="M16 2v4M8 2v4M3 9h18"/>
+                                    </svg>
+                                </span>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                                        حضور و غیاب
+                                    </span>
+                                    <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                                        وضعیت حضور دانش‌آموزان
+                                    </span>
+                                </span>
+                            </a>
+
+                            <!-- Grades -->
+                            <a href="#grades" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E5F4FF] text-[#5798D7] sm:h-10 sm:w-10">
+                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <path d="M14 2v6h6M8 13h8M8 17h6"/>
+                                    </svg>
+                                </span>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                                        نمرات و کارنامه
+                                    </span>
+                                    <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                                        نتایج و عملکرد تحصیلی
+                                    </span>
+                                </span>
+                            </a>
+
+                            <!-- Reports -->
+                            <a href="#reports" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E3F8EE] text-[#35B985] sm:h-10 sm:w-10">
+                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16v16H4z"/>
+                                        <path d="M8 8h8M8 12h8M8 16h5"/>
+                                    </svg>
+                                </span>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                                        گزارش‌ها
+                                    </span>
+                                    <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                                        گزارش‌های تحلیلی
+                                    </span>
+                                </span>
+                            </a>
+
+                            <!-- Settings -->
+                            <a href="#settings" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF0E5] text-[#F49A52] sm:h-10 sm:w-10">
+                                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.5 2.6-.09-.03a1.7 1.7 0 0 0-1.8.45l-.08.06h-3l-.03-.09a1.7 1.7 0 0 0-1.45-1.1l-.1-.02-2.6-1.5.03-.09a1.7 1.7 0 0 0-.45-1.8l-.06-.08v-3l.09-.03a1.7 1.7 0 0 0 1.1-1.45l.02-.1 1.5-2.6.09.03a1.7 1.7 0 0 0 1.8-.45l.08-.06h3l.03.09a1.7 1.7 0 0 0 1.45 1.1l.1.02 2.6 1.5-.03.09a1.7 1.7 0 0 0 .45 1.8l.06.08v3z"/>
+                                    </svg>
+                                </span>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">
+                                        تنظیمات
+                                    </span>
+                                    <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">
+                                        تنظیمات پنل
+                                    </span>
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </details>
+            </li>
+
+        </ul>
+    </nav>
+
 </body>
 </html>
