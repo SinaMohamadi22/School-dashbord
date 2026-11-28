@@ -1,7 +1,7 @@
 /* فونت وزیرمتن: اول از پوشه assets/fonts/vazirmatn، اگر نبود از Google Fonts */
-@font-face { font-family: "VazirLocal"; font-weight: 400; src: url("../../assets/fonts/vazirmatn/Vazirmatn-Regular.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "VazirLocal"; font-weight: 500; src: url("../../assets/fonts/vazirmatn/Vazirmatn-Medium.woff2") format("woff2"); font-display: swap; }
-@font-face { font-family: "VazirLocal"; font-weight: 700; src: url("../../assets/fonts/vazirmatn/Vazirmatn-Bold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "VazirLocal"; font-weight: 400; src: url("../.../assets/fonts/vazirmatn/Vazirmatn-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "VazirLocal"; font-weight: 500; src: url("../.../assets/fonts/vazirmatn/Vazirmatn-Medium.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "VazirLocal"; font-weight: 700; src: url("../.../assets/fonts/vazirmatn/Vazirmatn-Bold.woff2") format("woff2"); font-display: swap; }
 
 /* ===== پایه ===== */
 :root {
