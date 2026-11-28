@@ -22,6 +22,8 @@ export default defineConfig({
   plugins: [tailwindcss()],
   base: '/School-dashbord/',
   build: {
+    outDir: 'docs',
+    emptyOutDir: true,
     rolldownOptions: {
       input: [
         resolve(root, 'index.html'),
