@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMART | سامانه هوشمند مدیریت مدرسه</title>
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
+  <link rel="stylesheet" href="./src/css/input.css" />
+</head>
+
+<body class="relative min-h-screen overflow-x-hidden font-vazirmatn text-[#20124d]">
+
+  <!-- Responsive Background -->
+  <picture class="pointer-events-none fixed inset-0 -z-10">
+    <source media="(max-width: 767px)" srcset="/assets/images/bg-mobile.webp">
+    <source media="(max-width: 1023px)" srcset="/assets/images/bg-tablet.webp">
+
+    <img
+      src="/assets/images/bg-desktop.webp"
+      alt=""
+      class="h-full w-full object-cover object-top"
+    />
+  </picture>
+
+
+  <!-- Header -->
+  <header class="mx-auto mt-4 flex h-[74px] w-[92%] max-w-[1420px] items-center justify-between rounded-[26px] border border-[#ded6ff] bg-white/70 px-4 shadow-[0_8px_24px_#6d48d31a] backdrop-blur-2xl sm:mt-[22px] sm:px-7">
+
+    <!-- Logo -->
+    <a href="#home" aria-label="SMART - خانه" class="flex items-center gap-2.5 text-[19px] font-extrabold text-[#7046f5] sm:text-[22px]">
+      <svg class="h-10 w-11 sm:h-12 sm:w-[52px]" viewBox="0 0 64 56" fill="none" aria-hidden="true">
+        <use href="#logo"></use>
+      </svg>
+      <span>SMART</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden h-full items-center gap-6 md:flex lg:gap-9" aria-label="ناوبری اصلی">
+      <a href="#" class="relative flex h-full items-center gap-2 whitespace-nowrap text-sm font-semibold text-[#4b378f] after:absolute after:bottom-0 after:right-0 after:left-0 after:h-1 after:rounded-full after:bg-[#8556ff]">
+        <svg class="size-4 text-[#7848ee]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        صفحه اصلی
+      </a>
+
+      <a href="#" class="flex h-full items-center gap-2 whitespace-nowrap text-sm font-semibold text-[#4b378f] hover:text-[#7046f5">
+        <svg class="size-4 text-[#7848ee]">
+            <use href="#about-us"></use>
+        </svg>
+        درباره ما
+      </a>
+
+      <a href="#" class="flex h-full items-center gap-2 whitespace-nowrap text-sm font-semibold text-[#4b378f] hover:text-[#7046f5]">
+        <svg class="size-4 text-[#7848ee]">
+            <use href="#letter"></use>
+        </svg>
+        تماس با ما
+      </a>
+    </nav>
+
+    <!-- Header buttons -->
+    <div class="flex items-center gap-2">
+      <a href="#roles" class="flex items-center gap-2 rounded-full bg-[#eee8ff] px-3 py-2.5 text-xs font-bold text-[#6440db] transition hover:bg-[#e5dcff] sm:px-5">
+        <svg class="size-6 text-2xl ">
+            <use href="#log-in"></use>
+        </svg>
+        <span>ورود به سیستم</span>
+      </a>
+
+      <button aria-label="منو" class="flex flex-col gap-1 p-1 md:hidden">
+        <span class="h-0.5 w-5 rounded bg-[#6945d9]"></span>
+        <span class="h-0.5 w-5 rounded bg-[#6945d9]"></span>
+        <span class="h-0.5 w-5 rounded bg-[#6945d9]"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="home" class="mx-auto w-[94%] max-w-[1420px]">
+
+    <!-- Hero -->
+    <section class="relative grid min-h-[220px] grid-cols-1 items-center gap-2 pt-8 sm:min-h-[270px] sm:pt-6 lg:min-h-[305px] lg:grid-cols-[1fr_1.6fr_1fr]">
+
+      <!-- Book illustration -->
+      <div aria-hidden="true" class="relative hidden h-[230px] self-end lg:block">
+            <img src="/assets/images/book.webp" alt="">
+      </div>
+
+      <!-- Hero content -->
+      <div class="z-10 text-center lg:col-start-2">
+        <h1 class="text-[25px] font-extrabold leading-relaxed text-[#20104e] sm:text-[clamp(28px,3.2vw,46px)]">
+          سامانه <span class="text-[#7047f3">هوشمند</span> مدیریت مدرسه
+        </h1>
+
+        <p class="mt-2 text-[13px] font-medium leading-8 text-[#5b469c] sm:mb-5 sm:text-[clamp(14px,1.55vw,20px)]">
+          راهکاری مدرن برای مدیریت بهتر، یادگیری آسان‌تر و ارتباط مؤثرتر
+        </p>
+
+        <div class="flex items-center justify-center gap-6 text-[#7246f5]">
+          <span class="h-0.5 w-16 bg-[#b9a2ff]"></span>
+                <svg class="h-10 w-11 sm:h-12 sm:w-[52px]" viewBox="0 0 64 56" fill="none" aria-hidden="true">
+                    <use href="#logo"></use>
+                </svg>
+          <span class="h-0.5 w-16 bg-[#b9a2ff]"></span>
+        </div>
+      </div>
+
+      <!-- School illustration -->
+      <div aria-hidden="true" class="relative hidden h-[230px] lg:block">
+        <img src="/assets/images/school-building.webp" alt="">
+      </div>
+    </section>
+
+    <!-- Role cards -->
+<section id="roles" aria-label="انتخاب پنل" class="mx-auto grid w-full max-w-[1190px] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-[22px]">
+
+  <!-- Parent panel -->
+  <article class="flex min-h-[370px] flex-col items-center rounded-[24px] border border-[#e3dcff] bg-white/85 px-5 py-5 text-center shadow-[0_12px_28px_#7551d51b] backdrop-blur-xl sm:min-h-[395px] sm:rounded-[28px] sm:px-7 sm:py-6 sm:col-span-2 lg:col-span-1">
+
+    <!-- Parent image -->
+    <div class="relative mx-auto mb-2 flex h-[135px] w-full max-w-[270px] items-center justify-center sm:h-[150px]">
+      <img
+        src="/assets/images/parent.webp"
+        alt="پنل اولیا"
+        class="h-full w-full object-contain rounded-4xl"
+      >
+    </div>
+
+    <h2 class="mb-2 mt-1 text-xl font-extrabold text-[#21104d] sm:text-[23px]">
+      پنل اولیا
+    </h2>
+
+    <p class="mb-4 min-h-[50px] text-xs leading-[1.9] text-[#5b4899] sm:min-h-[58px] sm:text-sm sm:leading-[2.1]">
+      پیگیری وضعیت تحصیلی فرزند، حضور و غیاب<br class="hidden sm:block"/>
+      و ارتباط با مدرسه
+    </p>
+
+    <a href="./pages/parent.html" class="mt-auto flex h-12 w-full max-w-[245px] items-center justify-center gap-5 rounded-full bg-gradient-to-r from-[#ff7a25] to-[#ffb057] text-sm font-bold text-white shadow-[0_10px_18px_#7751d52b] transition hover:-translate-y-1 hover:shadow-[0_14px_24px_#7751d544] sm:h-14">
+      ورود به پنل <svg class="size-5"><use href="#arrow"></use></svg>
+    </a>
+  </article>
+
+  <!-- Student panel -->
+  <article class="flex min-h-[370px] flex-col items-center rounded-[24px] border border-[#e3dcff] bg-white/85 px-5 py-5 text-center shadow-[0_12px_28px_#7551d51b] backdrop-blur-xl sm:min-h-[395px] sm:rounded-[28px] sm:px-7 sm:py-6">
+
+    <!-- Student image -->
+    <div class="relative mx-auto mb-2 flex h-[135px] w-full max-w-[270px] items-center justify-center sm:h-[150px]">
+      <img
+        src="/assets/images/student.webp"
+        alt="پنل دانش‌آموز"
+        class="h-full w-full object-contain rounded-4xl"
+      >
+    </div>
+
+    <h2 class="mb-2 mt-1 text-xl font-extrabold text-[#21104d] sm:text-[23px]">
+      پنل دانش‌آموز
+    </h2>
+
+    <p class="mb-4 min-h-[50px] text-xs leading-[1.9] text-[#5b4899] sm:min-h-[58px] sm:text-sm sm:leading-[2.1]">
+      دسترسی به برنامه درسی، تکالیف، نمرات<br class="hidden sm:block"/>
+      و کارنامه
+    </p>
+
+    <a href="./pages/student.html" class="mt-auto flex h-12 w-full max-w-[245px] items-center justify-center gap-5 rounded-full bg-gradient-to-r from-[#20a977] to-[#63d1a0] text-sm font-bold text-white shadow-[0_10px_18px_#7751d52b] transition hover:-translate-y-1 hover:shadow-[0_14px_24px_#7751d544] sm:h-14">
+      ورود به پنل <svg  class="size-5"><use href="#arrow"></use></svg>
+    </a>
+  </article>
+
+  <!-- School panel -->
+  <article class="flex min-h-[370px] flex-col items-center rounded-[24px] border border-[#e3dcff] bg-white/85 px-5 py-5 text-center shadow-[0_12px_28px_#7551d51b] backdrop-blur-xl sm:min-h-[395px] sm:rounded-[28px] sm:px-7 sm:py-6">
+
+    <!-- School image -->
+    <div class="relative mx-auto mb-2 flex h-[135px] w-full max-w-[270px] items-center justify-center sm:h-[150px]">
+      <img
+        src="/assets/images/school.webp"
+        alt="پنل مدرسه"
+        class="h-full w-full object-contain rounded-4xl"
+      >
+    </div>
+
+    <h2 class="mb-2 mt-1 text-xl font-extrabold text-[#21104d] sm:text-[23px]">
+      پنل مدرسه
+    </h2>
+
+    <p class="mb-4 min-h-[50px] text-xs leading-[1.9] text-[#5b4899] sm:min-h-[58px] sm:text-sm sm:leading-[2.1]">
+      مدیریت کامل مدرسه، دانش‌آموزان، معلمان<br class="hidden sm:block"/>
+      و امور اجرایی
+    </p>
+
+    <a href="./pages/school.html" class="mt-auto flex h-12 w-full max-w-[245px] items-center justify-center gap-5 rounded-full bg-gradient-to-r from-[#5930d8] to-[#9366ff] text-sm font-bold text-white shadow-[0_10px_18px_#7751d52b] transition hover:-translate-y-1 hover:shadow-[0_14px_24px_#7751d544] sm:h-14">
+      ورود به پنل <svg class="size-5"><use href="#arrow"></use></svg>
+    </a>
+  </article>
+
+</section>
+
+    <!-- Features -->
+    <section id="about" aria-label="ویژگی‌های سامانه" class="mx-auto mt-7 grid w-full max-w-[1190px] grid-cols-1 items-center gap-3 rounded-[25px] border border-[#e6ddff] bg-white/55 px-4 py-4 shadow-[0_8px_24px_#7957d51b] backdrop-blur-xl sm:mt-9 sm:grid-cols-3 sm:gap-0 sm:rounded-[35px] sm:px-5 sm:py-4">
+
+      <!-- Security -->
+      <div class="flex items-center justify-start gap-4 px-4 sm:justify-center">
+        <svg class="size-6 text-[#8453f4]">
+            <use href="#safe"></use>
+        </svg>
+        <div class="flex flex-col gap-1">
+          <strong class="text-sm font-extrabold text-[#21104d]">امنیت بالا</strong>
+          <small class="text-xs text-[#6851a1]">اطلاعات شما در امن‌ترین حالت</small>
+        </div>
+      </div>
+
+
+      <!-- Quick access -->
+      <div class="flex items-center justify-start gap-4 border-t border-[#d7c9ff] px-4 pt-3 sm:justify-center sm:border-r sm:border-t-0 sm:pt-0">
+        <svg class="size-6 text-[#8453f4]">
+            <use href="#bolt"></use>
+        </svg>
+        <div class="flex flex-col gap-1">
+          <strong class="text-sm font-extrabold text-[#21104d]">دسترسی سریع</strong>
+          <small class="text-xs text-[#6851a1]">در هر زمان و مکان</small>
+        </div>
+      </div>
+
+
+      <!-- Reports -->
+      <div class="flex items-center justify-start gap-4 border-t border-[#d7c9ff] px-4 pt-3 sm:justify-center sm:border-r sm:border-t-0 sm:pt-0">
+        <svg class="size-6 text-[#8453f4]">
+            <use href="#chart-bar"></use>
+        </svg>
+        <div class="flex flex-col gap-1">
+          <strong class="text-sm font-extrabold text-[#21104d]">گزارش‌های جامع</strong>
+          <small class="text-xs text-[#6851a1]">تصمیم‌گیری بهتر با داده‌های دقیق</small>
+        </div>
+      </div>
+
+    </section>  
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="mx-auto flex w-[92%] items-center justify-center gap-2.5 py-7 text-center text-[11px] text-[#7753db] sm:gap-4 sm:py-9 sm:text-sm">
+    <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+    <p class="m-0">
+      آینده‌ای روشن‌تر برای آموزش با <strong class="text-[#7046f5">SMART</strong>
+      <span class="text-lg">♡</span>
+    </p>
+    <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+  </footer>
+  <svg class="hidden">
+        <symbol id="log-in" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+        </symbol>
+        <symbol id="logo">
+            <path d="M6 16 32 3l26 13-26 13L6 16Z" fill="currentColor" opacity=".95"/>
+            <path d="M14 22v12c0 6 8 12 18 12s18-6 18-12V22L32 31 14 22Z" fill="currentColor" opacity=".72"/>
+            <path d="M55 19v17" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <path d="M51 38h8l-4 7-4-7Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="bolt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="chart-bar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
+        </symbol>
+        <symbol id="safe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol id="letter" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </symbol>
+        <symbol id="about-us" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+        </symbol>
+        <symbol id="arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </symbol>
+  </svg>
+</body>
+</html>
