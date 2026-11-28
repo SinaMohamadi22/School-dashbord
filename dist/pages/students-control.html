@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدیریت دانش‌آموزان مدرسه SMART">
+    <meta name="theme-color" content="#f7f4ff">
+
+    <title>مدیریت دانش‌آموزان | SMART</title>
+
+    <link rel="icon" type="image/x-icon" href="/School-dashbord/assets/favicon-B9F21RyA.png">
+
+  <link rel="stylesheet" crossorigin href="/School-dashbord/assets/input-B651C3KI.css">
+</head>
+
+<body class="min-h-screen bg-background font-vazirmatn text-text">
+
+    <div class="min-h-dvh lg:flex lg:flex-row-reverse lg:items-stretch">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="hidden w-[250px] shrink-0 flex-col border-l border-[#e9e4ff] bg-white px-3 py-4 lg:flex lg:min-h-dvh xl:w-[270px]">
+
+            <!-- Logo -->
+            <a href="/index.html" class="flex h-12 items-center justify-center border-b border-primary/5 pb-3">
+                <span class="text-xl font-black tracking-[3px] text-primary">SMART</span>
+            </a>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-5 flex-1" aria-label="منوی اصلی">
+                <ul class="space-y-1.5">
+
+                    <!-- Dashboard -->
+                    <li>./pages
+                        <a href="/pages/school.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">داشبورد</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                                <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                                <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                                <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Students -->
+                    <li>./pages
+                        <a href="/pages/students.html"
+                           aria-current="page"
+                           class="flex items-center justify-between rounded-xl bg-primary-light px-3 py-2.5 text-primary">
+                            <span class="text-sm font-bold">مدیریت دانش‌آموزان</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17 3.5a4 4 0 0 1 0 7.5M20 20v-1.5a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Teachers -->
+                    <li>./pages
+                        <a href="/pages/teachers-control.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">مدیریت معلمان</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 3 3 7.5 12 12l9-4.5L12 3ZM5 9.5v5c4 3 8 3 14 0v-5M21 8v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Classes -->
+                    <li>./pages
+                        <a href="/pages/classes.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">کلاس‌ها و پایه‌ها</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="17" rx="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                <path d="M7 2v4M17 2v4M3 9h18M7 13h3M7 17h3M14 13h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Attendance -->
+                    <li>./pages
+                        <a href="/pages/attendance-control.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">حضور و غیاب</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
+                                <path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Grades -->
+                    <li>./pages
+                        <a href="/pages/grades-manager.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">نمرات و کارنامه</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M6 3.5h8l4 4V20a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 20V5a1.5 1.5 0 0 1 2-1.5Z" stroke="currentColor" stroke-width="1.7"/>
+                                <path d="M14 3.5V8h4M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Reports -->
+                    <li>./pages
+                        <a href="/pages/reports.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">گزارش‌ها</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M4 19h4V9H4v10ZM10 19h4V4h-4v15ZM16 19h4v-7h-4v7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- Settings -->
+                    <li>./pages
+                        <a href="/pages/setting-manager.html"
+                           class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">تنظیمات</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                <path d="m19.4 15 .9 1.5-1.8 1.8-1.5-.9a7 7 0 0 1-1.7.7l-.4 1.7h-2.5l-.4-1.7a7 7 0 0 1-1.7-.7l-1.5.9L7 15.8l.9-1.5a7 7 0 0 1-.7-1.7l-1.7-.4V9.7l1.7-.4a7 7 0 0 1 .7-1.7L7 6.1 8.8 4.3l1.5.9a7 7 0 0 1 1.7-.7l.4-1.7h2.5l.4 1.7a7 7 0 0 1 1.7.7l1.5-.9 1.8 1.8-.9 1.5a7 7 0 0 1 .7 1.7l1.7.4v2.5l-1.7.4a7 7 0 0 1-.7 1.7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Sidebar School Card -->
+            <article class="mt-auto overflow-hidden rounded-2xl bg-primary-light">
+                <div class="flex h-[125px] items-center justify-center overflow-hidden p-2">
+                    <img
+                        src="/School-dashbord/assets/school-sidebar-2nOxt_LN.webp"
+                        alt="تصویر مدرسه"
+                        class="h-full w-full object-contain"
+                        width="180"
+                        height="130"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="px-3 pb-4 text-center">
+                    <h2 class="text-xs font-black text-primary">مدرسه بهتر</h2>
+                    <p class="mt-1.5 text-[10px] text-gray-500">آینده بهتر و روشن‌تر</p>
+                </div>
+            </article>
+
+        </aside>
+
+
+        <!-- ==================== MAIN ==================== -->
+        <main id="students-page" class="min-w-0 flex-1">
+
+            <div class="mx-auto flex min-h-dvh max-w-[1800px] flex-col gap-4 p-3 pb-28 sm:gap-5 sm:p-5 sm:pb-28 lg:pb-6 xl:p-6">
+
+                <!-- ==================== HEADER ==================== -->
+                <header class="relative grid min-h-[145px] grid-cols-1 overflow-hidden rounded-2xl px-4 py-3 sm:min-h-[165px] sm:px-6 lg:min-h-[185px] lg:grid-cols-2">
+
+                    <!-- Background -->
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-[#f0eaff] via-[#e7e1ff] to-[#d6c9ff]"></div>
+
+                    <!-- Decorative -->
+                    <div class="absolute inset-0 -z-10 overflow-hidden opacity-40" aria-hidden="true">
+                        <div class="absolute -left-12 -top-20 size-52 rounded-full bg-white blur-3xl"></div>
+                        <div class="absolute right-1/3 top-4 size-32 rounded-full bg-[#c8b5ff] blur-3xl"></div>
+                        <div class="absolute -bottom-16 right-10 size-48 rounded-full bg-white blur-3xl"></div>
+                    </div>
+
+                    <!-- Illustration -->
+                    <div class="pointer-events-none absolute bottom-0 left-0 hidden h-[150px] w-[42%] items-end justify-center sm:flex lg:h-[175px]">
+                        <img
+                            src="/School-dashbord/assets/school-header-Ct456wJc.webp"
+                            alt=""
+                            width="340"
+                            height="200"
+                            class="h-full w-full object-contain object-bottom"
+                            fetchpriority="high"
+                        >
+                    </div>
+
+                    <!-- Header Content -->
+                    <div class="relative z-10 flex flex-col justify-between gap-4">
+
+                        <!-- Top Bar -->
+                        <div class="flex items-center justify-between gap-2">
+
+                            <!-- User -->
+                            <div class="flex items-center gap-2">
+                                <div class="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-primary">
+                                    <img
+                                        src="/School-dashbord/assets/avatar-school-panel-BWILXrPC.webp"
+                                        alt="مدیر مدرسه"
+                                        class="size-full"
+                                        loading="lazy"
+                                    >
+                                </div>
+
+                                <div class="hidden text-right sm:block">
+                                    <p class="text-sm font-extrabold">مدیر مدرسه</p>
+                                    <p class="mt-1 text-xs text-gray-500">مدیر سیستم</p>
+                                </div>
+
+                                <svg viewBox="0 0 24 24" fill="none" class="size-3 text-gray-500" aria-hidden="true">
+                                    <path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Notification -->
+                            <button
+                                type="button"
+                                aria-label="اعلان‌ها"
+                                class="relative flex size-10 shrink-0 items-center justify-center rounded-full border border-white/70 bg-white/70 text-gray-600"
+                            >
+                                <svg viewBox="0 0 24 24" fill="none" class="size-5" aria-hidden="true">
+                                    <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="absolute -right-0.5 -top-0.5 flex size-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold text-white">۲</span>
+                            </button>
+
+                            <!-- Search -->
+                            <form role="search" class="min-w-0 flex-1">
+                                <label for="header-search" class="sr-only">جستجو در سامانه</label>
+                                <div class="flex h-10 max-w-[220px] items-center gap-2 rounded-full border border-white/70 bg-white/65 px-3 text-gray-400 backdrop-blur-sm">
+                                    <input
+                                        id="header-search"
+                                        type="search"
+                                        placeholder="جستجو در سامانه..."
+                                        class="min-w-0 flex-1 bg-transparent text-[10px] font-medium outline-none placeholder:text-gray-400 sm:text-xs"
+                                    >
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-4 shrink-0" aria-hidden="true">
+                                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+                                        <path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <!-- Welcome -->
+                        <div class="pb-2 sm:pb-4 lg:pb-5">
+                            <div class="flex items-center gap-2">
+                                <span aria-hidden="true" class="text-lg">👋</span>
+                                <h1 class="text-sm font-black text-[#24204a] sm:text-base">
+                                    مدیریت دانش‌آموزان
+                                </h1>
+                            </div>
+
+                            <p class="mt-2 text-[10px] font-medium text-[#5e548e] sm:text-xs">
+                                اطلاعات دانش‌آموزان مدرسه را مدیریت و بررسی کنید
+                            </p>
+                        </div>
+
+                    </div>
+                </header>
+
+
+                <!-- ==================== STUDENT STATS ==================== -->
+                <section aria-label="آمار دانش‌آموزان" class="grid grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-3 xl:grid-cols-4">
+
+                    <!-- Total Students -->
+                    <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#ece7ff] bg-white p-3 shadow-sm sm:gap-3 sm:p-4">
+                        <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-500 sm:size-11">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6" aria-hidden="true">
+                                <path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                <path d="M17 3.5a4 4 0 0 1 0 7.5M20 20v-1.5a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="truncate text-xs font-semibold text-gray-500 sm:text-sm">کل دانش‌آموزان</p>
+                            <p class="mt-1 text-base font-black text-blue-600 sm:text-xl">۱,۲۸۴</p>
+                            <p class="mt-0.5 text-[10px] font-semibold text-success sm:text-xs">▲ ۸٪ نسبت به ماه قبل</p>
+                        </div>
+                    </article>
+
+                    <!-- Active Students -->
+                    <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#ece7ff] bg-[#eefaf5] p-3 shadow-sm sm:gap-3 sm:p-4">
+                        <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emermerald-500 sm:size-11">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6" aria-hidden="true">
+                                <path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z" fill="currentColor" opacity=".15"/>
+                                <path d="m8 12 2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="truncate text-xs font-semibold text-gray-500 sm:text-sm">دانش‌آموزان فعال</p>
+                            <p class="mt-1 text-base font-black text-emeremerald-600 sm:text-xl">۱,۲۴۰</p>
+                            <p class="mt-0.5 text-[10px] font-semibold text-success sm:text-xs">۹۶.۵٪ از کل</p>
+                        </div>
+                    </article>
+
+                    <!-- New Students -->
+                    <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#ece7ff] bg-[#fff8f0] p-3 shadow-sm sm:gap-3 sm:p-4">
+                        <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-500 sm:size-11">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
+                            </svg>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="truncate text-xs font-semibold text-gray-500 sm:text-sm">ثبت‌نام جدید</p>
+                            <p class="mt-1 text-base font-black text-orange-500 sm:text-xl">۴۴</p>
+                            <p class="mt-0.5 text-[10px] font-semibold text-orange-500 sm:text-xs">این ماه</p>
+                        </div>
+                    </article>
+
+                    <!-- Average Grade -->
+                    <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#ece7ff] bg-[#f3f0ff] p-3 shadow-sm sm:gap-3 sm:p-4">
+                        <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-500 sm:size-11">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6" aria-hidden="true">
+                                <path d="m12 3 2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="truncate text-xs font-semibold text-gray-500 sm:text-sm">میانگین معدل</p>
+                            <p class="mt-1 text-base font-black text-violet-600 sm:text-xl">۱۸.۲۵</p>
+                            <p class="mt-0.5 text-[10px] font-semibold text-success sm:text-xs">▲ ۰.۴ نمره رشد</p>
+                        </div>
+                    </article>
+
+                </section>
+
+
+                <!-- ==================== STUDENTS MANAGEMENT ==================== -->
+                <section aria-labelledby="students-title" class="min-w-0 rounded-2xl border border-[#ece7ff] bg-white p-3 shadow-sm sm:p-4 lg:p-5">
+
+                    <!-- Section Header -->
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+                        <div>
+                            <h2 id="students-title" class="text-sm font-black sm:text-base">
+                                لیست دانش‌آموزان
+                            </h2>
+                            <p class="mt-1 text-[10px] text-gray-400 sm:text-xs">
+                                مشاهده و مدیریت اطلاعات دانش‌آموزان
+                            </p>
+                        </div>
+
+                        <!-- Add Student -->
+                        <a href="#add-student"
+                           class="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-primary-dark sm:text-sm">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            افزودن دانش‌آموز
+                        </a>
+
+                    </div>
+
+
+                    <!-- ==================== FILTERS ==================== -->
+                    <div class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-12 lg:gap-3">
+
+                        <!-- Search -->
+                        <div class="relative min-w-0 lg:col-span-5">
+                            <label for="student-search" class="sr-only">جستجوی دانش‌آموز</label>
+                            <input
+                                id="student-search"
+                                type="search"
+                                placeholder="جستجو بر اساس نام یا کد دانش‌آموز..."
+                                class="h-11 w-full rounded-xl border border-[#e9e4ff] bg-[#faf9ff] pr-10 pl-3 text-xs outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10 sm:text-sm"
+                            >
+                            <svg viewBox="0 0 24 24" fill="none" class="absolute right-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+                                <path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <!-- Grade Filter -->
+                        <div class="min-w-0 lg:col-span-2">
+                            <label for="grade-filter" class="sr-only">فیلتر پایه</label>
+                            <select id="grade-filter" class="h-11 w-full rounded-xl border border-[#e9e4ff] bg-[#faf9ff] px-3 text-xs text-gray-600 outline-none focus:border-primary sm:text-sm">
+                                <option value="">همه پایه‌ها</option>
+                                <option>پایه اول</option>
+                                <option>پایه دوم</option>
+                                <option>پایه سوم</option>
+                                <option>پایه چهارم</option>
+                                <option>پایه پنجم</option>
+                                <option>پایه ششم</option>
+                                <option>پایه هفتم</option>
+                                <option>پایه هشتم</option>
+                                <option>پایه نهم</option>
+                                <option>پایه دهم</option>
+                                <option>پایه یازدهم</option>
+                                <option>پایه دوازدهم</option>
+                            </select>
+                        </div>
+
+                        <!-- Status Filter -->
+                        <div class="min-w-0 lg:col-span-2">
+                            <label for="status-filter" class="sr-only">فیلتر وضعیت</label>
+                            <select id="status-filter" class="h-11 w-full rounded-xl border border-[#e9e4ff] bg-[#faf9ff] px-3 text-xs text-gray-600 outline-none focus:border-primary sm:text-sm">
+                                <option value="">همه وضعیت‌ها</option>
+                                <option>فعال</option>
+                                <option>غیرفعال</option>
+                                <option>در انتظار ثبت‌نام</option>
+                            </select>
+                        </div>
+
+                        <!-- Sort -->
+                        <div class="min-w-0 lg:col-span-3">
+                            <label for="sort-filter" class="sr-only">مرتب‌سازی</label>
+                            <select id="sort-filter" class="h-11 w-full rounded-xl border border-[#e9e4ff] bg-[#faf9ff] px-3 text-xs text-gray-600 outline-none focus:border-primary sm:text-sm">
+                                <option value="">مرتب‌سازی پیش‌فرض</option>
+                                <option>نام (الف تا ی)</option>
+                                <option>معدل (بیشترین)</option>
+                                <option>معدل (کمترین)</option>
+                                <option>جدیدترین ثبت‌نام</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================== DESKTOP TABLE ==================== -->
+                    <div class="mt-4 hidden overflow-x-auto md:block">
+                        <table class="w-full min-w-[760px] border-collapse text-right">
+
+                            <thead>
+                                <tr class="border-b border-[#eee9ff] bg-[#faf9ff] text-[11px] font-bold text-gray-500 lg:text-xs">
+                                    <th class="rounded-r-xl px-3 py-3">دانش‌آموز</th>
+                                    <th class="px-3 py-3">کد دانش‌آموزی</th>
+                                    <th class="px-3 py-3">پایه / کلاس</th>
+                                    <th class="px-3 py-3">معدل</th>
+                                    <th class="px-3 py-3">وضعیت</th>
+                                    <th class="rounded-l-xl px-3 py-3 text-center">عملیات</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="divide-y divide-[#f1edff] text-xs">
+
+                                <!-- Student 1 -->
+                                <tr class="transition-colors hover:bg-[#faf9ff]">
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center gap-2.5">
+                                            <img src="/assets/images/students/student-1.webp" alt="" class="size-10 shrink-0 rounded-full bg-blue-50 object-cover" loading="lazy">
+                                            <div class="min-w-0">
+                                                <p class="truncate font-bold text-text">آراد محمدی</p>
+                                                <p class="mt-1 text-[10px] text-gray-400">ar.mohammadi@email.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-3 py-3.5 text-gray-500">ST-1405-1024</td>
+                                    <td class="px-3 py-3.5 text-gray-500">دهم / ۱</td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="font-black text-success">۱۹.۲۵</span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#eaf8f1] px-2.5 py-1 text-[10px] font-bold text-[#35B985]">
+                                            <span class="size-1.5 rounded-full bg-[#35B985]"></span>
+                                            فعال
+                                        </span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center justify-center gap-1.5">
+                                            <a href="#view-student" aria-label="مشاهده آراد محمدی" class="flex size-8 items-center justify-center rounded-lg bg-[#edf4ff] text-blue-500 transition hover:bg-blue-100">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#edit-student" aria-label="ویرایش آراد محمدی" class="flex size-8 items-center justify-center rounded-lg bg-[#f3edff] text-primary transition hover:bg-[#e7deff]">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Student 2 -->
+                                <tr class="transition-colors hover:bg-[#faf9ff]">
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center gap-2.5">
+                                            <img src="/assets/images/students/student-2.webp" alt="" class="size-10 shrink-0 rounded-full bg-pink-50 object-cover" loading="lazy">
+                                            <div class="min-w-0">
+                                                <p class="truncate font-bold text-text">هستی رضایی</p>
+                                                <p class="mt-1 text-[10px] text-gray-400">h.rezaei@email.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-3 py-3.5 text-gray-500">ST-1405-1025</td>
+                                    <td class="px-3 py-3.5 text-gray-500">یازدهم / ۲</td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="font-black text-success">۱۸.۷۵</span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#eaf8f1] px-2.5 py-1 text-[10px] font-bold text-[#35B985]">
+                                            <span class="size-1.5 rounded-full bg-[#35B985]"></span>
+                                            فعال
+                                        </span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center justify-center gap-1.5">
+                                            <a href="#view-student" aria-label="مشاهده هستی رضایی" class="flex size-8 items-center justify-center rounded-lg bg-[#edf4ff] text-blue-500 transition hover:bg-blue-100">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#edit-student" aria-label="ویرایش هستی رضایی" class="flex size-8 items-center justify-center rounded-lg bg-[#f3edff] text-primary transition hover:bg-[#e7deff]">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Student 3 -->
+                                <tr class="transition-colors hover:bg-[#faf9ff]">
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center gap-2.5">
+                                            <img src="/assets/images/students/student-3.webp" alt="" class="size-10 shrink-0 rounded-full bg-orange-50 object-cover" loading="lazy">
+                                            <div class="min-w-0">
+                                                <p class="truncate font-bold text-text">پارسا احمدی</p>
+                                                <p class="mt-1 text-[10px] text-gray-400">p.ahmadi@email.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-3 py-3.5 text-gray-500">ST-1405-1026</td>
+                                    <td class="px-3 py-3.5 text-gray-500">دهم / ۳</td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="font-black text-orange-500">۱۶.۸۰</span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#eaf8f1] px-2.5 py-1 text-[10px] font-bold text-[#35B985]">
+                                            <span class="size-1.5 rounded-full bg-[#35B985]"></span>
+                                            فعال
+                                        </span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center justify-center gap-1.5">
+                                            <a href="#view-student" aria-label="مشاهده پارسا احمدی" class="flex size-8 items-center justify-center rounded-lg bg-[#edf4ff] text-blue-500 transition hover:bg-blue-100">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#edit-student" aria-label="ویرایش پارسا احمدی" class="flex size-8 items-center justify-center rounded-lg bg-[#f3edff] text-primary transition hover:bg-[#e7deff]">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Student 4 -->
+                                <tr class="transition-colors hover:bg-[#faf9ff]">
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center gap-2.5">
+                                            <img src="/assets/images/students/student-4.webp" alt="" class="size-10 shrink-0 rounded-full bg-emeremerald-50 object-cover" loading="lazy">
+                                            <div class="min-w-0">
+                                                <p class="truncate font-bold text-text">نیایش کریمی</p>
+                                                <p class="mt-1 text-[10px] text-gray-400">n.karimi@email.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-3 py-3.5 text-gray-500">ST-1405-1027</td>
+                                    <td class="px-3 py-3.5 text-gray-500">دوازدهم / ۱</td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="font-black text-success">۱۹.۶۰</span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#eaf8f1] px-2.5 py-1 text-[10px] font-bold text-[#35B985]">
+                                            <span class="size-1.5 rounded-full bg-[#35B985]"></span>
+                                            فعال
+                                        </span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center justify-center gap-1.5">
+                                            <a href="#view-student" aria-label="مشاهده نیایش کریمی" class="flex size-8 items-center justify-center rounded-lg bg-[#edf4ff] text-blue-500 transition hover:bg-blue-100">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#edit-student" aria-label="ویرایش نیایش کریمی" class="flex size-8 items-center justify-center rounded-lg bg-[#f3edff] text-primary transition hover:bg-[#e7deff]">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Student 5 -->
+                                <tr class="transition-colors hover:bg-[#faf9ff]">
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center gap-2.5">
+                                            <img src="/assets/images/students/student-5.webp" alt="" class="size-10 shrink-0 rounded-full bg-violet-50 object-cover" loading="lazy">
+                                            <div class="min-w-0">
+                                                <p class="truncate font-bold text-text">امیرحسین صادقی</p>
+                                                <p class="mt-1 text-[10px] text-gray-400">a.sadeghi@email.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-3 py-3.5 text-gray-500">ST-1405-1028</td>
+                                    <td class="px-3 py-3.5 text-gray-500">یازدهم / ۱</td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="font-black text-orange-500">۱۵.۹۰</span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-2.5 py-1 text-[10px] font-bold text-orange-500">
+                                            <span class="size-1.5 rounded-full bg-orange-400"></span>
+                                            نیازمند بررسی
+                                        </span>
+                                    </td>
+                                    <td class="px-3 py-3.5">
+                                        <div class="flex items-center justify-center gap-1.5">
+                                            <a href="#view-student" aria-label="مشاهده امیرحسین صادقی" class="flex size-8 items-center justify-center rounded-lg bg-[#edf4ff] text-blue-500 transition hover:bg-blue-100">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#edit-student" aria-label="ویرایش امیرحسین صادقی" class="flex size-8 items-center justify-center rounded-lg bg-[#f3edff] text-primary transition hover:bg-[#e7deff]">
+                                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                    <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <!-- ==================== MOBILE STUDENT CARDS ==================== -->
+                    <div class="mt-4 space-y-3 md:hidden">
+
+                        <!-- Mobile Student 1 -->
+                        <article class="rounded-2xl border border-[#eee9ff] bg-[#faf9ff] p-3">
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/images/students/student-1.webp" alt="" class="size-11 shrink-0 rounded-full bg-blue-50 object-cover" loading="lazy">
+                                <div class="min-w-0 flex-1">
+                                    <h3 class="truncate text-xs font-bold">آراد محمدی</h3>
+                                    <p class="mt-1 truncate text-[10px] text-gray-400">ST-1405-1024</p>
+                                </div>
+                                <span class="shrink-0 rounded-full bg-[#eaf8f1] px-2 py-1 text-[9px] font-bold text-[#35B985]">فعال</span>
+                            </div>
+                            <div class="mt-3 grid grid-cols-3 gap-2 border-t border-[#eee9ff] pt-3 text-center">
+                                <div>
+                                    <p class="text-[9px] text-gray-400">پایه</p>
+                                    <p class="mt-1 text-[11px] font-bold">دهم</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">کلاس</p>
+                                    <p class="mt-1 text-[11px] font-bold">۱</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">معدل</p>
+                                    <p class="mt-1 text-[11px] font-black text-success">۱۹.۲۵</p>
+                                </div>
+                            </div>
+                            <div class="mt-3 flex justify-end gap-2">
+                                <a href="#view-student" class="flex items-center gap-1.5 rounded-lg bg-[#edf4ff] px-3 py-2 text-[10px] font-bold text-blue-500">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                    </svg>
+                                    مشاهده
+                                </a>
+                                <a href="#edit-student" class="flex items-center gap-1.5 rounded-lg bg-[#f3edff] px-3 py-2 text-[10px] font-bold text-primary">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    ویرایش
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Mobile Student 2 -->
+                        <article class="rounded-2xl border border-[#eee9ff] bg-[#faf9ff] p-3">
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/images/students/student-2.webp" alt="" class="size-11 shrink-0 rounded-full bg-pink-50 object-cover" loading="lazy">
+                                <div class="min-w-0 flex-1">
+                                    <h3 class="truncate text-xs font-bold">هستی رضایی</h3>
+                                    <p class="mt-1 truncate text-[10px] text-gray-400">ST-1405-1025</p>
+                                </div>
+                                <span class="shrink-0 rounded-full bg-[#eaf8f1] px-2 py-1 text-[9px] font-bold text-[#35B985]">فعال</span>
+                            </div>
+                            <div class="mt-3 grid grid-cols-3 gap-2 border-t border-[#eee9ff] pt-3 text-center">
+                                <div>
+                                    <p class="text-[9px] text-gray-400">پایه</p>
+                                    <p class="mt-1 text-[11px] font-bold">یازدهم</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">کلاس</p>
+                                    <p class="mt-1 text-[11px] font-bold">۲</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">معدل</p>
+                                    <p class="mt-1 text-[11px] font-black text-success">۱۸.۷۵</p>
+                                </div>
+                            </div>
+                            <div class="mt-3 flex justify-end gap-2">
+                                <a href="#view-student" class="flex items-center gap-1.5 rounded-lg bg-[#edf4ff] px-3 py-2 text-[10px] font-bold text-blue-500">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                    </svg>
+                                    مشاهده
+                                </a>
+                                <a href="#edit-student" class="flex items-center gap-1.5 rounded-lg bg-[#f3edff] px-3 py-2 text-[10px] font-bold text-primary">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    ویرایش
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Mobile Student 3 -->
+                        <article class="rounded-2xl border border-[#eee9ff] bg-[#faf9ff] p-3">
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/images/students/student-3.webp" alt="" class="size-11 shrink-0 rounded-full bg-orange-50 object-cover" loading="lazy">
+                                <div class="min-w-0 flex-1">
+                                    <h3 class="truncate text-xs font-bold">پارسا احمدی</h3>
+                                    <p class="mt-1 truncate text-[10px] text-gray-400">ST-1405-1026</p>
+                                </div>
+                                <span class="shrink-0 rounded-full bg-[#eaf8f1] px-2 py-1 text-[9px] font-bold text-[#35B985]">فعال</span>
+                            </div>
+                            <div class="mt-3 grid grid-cols-3 gap-2 border-t border-[#eee9ff] pt-3 text-center">
+                                <div>
+                                    <p class="text-[9px] text-gray-400">پایه</p>
+                                    <p class="mt-1 text-[11px] font-bold">دهم</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">کلاس</p>
+                                    <p class="mt-1 text-[11px] font-bold">۳</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">معدل</p>
+                                    <p class="mt-1 text-[11px] font-black text-orange-500">۱۶.۸۰</p>
+                                </div>
+                            </div>
+                            <div class="mt-3 flex justify-end gap-2">
+                                <a href="#view-student" class="flex items-center gap-1.5 rounded-lg bg-[#edf4ff] px-3 py-2 text-[10px] font-bold text-blue-500">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                    </svg>
+                                    مشاهده
+                                </a>
+                                <a href="#edit-student" class="flex items-center gap-1.5 rounded-lg bg-[#f3edff] px-3 py-2 text-[10px] font-bold text-primary">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    ویرایش
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Mobile Student 4 -->
+                        <article class="rounded-2xl border border-[#eee9ff] bg-[#faf9ff] p-3">
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/images/students/student-4.webp" alt="" class="size-11 shrink-0 rounded-full bg-emerald-50 object-cover" loading="lazy">
+                                <div class="min-w-0 flex-1">
+                                    <h3 class="truncate text-xs font-bold">نیایش کریمی</h3>
+                                    <p class="mt-1 truncate text-[10px] text-gray-400">ST-1405-1027</p>
+                                </div>
+                                <span class="shrink-0 rounded-full bg-[#eaf8f1] px-2 py-1 text-[9px] font-bold text-[#35B985]">فعال</span>
+                            </div>
+                            <div class="mt-3 grid grid-cols-3 gap-2 border-t border-[#eee9ff] pt-3 text-center">
+                                <div>
+                                    <p class="text-[9px] text-gray-400">پایه</p>
+                                    <p class="mt-1 text-[11px] font-bold">دوازدهم</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">کلاس</p>
+                                    <p class="mt-1 text-[11px] font-bold">۱</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">معدل</p>
+                                    <p class="mt-1 text-[11px] font-black text-success">۱۹.۶۰</p>
+                                </div>
+                            </div>
+                            <div class="mt-3 flex justify-end gap-2">
+                                <a href="#view-student" class="flex items-center gap-1.5 rounded-lg bg-[#edf4ff] px-3 py-2 text-[10px] font-bold text-blue-500">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                    </svg>
+                                    مشاهده
+                                </a>
+                                <a href="#edit-student" class="flex items-center gap-1.5 rounded-lg bg-[#f3edff] px-3 py-2 text-[10px] font-bold text-primary">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    ویرایش
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Mobile Student 5 -->
+                        <article class="rounded-2xl border border-[#eee9ff] bg-[#faf9ff] p-3">
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/images/students/student-5.webp" alt="" class="size-11 shrink-0 rounded-full bg-violet-50 object-cover" loading="lazy">
+                                <div class="min-w-0 flex-1">
+                                    <h3 class="truncate text-xs font-bold">امیرحسین صادقی</h3>
+                                    <p class="mt-1 truncate text-[10px] text-gray-400">ST-1405-1028</p>
+                                </div>
+                                <span class="shrink-0 rounded-full bg-orange-50 px-2 py-1 text-[9px] font-bold text-orange-500">نیازمند بررسی</span>
+                            </div>
+                            <div class="mt-3 grid grid-cols-3 gap-2 border-t border-[#eee9ff] pt-3 text-center">
+                                <div>
+                                    <p class="text-[9px] text-gray-400">پایه</p>
+                                    <p class="mt-1 text-[11px] font-bold">یازدهم</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">کلاس</p>
+                                    <p class="mt-1 text-[11px] font-bold">۱</p>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-gray-400">معدل</p>
+                                    <p class="mt-1 text-[11px] font-black text-orange-500">۱۵.۹۰</p>
+                                </div>
+                            </div>
+                            <div class="mt-3 flex justify-end gap-2">
+                                <a href="#view-student" class="flex items-center gap-1.5 rounded-lg bg-[#edf4ff] px-3 py-2 text-[10px] font-bold text-blue-500">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor" stroke-width="1.7"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                    </svg>
+                                    مشاهده
+                                </a>
+                                <a href="#edit-student" class="flex items-center gap-1.5 rounded-lg bg-[#f3edff] px-3 py-2 text-[10px] font-bold text-primary">
+                                    <svg viewBox="0 0 24 24" fill="none" class="size-3.5">
+                                        <path d="m15 5 4 4M4 20l4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    ویرایش
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+                    <!-- ==================== PAGINATION ==================== -->
+                    <div class="mt-4 flex flex-col gap-3 border-t border-[#eee9ff] pt-4 sm:flex-row sm:items-center sm:justify-between">
+
+                        <p class="text-center text-[10px] text-gray-400 sm:text-right sm:text-xs">
+                            نمایش ۱ تا ۵ از ۱,۲۸۴ دانش‌آموز
+                        </p>
+
+                        <nav aria-label="صفحه‌بندی دانش‌آموزان">
+                            <ul class="flex items-center justify-center gap-1.5">
+
+                                <li>
+                                    <a href="#previous" aria-label="صفحه قبلی" class="flex size-8 items-center justify-center rounded-lg border border-[#e9e4ff] text-gray-400 transition hover:bg-primary-light hover:text-primary">
+                                        <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                            <path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#page-1" aria-current="page" class="flex size-8 items-center justify-center rounded-lg bg-primary text-xs font-bold text-white">۱</a>
+                                </li>
+                                <li>
+                                    <a href="#page-2" class="flex size-8 items-center justify-center rounded-lg border border-[#e9e4ff] text-xs text-gray-500 transition hover:bg-primary-light hover:text-primary">۲</a>
+                                </li>
+                                <li>
+                                    <a href="#page-3" class="flex size-8 items-center justify-center rounded-lg border border-[#e9e4ff] text-xs text-gray-500 transition hover:bg-primary-light hover:text-primary">۳</a>
+                                </li>
+                                <li>
+                                    <span class="flex size-8 items-center justify-center text-xs text-gray-400">...</span>
+                                </li>
+                                <li>
+                                    <a href="#page-256" class="flex size-8 items-center justify-center rounded-lg border border-[#e9e4ff] text-xs text-gray-500 transition hover:bg-primary-light hover:text-primary">۲۵۶</a>
+                                </li>
+
+                                <li>
+                                    <a href="#next" aria-label="صفحه بعدی" class="flex size-8 items-center justify-center rounded-lg border border-[#e9e4ff] text-gray-400 transition hover:bg-primary-light hover:text-primary">
+                                        <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                            <path d="m10 6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================== BOTTOM BANNER ==================== -->
+                <section class="relative flex min-h-[115px] items-center overflow-hidden rounded-2xl border border-[#ece7ff] bg-gradient-to-l from-[#e7ddff] via-[#eee9ff] to-[#d9caff] p-4 sm:min-h-[135px] sm:p-5">
+
+                    <!-- Decorations -->
+                    <div class="absolute -left-12 -top-12 size-36 rounded-full bg-white/30 blur-2xl" aria-hidden="true"></div>
+                    <div class="absolute -bottom-14 right-1/3 size-32 rounded-full bg-[#c3a8ff]/40 blur-2xl" aria-hidden="true"></div>
+
+                    <!-- Illustration -->
+                    <div class="relative z-10 hidden h-[115px] w-[42%] shrink-0 sm:block">
+                        <img
+                            src="/School-dashbord/assets/laptop-banner-DIdIEcey.webp"
+                            alt=""
+                            width="240"
+                            height="150"
+                            class="h-full w-full object-contain"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <!-- Banner Text -->
+                    <div class="relative z-10 flex-1 text-center sm:text-right">
+                        <h2 class="text-xs font-black text-primary sm:text-sm">
+                            مدیریت هوشمند دانش‌آموزان با SMART
+                        </h2>
+                        <p class="mt-2 text-[9px] leading-5 text-[#7463a9] sm:text-[11px]">
+                            اطلاعات دقیق‌تر، مدیریت بهتر و آینده‌ای روشن‌تر
+                        </p>
+                    </div>
+
+                </section>
+
+
+                <!-- ==================== FOOTER ==================== -->
+                <footer class="mx-auto flex w-[92%] items-center justify-center gap-2.5 text-center text-[10px] text-[#7753db] sm:gap-4 sm:text-sm">
+                    <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+                    <p class="m-0">
+                        آینده‌ای روشن‌تر برای آموزش با
+                        <strong class="text-[#7046f5">SMART</strong>
+                        <span class="text-lg">♡</span>
+                    </p>
+                    <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+                </footer>
+
+            </div>
+
+
+            <!-- ==================== MOBILE BOTTOM NAV ==================== -->
+            <nav
+                aria-label="منوی موبایل"
+                class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E9E4FF] bg-white/95 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(65,45,130,0.08)] backdrop-blur-lg lg:hidden"
+            >
+                <ul class="mx-auto grid max-w-lg grid-cols-5 gap-1 py-2">
+
+                    <!-- Dashboard -->
+                    <li class="mi./pages>
+                        <a href="/pages/school.html" class="flex min-w-0 flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                                <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                                <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                                <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                            </svg>
+                            <span class="truncate text-[9px]">داشبورد</span>
+                        </a>
+                    </li>
+
+                    <!-- Students -->
+                    <li class="mi./pages>
+                        <a href="/pages/students.html" aria-current="page" class="flex min-w-0 flex-col items-center justify-center gap-1 rounded-xl bg-primary-light py-2 text-primary">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                <path d="M17 3.5a4 4 0 0 1 0 7.5M20 20v-1.5a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                            <span class="truncate text-[9px] font-bold">دانش‌آموزان</span>
+                        </a>
+                    </li>
+
+                    <!-- Teachers -->
+                    <li class="mi./pages>
+                        <a href="/pages/teachers-control.html" class="flex min-w-0 flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 3 3 7.5 12 12l9-4.5L12 3ZM5 9.5v5c4 3 8 3 14 0v-5M21 8v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="truncate text-[9px]">معلمان</span>
+                        </a>
+                    </li>
+
+                    <!-- Classes -->
+                    <li class="mi./pages>
+                        <a href="/pages/classes.html" class="flex min-w-0 flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="17" rx="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                <path d="M7 2v4M17 2v4M3 9h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                            <span class="truncate text-[9px]">کلاس‌ها</span>
+                        </a>
+                    </li>
+
+                    <!-- More -->
+                    <li class="relative min-w-0">
+                        <details class="group">
+                            <summary class="flex cursor-pointer list-none flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary [&::-webkit-details-marker]:hidden">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true">
+                                    <circle cx="5" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="19" cy="12" r="1" fill="currentColor"/>
+                                </svg>
+                                <span class="truncate text-[9px]">بیشتر</span>
+                            </summary>
+
+                            <!-- More Menu -->
+                            <div class="fixed inset-x-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-[60] mx-auto max-h-[min(70dvh,480px)] w-auto max-w-[360px] overflow-y-auto overscroll-contain rounded-2xl border border-[#E9E4FF] bg-white p-3 shadow-[0_12px_40px_rgba(65,45,130,0.16)] sm:inset-x-4 sm:max-w-[400px]">
+
+                                <div class="mb-3 flex items-center justify-between gap-2 border-b border-[#F0ECFA] pb-3">
+                                    <span class="text-sm font-bold text-[#25243A]">دسترسی‌های بیشتر</span>
+                                    <span class="rounded-lg bg-[#F3EFFF] px-2 py-1 text-[10px] text-[#6D52CF]">۴ بخش</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 sm:gap-3">
+
+                                    <!-- Atte./pages -->
+                                    <a href="/pages/attendance-control.html" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                        <span class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#EDE7FF] text-[#6D52CF] sm:size-10">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
+                                                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                            </svg>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">حضور و غیاب</span>
+                                            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">وضعیت حضور</span>
+                                        </span>
+                                    </a>
+
+                                    <!-- Grad./pages
+                                    <a href="/pages/grades-manager.html" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                        <span class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#E5F4FF] text-[#5798D7] sm:size-10">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="M6 3h8l4 4v14H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <path d="M14 3v4h4M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                            </svg>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">نمرات و کارنامه</span>
+                                            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">عملکرد تحصیلی</span>
+                                        </span>
+                                    </a>
+
+                                    <!-- Repo./pages>
+                                    <a href="/pages/reports.html" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                        <span class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#E3F8EE] text-[#35B985] sm:size-10">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">گزارش‌ها</span>
+                                            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">گزارش‌های تحلیلی</span>
+                                        </span>
+                                    </a>
+
+                                    <!-- Sett./pages->
+                                    <a href="/pages/setting-manager.html" class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                        <span class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF0E5] text-[#F49A52] sm:size-10">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+                                                <path d="m19.4 15 .9 1.5-1.8 1.8-1.5-.9a7 7 0 0 1-1.7.7l-.4 1.7h-2.5l-.4-1.7a7 7 0 0 1-1.7-.7l-1.5.9L7 15.8l.9-1.5a7 7 0 0 1-.7-1.7l-1.7-.4V9.7l1.7-.4a7 7 0 0 1 .7-1.7L7 6.1 8.8 4.3l1.5.9a7 7 0 0 1 1.7-.7l.4-1.7h2.5l.4 1.7a7 7 0 0 1 1.7.7l1.5-.9 1.8 1.8-.9 1.5a7 7 0 0 1 .7 1.7l1.7.4v2.5l-1.7.4a7 7 0 0 1-.7 1.7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">تنظیمات</span>
+                                            <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">تنظیمات پنل</span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </details>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

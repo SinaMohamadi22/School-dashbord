@@ -1,0 +1,989 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدیریت معلمان مدرسه SMART">
+    <meta name="theme-color" content="#f7f4ff">
+    <title>مدیریت معلمان | SMART</title>
+    <link rel="icon" type="image/x-icon" href="/School-dashbord/assets/favicon-B9F21RyA.png">
+
+  <link rel="stylesheet" crossorigin href="/School-dashbord/assets/input-B651C3KI.css">
+</head>
+
+<body class="min-h-screen bg-background font-vazirmatn text-text">
+
+<div class="min-h-dvh lg:flex lg:flex-row-reverse lg:items-stretch">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="hidden w-[250px] shrink-0 flex-col border-l border-[#e9e4ff] bg-white px-3 py-4 lg:flex lg:min-h-dvh lg:self-stretch xl:w-[270px]">
+
+        <!-- Logo -->
+        <a href="/index.html" class="flex h-12 items-center justify-center border-b border-primary/5 pb-3">
+            <span class="text-xl font-black tracking-[3px] text-primary">SMART</span>
+        </a>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-5 flex-1" aria-label="منوی اصلی">
+            <ul class="space-y-1.5">
+
+                <li>./pages
+                    <a href="/pages/school.html"
+                       class="flex items-center justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">داشبورد</span>
+                        <svg class="size-4">
+                            <use href="#dashbord"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/students-control.html"
+                       class="flex items-center group justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">مدیریت دانش‌آموزان</span>
+                        <svg class="size-4 fill-gray-500 group-hover:fill-primary">
+                            <use href="#students"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/teachers-control.html"
+                       aria-current="page"
+                       class="flex items-center justify-between rounded-xl bg-primary-light px-3 py-2.5 text-xs font-bold text-primary">
+                        <span class="font-medium text-sm">مدیریت معلمان</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 3 3 7.5 12 12l9-4.5L12 3ZM5 9.5v5c4 3 8 3 14 0v-5M21 8v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/classes.html"
+                       class="flex items-center justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">کلاس‌ها و پایه‌ها</span>
+                        <svg class="size-4">
+                            <use href="#calendar"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/attendance-control.html"
+                       class="flex items-center justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">حضور و غیاب</span>
+                        <svg class="size-4">
+                            <use href="#clock"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/grades-manager.html"
+                       class="flex items-center justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">نمرات و کارنامه</span>
+                        <svg class="size-4">
+                            <use href="#score"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/reports.html"
+                       class="flex items-center justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">گزارش‌ها</span>
+                        <svg class="size-4">
+                            <use href="#newspaper"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/setting-manager.html"
+                       class="flex items-center justify-between rounded-xl px-3 py-2.5 text-xs text-text transition-colors hover:bg-primary-light hover:text-primary">
+                        <span class="font-medium text-sm">تنظیمات</span>
+                        <svg class="size-4">
+                            <use href="#setting"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- School Card -->
+        <article class="mt-auto overflow-hidden rounded-2xl bg-primary-light">
+            <div class="flex h-[125px] items-center justify-center overflow-hidden p-2">
+                <img
+                    src="/School-dashbord/assets/school-sidebar-2nOxt_LN.webp"
+                    alt="تصویر مدرسه"
+                    class="h-full w-full object-contain"
+                    width="180"
+                    height="130"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="px-3 pb-4 text-center">
+                <h2 class="text-xs font-black text-primary">مدرسه بهتر</h2>
+                <p class="mt-1.5 text-[10px] text-gray-500">آینده بهتر و روشن‌تر</p>
+            </div>
+        </article>
+
+    </aside>
+
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="teachers" class="min-w-0 flex-1">
+
+        <div class="mx-auto flex min-h-dvh max-w-[1800px] flex-col gap-4 p-3 pb-28 sm:gap-5 sm:p-5 sm:pb-28 lg:pb-8 xl:p-6">
+
+            <!-- ==================== HEADER ==================== -->
+            <header class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#f0eaff] via-[#e7e1ff] to-[#d6c9ff] px-4 py-4 sm:px-6 sm:py-5">
+
+                <div class="pointer-events-none absolute -left-12 -top-20 size-52 rounded-full bg-white/50 blur-3xl"></div>
+                <div class="pointer-events-none absolute right-1/3 top-4 size-32 rounded-full bg-[#c8b5ff]/50 blur-3xl"></div>
+
+                <div class="relative z-10 flex flex-wrap items-center justify-between gap-4">
+
+                    <div class="flex items-center gap-2">
+
+                        <div class="flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-white bg-primary text-white">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 3 3 7.5 12 12l9-4.5L12 3ZM5 9.5v5c4 3 8 3 14 0v-5M21 8v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <p class="text-xs text-[#7463a9]">پنل مدیریت مدرسه</p>
+                            <h1 class="mt-1 text-base font-black text-[#24204a] sm:text-lg">
+                                مدیریت معلمان
+                            </h1>
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-2">
+
+                        <button type="button" aria-label="اعلان‌ها"
+                            class="relative flex size-10 items-center justify-center rounded-full border border-white/70 bg-white/70 text-gray-600">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-5">
+                                <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"
+                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                            <span class="absolute -right-0.5 -top-0.5 flex size-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold text-white">۲</span>
+                        </button>
+
+                        <div class="flex items-center gap-2">
+                            <div class="flex size-9 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-primary">
+                                <img src="/School-dashbord/assets/avatar-school-panel-BWILXrPC.webp"
+                                    alt="مدیر مدرسه" class="size-full" loading="lazy">
+                            </div>
+                            <div class="hidden sm:block">
+                                <p class="text-xs font-bold text-[#24204a]">مدیر مدرسه</p>
+                                <p class="mt-1 text-[10px] text-[#7463a9]">مدیر سیستم</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="relative z-10 mt-6">
+                    <h2 class="text-sm font-black text-[#24204a] sm:text-base">
+                        مدیریت کادر آموزشی مدرسه 👨🏻‍🏫
+                    </h2>
+                    <p class="mt-2 text-[10px] leading-6 text-[#5e548e] sm:text-xs">
+                        اطلاعات معلمان، وضعیت همکاری و عملکرد کادر آموزشی را مدیریت کنید.
+                    </p>
+                </div>
+
+            </header>
+
+
+            <!-- ==================== STATS ==================== -->
+            <section aria-label="آمار معلمان" class="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+
+                <!-- Total -->
+                <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#ece7ff] bg-white p-3 shadow-sm sm:gap-3 sm:p-4">
+                    <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#f1eaff] text-primary sm:size-11">
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 3 3 7.5 12 12l9-4.5L12 3ZM5 9.5v5c4 3 8 3 14 0v-5M21 8v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="truncate text-[10px] font-semibold text-gray-500 sm:text-xs">کل معلمان</p>
+                        <p class="mt-1 text-lg font-black text-text sm:text-xl">۶۸</p>
+                        <p class="mt-0.5 text-[9px] text-success sm:text-[10px]">تمام کادر آموزشی</p>
+                    </div>
+                </article>
+
+                <!-- Active -->
+                <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#e5f4ec] bg-[#f0faf5] p-3 shadow-sm sm:gap-3 sm:p-4">
+                    <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-500 sm:size-11">
+                        <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6">
+                            <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="truncate text-[10px] font-semibold text-gray-500 sm:text-xs">معلمان فعال</p>
+                        <p class="mt-1 text-lg font-black text-text sm:text-xl">۶۲</p>
+                        <p class="mt-0.5 text-[9px] text-emerald-600 sm:text-[10px]">● در حال همکاری</p>
+                    </div>
+                </article>
+
+                <!-- On leave -->
+                <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#f9eadb] bg-[#fff8f0] p-3 shadow-sm sm:gap-3 sm:p-4">
+                    <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-500 sm:size-11">
+                        <svg class="size-5 sm:size-6">
+                            <use href="#clock"></use>
+                        </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="truncate text-[10px] font-semibold text-gray-500 sm:text-xs">مرخصی</p>
+                        <p class="mt-1 text-lg font-black text-text sm:text-xl">۴</p>
+                        <p class="mt-0.5 text-[9px] text-orange-500 sm:text-[10px]">● مرخصی موقت</p>
+                    </div>
+                </article>
+
+                <!-- New -->
+                <article class="flex min-w-0 items-center gap-2 rounded-2xl border border-[#e5edff] bg-[#f3f6ff] p-3 shadow-sm sm:gap-3 sm:p-4">
+                    <div class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-500 sm:size-11">
+                        <svg viewBox="0 0 24 24" fill="none" class="size-5 sm:size-6">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="truncate text-[10px] font-semibold text-gray-500 sm:text-xs">معلمان جدید</p>
+                        <p class="mt-1 text-lg font-black text-text sm:text-xl">۲</p>
+                        <p class="mt-0.5 text-[9px] text-blue-500 sm:text-[10px]">● این ماه</p>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <!-- ==================== TEACHERS SECTION ==================== -->
+            <section aria-labelledby="teachers-list-title" class="min-w-0 rounded-2xl border border-[#ece7ff] bg-white p-3 shadow-sm sm:p-4">
+
+                <!-- Section Header -->
+                <div class="flex flex-wrap items-center justify-between gap-3">
+
+                    <div>
+                        <h2 id="teachers-list-title" class="text-sm font-black sm:text-base">
+                            فهرست معلمان
+                        </h2>
+                        <p class="mt-1 text-[10px] text-gray-400 sm:text-xs">
+                            اطلاعات و وضعیت همکاری معلمان مدرسه
+                        </p>
+                    </div>
+
+                    <button type="button"
+                        class="flex items-center justify-center gap-2 rounded-xl bg-primary px-3 py-2.5 text-[10px] font-bold text-white transition-colors hover:bg-primary-dark sm:px-4 sm:text-xs">
+                        <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        افزودن معلم
+                    </button>
+
+                </div>
+
+
+                <!-- Search & Filters -->
+                <div class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <label class="relative sm:col-span-2 lg:col-span-2">
+                        <span class="sr-only">جست‌وجوی معلم</span>
+                        <svg viewBox="0 0 24 24" fill="none"
+                            class="absolute right-3 top-1/2 size-4 -translate-y-1/2 text-gray-400">
+                            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <input type="search" placeholder="جست‌وجوی نام، کد پرسنلی..."
+                            class="h-10 w-full rounded-xl border border-[#ece7ff] bg-[#faf9ff] pr-9 pl-3 text-xs outline-none transition focus:border-primary">
+                    </label>
+
+                    <label>
+                        <span class="sr-only">فیلتر درس</span>
+                        <select class="h-10 w-full rounded-xl border border-[#ece7ff] bg-[#faf9ff] px-3 text-xs text-gray-500 outline-none focus:border-primary">
+                            <option>همه دروس</option>
+                            <option>ریاضی</option>
+                            <option>علوم</option>
+                            <option>فارسی</option>
+                            <option>زبان انگلیسی</option>
+                            <option>مطالعات اجتماعی</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span class="sr-only">فیلتر وضعیت</span>
+                        <select class="h-10 w-full rounded-xl border border-[#ece7ff] bg-[#faf9ff] px-3 text-xs text-gray-500 outline-none focus:border-primary">
+                            <option>همه وضعیت‌ها</option>
+                            <option>فعال</option>
+                            <option>مرخصی</option>
+                            <option>غیرفعال</option>
+                        </select>
+                    </label>
+
+                </div>
+
+
+                <!-- Results Info -->
+                <div class="mt-4 flex items-center justify-between gap-2">
+                    <p class="text-[10px] text-gray-400 sm:text-xs">
+                        نمایش <span class="font-bold text-text">۶</span> معلم از ۶۸ معلم
+                    </p>
+
+                    <button type="button" class="text-[10px] font-semibold text-primary sm:text-xs">
+                        پاک کردن فیلترها
+                    </button>
+                </div>
+
+
+                <!-- ==================== DESKTOP TABLE ==================== -->
+                <div class="mt-3 hidden overflow-x-auto rounded-xl border border-[#f0ecfa] md:block">
+
+                    <table class="w-full min-w-[760px] border-collapse text-right">
+
+                        <thead class="bg-[#faf9ff] text-[11px] text-gray-500">
+                            <tr>
+                                <th class="px-4 py-4 font-semibold">معلم</th>
+                                <th class="px-4 py-4 font-semibold">کد پرسنلی</th>
+                                <th class="px-4 py-4 font-semibold">درس تخصصی</th>
+                                <th class="px-4 py-4 font-semibold">پایه تدریس</th>
+                                <th class="px-4 py-4 font-semibold">وضعیت</th>
+                                <th class="px-4 py-4 text-center font-semibold">عملیات</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="divide-y divide-[#f0ecfa] text-xs">
+
+                            <!-- Teacher 1 -->
+                            <tr class="transition-colors hover:bg-[#fcfbff]">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#eee8ff] text-xs font-bold text-primary">م</div>
+                                        <div>
+                                            <p class="font-bold">مریم احمدی</p>
+                                            <p class="mt-1 text-[10px] text-gray-400">maryam@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3 text-gray-500">۱۰۲۴۵</td>
+                                <td class="px-4 py-3">ریاضی</td>
+                                <td class="px-4 py-3">هفتم، هشتم</td>
+                                <td class="px-4 py-3">
+                                    <span class="rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-semibold text-emerald-600">فعال</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" aria-label="مشاهده مریم احمدی" class="rounded-lg bg-[#f1eaff] p-2 text-primary hover:bg-[#e7dcff]">
+                                            <svg class="size-4" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="ویرایش مریم احمدی" class="rounded-lg bg-blue-50 p-2 text-blue-500 hover:bg-blue-100">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Teacher 2 -->
+                            <tr class="transition-colors hover:bg-[#fcfbff]">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#e7f4ff] text-xs font-bold text-blue-500">ع</div>
+                                        <div>
+                                            <p class="font-bold">علی رضایی</p>
+                                            <p class="mt-1 text-[10px] text-gray-400">ali@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3 text-gray-500">۱۰۲۴۶</td>
+                                <td class="px-4 py-3">علوم تجربی</td>
+                                <td class="px-4 py-3">هفتم، نهم</td>
+                                <td class="px-4 py-3">
+                                    <span class="rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-semibold text-emerald-600">فعال</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" aria-label="مشاهده علی رضایی" class="rounded-lg bg-[#f1eaff] p-2 text-primary hover:bg-[#e7dcff]">
+                                            <svg class="size-4" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="ویرایش علی رضایی" class="rounded-lg bg-blue-50 p-2 text-blue-500 hover:bg-blue-100">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Teacher 3 -->
+                            <tr class="transition-colors hover:bg-[#fcfbff]">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#fff0e5] text-xs font-bold text-orange-500">ف</div>
+                                        <div>
+                                            <p class="font-bold">فاطمه کریمی</p>
+                                            <p class="mt-1 text-[10px] text-gray-400">fatemeh@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3 text-gray-500">۱۰۲۴۷</td>
+                                <td class="px-4 py-3">زبان انگلیسی</td>
+                                <td class="px-4 py-3">هفتم، هشتم، نهم</td>
+                                <td class="px-4 py-3">
+                                    <span class="rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-semibold text-emerald-600">فعال</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" aria-label="مشاهده فاطمه کریمی" class="rounded-lg bg-[#f1eaff] p-2 text-primary hover:bg-[#e7dcff]">
+                                            <svg class="size-4" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="ویرایش فاطمه کریمی" class="rounded-lg bg-blue-50 p-2 text-blue-500 hover:bg-blue-100">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Teacher 4 -->
+                            <tr class="transition-colors hover:bg-[#fcfbff]">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#fcecf2] text-xs font-bold text-pink-500">ح</div>
+                                        <div>
+                                            <p class="font-bold">حسین محمدی</p>
+                                            <p class="mt-1 text-[10px] text-gray-400">hossein@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3 text-gray-500">۱۰۲۴۸</td>
+                                <td class="px-4 py-3">فارسی</td>
+                                <td class="px-4 py-3">هفتم، هشتم</td>
+                                <td class="px-4 py-3">
+                                    <span class="rounded-full bg-orange-50 px-3 py-1.5 text-[10px] font-semibold text-orange-600">مرخصی</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" aria-label="مشاهده حسین محمدی" class="rounded-lg bg-[#f1eaff] p-2 text-primary hover:bg-[#e7dcff]">
+                                            <svg class="size-4" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="ویرایش حسین محمدی" class="rounded-lg bg-blue-50 p-2 text-blue-500 hover:bg-blue-100">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Teacher 5 -->
+                            <tr class="transition-colors hover:bg-[#fcfbff]">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#eaf8f1] text-xs font-bold text-emerald-600">ز</div>
+                                        <div>
+                                            <p class="font-bold">زهرا موسوی</p>
+                                            <p class="mt-1 text-[10px] text-gray-400">zahra@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3 text-gray-500">۱۰۲۴۹</td>
+                                <td class="px-4 py-3">مطالعات اجتماعی</td>
+                                <td class="px-4 py-3">هشتم، نهم</td>
+                                <td class="px-4 py-3">
+                                    <span class="rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-semibold text-emerald-600">فعال</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" aria-label="مشاهده زهرا موسوی" class="rounded-lg bg-[#f1eaff] p-2 text-primary hover:bg-[#e7dcff]">
+                                            <svg class="size-4" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="ویرایش زهرا موسوی" class="rounded-lg bg-blue-50 p-2 text-blue-500 hover:bg-blue-100">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Teacher 6 -->
+                            <tr class="transition-colors hover:bg-[#fcfbff]">
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#edf4ff] text-xs font-bold text-blue-500">م</div>
+                                        <div>
+                                            <p class="font-bold">محمد جعفری</p>
+                                            <p class="mt-1 text-[10px] text-gray-400">mohammad@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3 text-gray-500">۱۰۲۵۰</td>
+                                <td class="px-4 py-3">فیزیک</td>
+                                <td class="px-4 py-3">نهم</td>
+                                <td class="px-4 py-3">
+                                    <span class="rounded-full bg-gray-100 px-3 py-1.5 text-[10px] font-semibold text-gray-500">غیرفعال</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" aria-label="مشاهده محمد جعفری" class="rounded-lg bg-[#f1eaff] p-2 text-primary hover:bg-[#e7dcff]">
+                                            <svg class="size-4" viewBox="0 0 24 24" fill="none">
+                                                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.7"/>
+                                                <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="ویرایش محمد جعفری" class="rounded-lg bg-blue-50 p-2 text-blue-500 hover:bg-blue-100">
+                                            <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                                <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- ==================== MOBILE TEACHER CARDS ==================== -->
+                <div class="mt-3 space-y-3 md:hidden">
+
+                    <!-- Teacher 1 -->
+                    <article class="rounded-xl border border-[#f0ecfa] bg-[#fdfcff] p-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex min-w-0 items-center gap-2.5">
+                                <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#eee8ff] text-sm font-bold text-primary">م</div>
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-xs font-bold">مریم احمدی</h3>
+                                    <p class="mt-1 text-[10px] text-gray-400">کد پرسنلی: ۱۰۲۴۵</p>
+                                </div>
+                            </div>
+                            <span class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[9px] font-semibold text-emerald-600">فعال</span>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-white p-2.5 text-[10px]">
+                            <p class="text-gray-400">درس تخصصی: <span class="font-semibold text-text">ریاضی</span></p>
+                            <p class="text-gray-400">پایه: <span class="font-semibold text-text">هفتم، هشتم</span></p>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button type="button" class="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#f1eaff] py-2 text-[10px] font-semibold text-primary">
+                                مشاهده جزئیات
+                            </button>
+                            <button type="button" aria-label="ویرایش مریم احمدی" class="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                    <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Teacher 2 -->
+                    <article class="rounded-xl border border-[#f0ecfa] bg-[#fdfcff] p-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex min-w-0 items-center gap-2.5">
+                                <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#e7f4ff] text-sm font-bold text-blue-500">ع</div>
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-xs font-bold">علی رضایی</h3>
+                                    <p class="mt-1 text-[10px] text-gray-400">کد پرسنلی: ۱۰۲۴۶</p>
+                                </div>
+                            </div>
+                            <span class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[9px] font-semibold text-emerald-600">فعال</span>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-white p-2.5 text-[10px]">
+                            <p class="text-gray-400">درس تخصصی: <span class="font-semibold text-text">علوم تجربی</span></p>
+                            <p class="text-gray-400">پایه: <span class="font-semibold text-text">هفتم، نهم</span></p>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button type="button" class="flex flex-1 items-center justify-center rounded-lg bg-[#f1eaff] py-2 text-[10px] font-semibold text-primary">
+                                مشاهده جزئیات
+                            </button>
+                            <button type="button" aria-label="ویرایش علی رضایی" class="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                    <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Teacher 3 -->
+                    <article class="rounded-xl border border-[#f0ecfa] bg-[#fdfcff] p-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex min-w-0 items-center gap-2.5">
+                                <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#fff0e5] text-sm font-bold text-orange-500">ف</div>
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-xs font-bold">فاطمه کریمی</h3>
+                                    <p class="mt-1 text-[10px] text-gray-400">کد پرسنلی: ۱۰۲۴۷</p>
+                                </div>
+                            </div>
+                            <span class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[9px] font-semibold text-emerald-600">فعال</span>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-white p-2.5 text-[10px]">
+                            <p class="text-gray-400">درس تخصصی: <span class="font-semibold text-text">زبان انگلیسی</span></p>
+                            <p class="text-gray-400">پایه: <span class="font-semibold text-text">هفتم تا نهم</span></p>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button type="button" class="flex flex-1 items-center justify-center rounded-lg bg-[#f1eaff] py-2 text-[10px] font-semibold text-primary">
+                                مشاهده جزئیات
+                            </button>
+                            <button type="button" aria-label="ویرایش فاطمه کریمی" class="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                    <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Teacher 4 -->
+                    <article class="rounded-xl border border-[#f0ecfa] bg-[#fdfcff] p-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex min-w-0 items-center gap-2.5">
+                                <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#fcecf2] text-sm font-bold text-pink-500">ح</div>
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-xs font-bold">حسین محمدی</h3>
+                                    <p class="mt-1 text-[10px] text-gray-400">کد پرسنلی: ۱۰۲۴۸</p>
+                                </div>
+                            </div>
+                            <span class="shrink-0 rounded-full bg-orange-50 px-2.5 py-1 text-[9px] font-semibold text-orange-600">مرخصی</span>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-white p-2.5 text-[10px]">
+                            <p class="text-gray-400">درس تخصصی: <span class="font-semibold text-text">فارسی</span></p>
+                            <p class="text-gray-400">پایه: <span class="font-semibold text-text">هفتم، هشتم</span></p>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button type="button" class="flex flex-1 items-center justify-center rounded-lg bg-[#f1eaff] py-2 text-[10px] font-semibold text-primary">
+                                مشاهده جزئیات
+                            </button>
+                            <button type="button" aria-label="ویرایش حسین محمدی" class="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                    <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Teacher 5 -->
+                    <article class="rounded-xl border border-[#f0ecfa] bg-[#fdfcff] p-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex min-w-0 items-center gap-2.5">
+                                <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#eaf8f1] text-sm font-bold text-emerald-600">ز</div>
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-xs font-bold">زهرا موسوی</h3>
+                                    <p class="mt-1 text-[10px] text-gray-400">کد پرسنلی: ۱۰۲۴۹</p>
+                                </div>
+                            </div>
+                            <span class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[9px] font-semibold text-emerald-600">فعال</span>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-white p-2.5 text-[10px]">
+                            <p class="text-gray-400">درس تخصصی: <span class="font-semibold text-text">مطالعات اجتماعی</span></p>
+                            <p class="text-gray-400">پایه: <span class="font-semibold text-text">هشتم، نهم</span></p>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button type="button" class="flex flex-1 items-center justify-center rounded-lg bg-[#f1eaff] py-2 text-[10px] font-semibold text-primary">
+                                مشاهده جزئیات
+                            </button>
+                            <button type="button" aria-label="ویرایش زهرا موسوی" class="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                    <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Teacher 6 -->
+                    <article class="rounded-xl border border-[#f0ecfa] bg-[#fdfcff] p-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex min-w-0 items-center gap-2.5">
+                                <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#edf4ff] text-sm font-bold text-blue-500">م</div>
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-xs font-bold">محمد جعفری</h3>
+                                    <p class="mt-1 text-[10px] text-gray-400">کد پرسنلی: ۱۰۲۵۰</p>
+                                </div>
+                            </div>
+                            <span class="shrink-0 rounded-full bg-gray-100 px-2.5 py-1 text-[9px] font-semibold text-gray-500">غیرفعال</span>
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 rounded-lg bg-white p-2.5 text-[10px]">
+                            <p class="text-gray-400">درس تخصصی: <span class="font-semibold text-text">فیزیک</span></p>
+                            <p class="text-gray-400">پایه: <span class="font-semibold text-text">نهم</span></p>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <button type="button" class="flex flex-1 items-center justify-center rounded-lg bg-[#f1eaff] py-2 text-[10px] font-semibold text-primary">
+                                مشاهده جزئیات
+                            </button>
+                            <button type="button" aria-label="ویرایش محمد جعفری" class="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-blue-500">
+                                <svg viewBox="0 0 24 24" fill="none" class="size-4">
+                                    <path d="m14 5 5 5M4 20l4.5-1 10.7-10.7a2.12 2.12 0 0 0-3-3L5.5 16 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <!-- ==================== PAGINATION ==================== -->
+                <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-[#f0ecfa] pt-4">
+
+                    <p class="text-[10px] text-gray-400 sm:text-xs">
+                        صفحه ۱ از ۱۲
+                    </p>
+
+                    <nav aria-label="صفحه‌بندی" class="flex items-center gap-1.5">
+
+                        <button type="button" aria-label="صفحه قبلی"
+                            class="flex size-8 items-center justify-center rounded-lg border border-[#ece7ff] text-gray-400">
+                            <span class="text-lg">›</span>
+                        </button>
+
+                        <button type="button" aria-current="page"
+                            class="flex size-8 items-center justify-center rounded-lg bg-primary text-xs font-bold text-white">۱</button>
+
+                        <button type="button"
+                            class="flex size-8 items-center justify-center rounded-lg border border-[#ece7ff] text-xs text-gray-500 hover:bg-primary-light">۲</button>
+
+                        <button type="button"
+                            class="flex size-8 items-center justify-center rounded-lg border border-[#ece7ff] text-xs text-gray-500 hover:bg-primary-light">۳</button>
+
+                        <span class="px-1 text-xs text-gray-400">...</span>
+
+                        <button type="button"
+                            class="flex size-8 items-center justify-center rounded-lg border border-[#ece7ff] text-xs text-gray-500 hover:bg-primary-light">۱۲</button>
+
+                        <button type="button" aria-label="صفحه بعدی"
+                            class="flex size-8 items-center justify-center rounded-lg border border-[#ece7ff] text-gray-400">
+                            <span class="text-lg">‹</span>
+                        </button>
+
+                    </nav>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================== FOOTER ==================== -->
+            <footer class="mx-auto mt-auto flex w-[92%] items-center justify-center gap-2.5 pt-3 text-center text-[10px] text-[#7753db] sm:gap-4 sm:text-xs">
+                <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+                <p>
+                    آینده‌ای روشن‌تر برای آموزش با
+                    <strong class="text-[#7046f5]">SMART</strong>
+                    <span class="text-lg">♡</span>
+                </p>
+                <span class="h-0.5 w-6 bg-[#b9a4ff] sm:w-[90px]"></span>
+            </footer>
+
+        </div>
+
+
+        <!-- ==================== MOBILE BOTTOM NAVIGATION ==================== -->
+        <nav
+            aria-label="منوی موبایل"
+            class="fixed inset-x-0 bottom-0 z-50 border-t border-[#E9E4FF] bg-white/95 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(65,45,130,0.08)] backdrop-blur-lg lg:hidden"
+        >
+            <ul class="mx-auto grid max-w-lg grid-cols-5 gap-1 py-2">
+
+                <!-- Dashboard -->
+                <li>./pages
+                    <a href="/pages/school.html"
+                        class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary">
+                        <svg class="size-4">
+                            <use href="#dashbord"></use>
+                        </svg>
+                        <span class="text-[9px]">داشبورد</span>
+                    </a>
+                </li>
+
+                <!-- Students -->
+                <li>./pages
+                    <a href="/pages/students-control.html"
+                        class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary">
+                        <svg class="size-4">
+                            <use href="#students"></use>
+                        </svg>
+                        <span class="text-[9px]">دانش‌آموزان</span>
+                    </a>
+                </li>
+
+                <li>./pages
+                    <a href="/pages/teachers-control.html" class="group flex items-center justify-between rounded-xl px-3 py-2.5 text-text transition-colors hover:bg-primary-light hover:text-primary">
+                            <span class="text-sm font-medium">مدیریت معلمان</span>
+                            <svg viewBox="0 0 24 24" fill="none" class="size-4" aria-hidden="true">
+                                <path d="M12 3 3 7.5 12 12l9-4.5L12 3ZM5 9.5v5c4 3 8 3 14 0v-5M21 8v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                </li>
+
+                <!-- Classes -->
+                <li>./pages
+                    <a href="/pages/classes.html"
+                        class="flex flex-col items-center justify-center gap-1 rounded-xl py-2 text-gray-500 transition-colors hover:bg-primary-light hover:text-primary">
+                        <svg class="size-4">
+                            <use href="#calendar"></use>
+                        </svg>
+                        <span class="text-[9px]">کلاس‌ها</span>
+                    </a>
+                </li>
+
+                <!-- More -->
+                <li class="relative flex-1 min-w-0">
+                    <details class="group">
+
+                        <summary
+                            class="flex cursor-pointer list-none flex-col items-center justify-center rounded-xl py-2 text-[#77738B] transition-colors hover:bg-[#F5F2FF] hover:text-[#6D52CF] [&::-webkit-details-marker]:hidden"
+                        >
+                            <svg
+                                class="size-4 shrink-0 transition-transform duration-200 group-open:rotate-180"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="5" cy="12" r="1" />
+                                <circle cx="12" cy="12" r="1" />
+                                <circle cx="19" cy="12" r="1" />
+                            </svg>
+
+                            <span class="max-w-full truncate text-[9px] sm:text-xs">
+                                بیشتر
+                            </span>
+                        </summary>
+
+                        <div
+                            class="fixed inset-x-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-[60] mx-auto w-auto max-w-[360px] max-h-[min(70dvh,480px)] overflow-y-auto overscroll-contain rounded-2xl border border-[#E9E4FF] bg-white p-3 shadow-[0_12px_40px_rgba(65,45,130,0.16)] sm:inset-x-4 sm:max-w-[400px]"
+                        >
+
+                            <div class="mb-3 flex items-center justify-between gap-2 border-b border-[#F0ECFA] pb-3">
+                                <span class="text-sm font-bold text-[#25243A]">
+                                    دسترسی‌های بیشتر
+                                </span>
+
+                                <span class="rounded-lg bg-[#F3EFFF] px-2 py-1 text-[10px] text-[#6D52CF] sm:text-xs">
+                                    ۴ بخش
+                                </span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 sm:gap-3">
+
+                                <!-- Atte./pages -->
+                                <a href="/pages/attendance-control.html"
+                                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#EDE7FF] text-[#6D52CF] sm:h-10 sm:w-10">
+                                        <svg class="size-4">
+                                            <use href="#calendar"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0 flex-1">
+                                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">حضور و غیاب</span>
+                                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">وضعیت حضور دانش‌آموزان</span>
+                                    </span>
+                                </a>
+
+                                <!-- Grad./pages
+                                <a href="/pages/grades-manager.html"
+                                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E5F4FF] text-[#5798D7] sm:h-10 sm:w-10">
+                                        <svg class="size-4">
+                                            <use href="#score"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0 flex-1">
+                                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">نمرات و کارنامه</span>
+                                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">نتایج و عملکرد تحصیلی</span>
+                                    </span>
+                                </a>
+
+                                <!-- Repo./pages>
+                                <a href="/pages/reports.html"
+                                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E3F8EE] text-[#35B985] sm:h-10 sm:w-10">
+                                        <svg class="size-4">
+                                            <use href="#newspaper"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0 flex-1">
+                                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">گزارش‌ها</span>
+                                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">گزارش‌های تحلیلی</span>
+                                    </span>
+                                </a>
+
+                                <!-- Sett./pages->
+                                <a href="/pages/setting-manager.html"
+                                    class="flex min-w-0 items-center gap-2 rounded-xl border border-[#F0ECFA] bg-[#FAF9FF] p-2.5 transition-colors hover:border-[#D9CCFF] hover:bg-[#F3EFFF] sm:gap-3 sm:p-3">
+                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF0E5] text-[#F49A52] sm:h-10 sm:w-10">
+                                        <svg class="size-4">
+                                            <use href="#setting"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="min-w-0 flex-1">
+                                        <span class="block truncate text-xs font-semibold text-[#34304B] sm:text-sm">تنظیمات</span>
+                                        <span class="mt-1 hidden truncate text-[10px] text-[#918BA6] sm:block">تنظیمات پنل</span>
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </details>
+                </li>
+
+            </ul>
+        </nav>
+
+    </main>
+</div>
+
+
+    <svg     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <symbol id="setting" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </symbol>
+        <symbol id="newspaper" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+        </symbol>
+        <symbol id="score" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+        </symbol>
+        <symbol id="clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </symbol>
+        <symbol id="calendar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+        </symbol>
+        <symbol id="teachers" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+        </symbol>
+        <symbol id="dashbord" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+        </symbol>
+        <symbol id="students" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256">
+            <path d="M225.26514,60.20508l-96-32a4.00487,4.00487,0,0,0-2.53028,0l-96,32c-.05713.019-.10815.04809-.16406.06958-.08545.033-.16821.06811-.251.10644a4.04126,4.04126,0,0,0-.415.22535c-.06714.04174-.13575.08007-.20044.12548a3.99,3.99,0,0,0-.47632.39307c-.02027.01953-.0437.0354-.06348.05542a3.97787,3.97787,0,0,0-.44556.53979c-.04077.0586-.07373.12183-.11132.18262a3.99741,3.99741,0,0,0-.23487.43262c-.03613.07837-.06811.15771-.09912.23852a3.96217,3.96217,0,0,0-.144.46412c-.01929.07714-.04126.15234-.05591.2312A3.98077,3.98077,0,0,0,28,64v80a4,4,0,0,0,8,0V69.55005l43.87524,14.625A59.981,59.981,0,0,0,104.272,175.09814a91.80574,91.80574,0,0,0-53.39062,38.71631,3.99985,3.99985,0,1,0,6.70117,4.36914,84.02266,84.02266,0,0,1,140.83447,0,3.99985,3.99985,0,1,0,6.70117-4.36914A91.80619,91.80619,0,0,0,151.728,175.09814a59.981,59.981,0,0,0,24.39673-90.92309l49.14038-16.38013a4.00037,4.00037,0,0,0,0-7.58984ZM180,120A52,52,0,1,1,87.92993,86.85986l38.80493,12.93506a4.00487,4.00487,0,0,0,2.53028,0l38.80493-12.93506A51.85133,51.85133,0,0,1,180,120ZM168.00659,78.44775l-.01294.0044L128,91.7832,44.64893,64,128,36.2168,211.35107,64Z"/>
+        </symbol>
+    </svg>
+
+</body>
+</html>
